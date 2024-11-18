@@ -17,3 +17,7 @@ documentation for details.
 
    en/index
    zh/*
+   zh/analysis-panal/*
+   zh/create-analysis-upload-data/*
+   zh/visual-panel/*
+
