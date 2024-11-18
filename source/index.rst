@@ -16,5 +16,5 @@ documentation for details.
    :caption: Contents:
 
    en/index
-   zh/*
+   zh/_index.zh.md
 
