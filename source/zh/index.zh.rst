@@ -9,7 +9,8 @@ Ragomics功能块代码由具体生物信息算法由实验室研发，请用户
 ----
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
+   :caption: Contents:
 
    docs/project-management/_index.md
    docs/analysis-panel/_index.md

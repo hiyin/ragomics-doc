@@ -16,5 +16,5 @@ documentation for details.
    :maxdepth: 3
    :caption: Contents:
 
-   zh/index.zh.md
+   zh/index.zh.rst
 
