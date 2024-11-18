@@ -12,8 +12,8 @@ documentation for details.
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Contents:
 
    en/index
-   zh/_index.zh.md
+   zh/*
