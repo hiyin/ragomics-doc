@@ -16,9 +16,9 @@ documentation for details.
    :maxdepth: 3
    :caption: Contents:
 
-   docs/project-management/_index.md
-   docs/analysis-panel/_index.md
-   docs/create-analysis-upload-data/index.md
-   docs/visual-panel/_index.md
+   zh/docs/project-management/_index.md
+   zh/docs/analysis-panel/_index.md
+   zh/docs/create-analysis-upload-data/index.md
+   zh/docs/visual-panel/_index.md
    
 
