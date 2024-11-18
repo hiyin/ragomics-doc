@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html lang="zh" data-content_root="../../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>细胞散点图Scatter/Embedding交互 &#8212; ragomics 2024-11-18 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../../../_static/documentation_options.js?v=b9af27da"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="索引" href="../../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../../search.html" />
+   
+  <link rel="stylesheet" href="../../../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="scatter-embedding">
+<h1>细胞散点图Scatter/Embedding交互<a class="headerlink" href="#scatter-embedding" title="Link to this heading">¶</a></h1>
+<p>散点图（Scatter）内，<strong>每个散点代表一个细胞</strong>。</p>
+<section id="basis">
+<h2>切换基（Basis）<a class="headerlink" href="#basis" title="Link to this heading">¶</a></h2>
+<p>如basis中无选项，请通过平台计算相关basis或上传带有basis的数据，例如PCA、UMAP。计算完成后打开计算节点对应可视化界面Visual Panel。PCA、UMAP、t-SNE等降维结果显示在basis下拉菜单内。</p>
+<p>下图basis选取为umap。如需切换basis可视化，点击Visual panel embedding区内basis下拉菜单进行选择<br />
+{{&lt; image src=&quot;images/visual-panel-endocrinogenesis-embedding-umap.png&quot; alt=&quot;Alt text for the image&quot; width=&quot;500px&quot;&gt;}}</p>
+<p>切换为PCA<br />
+{{&lt; image src=&quot;images/visual-panel-endocrinogenesis-embedding-pca.png&quot; alt=&quot;Alt text for the image&quot; width=&quot;500px&quot;&gt;}}</p>
+<p>下拉菜单中选择select dimensions可组合不同basis<br />
+{{&lt; image src=&quot;images/visual-panel-endocrinogenesis-embedding-basis-switch.png&quot; alt=&quot;Alt text for the image&quot; width=&quot;500px&quot;&gt;}}</p>
+</section>
+<section id="x-y-z-customize-x-y-z-axes">
+<h2>自定义x/y/z坐标（Customize x, y, z axes）<a class="headerlink" href="#x-y-z-customize-x-y-z-axes" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>通过basis选取</p></li>
+<li><p>通过基因的值选取</p></li>
+<li><p>通过obs细胞的值选取</p></li>
+</ul>
+<section id="basis-combinattion">
+<h3>基（Basis combinattion）<a class="headerlink" href="#basis-combinattion" title="Link to this heading">¶</a></h3>
+<p>Ragomics支持混合不同basis用于可视化。例如PCA产出的principle components（PCs）代表不同含义，您可通过选择PC及通过染色理解PC。
+{{&lt; image src=&quot;images/visual-panel-endocrinogenesis-embedding-basis-combination.png&quot; alt=&quot;Alt text for the image&quot; width=&quot;500px&quot;&gt;}}</p>
+</section>
+</section>
+<section id="id1">
+<h2>染色<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<section id="obs-category">
+<h3>通过obs-category进行染色<a class="headerlink" href="#obs-category" title="Link to this heading">¶</a></h3>
+<p>通过点击左侧obs区具体subcategory隐藏某一分类。常用的场景包括隐藏个别sample、cluster，方便数据可视化。</p>
+</section>
+<section id="obs-numerical">
+<h3>通过obs-numerical进行染色<a class="headerlink" href="#obs-numerical" title="Link to this heading">¶</a></h3>
+<p>{{&lt; image src=&quot;images/visual-panel-obs-embedding-numerical.png&quot; alt=&quot;Alt text for the image&quot; width=&quot;500px&quot;&gt;}}</p>
+</section>
+<section id="gene-values">
+<h3>基因（Gene values）<a class="headerlink" href="#gene-values" title="Link to this heading">¶</a></h3>
+</section>
+</section>
+<section id="id2">
+<h2>细调图像<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<p>{{&lt; image src=&quot;images/visual-panel-embedding-plot-0.png&quot; alt=&quot;Alt text for the image&quot; width=&quot;500px&quot;&gt;}}</p>
+</section>
+<section id="id3">
+<h2>常用降维方法<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>PCA：一般preprocess recipe内自动计算PCA</p>
+<ul>
+<li><p>PCs数量一般根据explained variance elbow plot选取（实际中不少论文使用包默认PCs参数）</p></li>
+<li><p>Scanpy, Seurat等代码库可手动计算pca（如已跑recipe，不需再进行PCA计算）</p></li>
+</ul>
+</li>
+<li><p>UMAP：</p>
+<ul>
+<li><p>Python:</p>
+<ul>
+<li><p>sc.tl.umap；dyn.reduceDimension等功能块可计算UMAP</p></li>
+<li><p>一般底层算法均基于umap-learn：https://umap-learn.readthedocs.io/en/latest/</p></li>
+</ul>
+</li>
+<li><p>R:</p>
+<ul>
+<li><p>Seurat.RunUMAP</p></li>
+</ul>
+</li>
+<li><p>&quot;Math salad&quot; - from Dr. Lior Patcher, on X (former twitter)</p></li>
+</ul>
+</li>
+<li><p>t-sne</p></li>
+</ul>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../../index.html">ragomics</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../_index.zh.html">Ragomics教程及文档中心</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, ragomics.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.4.7</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../../../_sources/zh/docs/visual-panel/embedding/_index.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
