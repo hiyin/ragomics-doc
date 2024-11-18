@@ -13,5 +13,5 @@ Ragomics功能块代码由具体生物信息算法由实验室研发，请用户
 
    docs/project-management/_index.md
    docs/analysis-panel/_index.md
-   docs/create-analysis-upload-data/index.md
+   docs/create-analysis-upload-data/_index.md
    docs/visual-panel/_index.md
