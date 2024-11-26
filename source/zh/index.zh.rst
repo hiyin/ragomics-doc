@@ -1,7 +1,8 @@
+# Ragomics Platform Information
 
+The Ragomics platform is independently developed by **Shanghai Ragamuffin Inc.** The platform's UI design and code are protected by copyright and patent laws.
 
-Ragomics平台由Shanghai Ragamuffin Inc. 自主研发，平台UI设计、代码均受版权、专利保护。  
-Ragomics功能块代码由具体生物信息算法由实验室研发，请用户在引用/Acknowledge咱平台同时勿忘引用具体实验室相关文章。
+The code for Ragomics' functional blocks and specific bioinformatics algorithms is developed by collaborating laboratories. When citing or acknowledging the platform, users are kindly reminded to also reference the relevant laboratory publications.
 
 .. toctree::
    :maxdepth: 4

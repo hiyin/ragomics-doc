@@ -206,6 +206,10 @@
 <li class="toctree-l1"><a class="reference internal" href="#public-analyses-and-databases">Public Analyses and Databases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#data-upload-and-management">Data Upload and Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#supported-data-formats-for-upload-in-ragomics">Supported Data Formats for Upload in Ragomics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#analysis-panel">Analysis Panel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#analysis-pipeline">Analysis Pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#pipeline-helper-and-analysis-nodes">Pipeline Helper and Analysis Nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#adjusting-parameters">Adjusting Parameters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../analysis-panel/_index.html">分析面板（Analysis Panel）</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../create-analysis-upload-data/_index.html">上传数据</a></li>
 </ul>
@@ -422,6 +426,107 @@
 <li><p>On the right side of the upload panel, you can find format requirements and mandatory file examples.</p></li>
 <li><p>Once the data is uploaded, click the <strong>Assemble</strong> button to complete the data assembly.</p></li>
 </ol>
+</section>
+</section>
+<section id="analysis-panel">
+<h1>Analysis Panel<a class="headerlink" href="#analysis-panel" title="Link to this heading">¶</a></h1>
+<p>In the <strong>Analysis Panel</strong>, users can freely perform various analysis operations, such as uploading data, importing data, selecting <strong>Function Blocks</strong>, and assembling analysis pipelines. After completing the analysis, users can view the results directly or navigate to the corresponding <strong>Visualization Panel</strong> to explore the visualized outcomes.</p>
+<hr class="docutils" />
+<section id="importing-data">
+<h2>Importing Data<a class="headerlink" href="#importing-data" title="Link to this heading">¶</a></h2>
+<p>In the <strong>Analysis Panel</strong>, users can import data through the <strong>Data Source</strong> tab on the left sidebar. There are three methods for importing data:</p>
+<section id="importing-from-existing-data">
+<h3>1. Importing from Existing Data<a class="headerlink" href="#importing-from-existing-data" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>If users have already uploaded the target data to their account via the data upload feature, they can choose to import it from existing data.</p></li>
+<li><p>In the import form, select the desired data by checking the boxes on the left.</p></li>
+<li><p>Click <strong>Confirm</strong> to import the data from the account into the current analysis task.</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="analysis-pipeline">
+<h1>Analysis Pipeline<a class="headerlink" href="#analysis-pipeline" title="Link to this heading">¶</a></h1>
+<section id="assembling-an-analysis-pipeline">
+<h2>Assembling an Analysis Pipeline<a class="headerlink" href="#assembling-an-analysis-pipeline" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p>In the <strong>Analysis Panel</strong>, select any dataset from either the <strong>Public Data List</strong> or the <strong>Imported Data List</strong> on the left sidebar.</p></li>
+<li><p>Drag the selected data into the main analysis area of the panel.</p></li>
+<li><p>Based on your analysis requirements, choose the appropriate algorithm modules and drag them into the main analysis area.</p></li>
+<li><p>Independent algorithm modules can be connected to uploaded single-cell sequencing data or other analysis nodes.</p></li>
+<li><p>To connect, select the connection point on one side and drag it to another function block or data node.</p></li>
+</ol>
+</section>
+</section>
+<section id="pipeline-helper-and-analysis-nodes">
+<h1>Pipeline Helper and Analysis Nodes<a class="headerlink" href="#pipeline-helper-and-analysis-nodes" title="Link to this heading">¶</a></h1>
+<section id="pipeline-helper">
+<h2>Pipeline Helper<a class="headerlink" href="#pipeline-helper" title="Link to this heading">¶</a></h2>
+<p>If users require assistance when assembling analysis pipelines, they can enable <strong>Guidance</strong> during the creation of an analysis or click the <strong>Pipeline Helper</strong> button in the top-left corner of the main area in the <strong>Analysis Panel</strong>.</p>
+</section>
+<hr class="docutils" />
+<section id="pipeline-template-library">
+<h2>Pipeline Template Library<a class="headerlink" href="#pipeline-template-library" title="Link to this heading">¶</a></h2>
+<p>In the <strong>Pipeline Helper</strong> page, users can select a suitable analysis pipeline from Ragomics' <strong>Pipeline Template Library</strong> and import it into the <strong>Analysis Panel</strong> for use.</p>
+</section>
+<hr class="docutils" />
+<section id="ai-pipeline">
+<h2>AI Pipeline<a class="headerlink" href="#ai-pipeline" title="Link to this heading">¶</a></h2>
+<p>In the <strong>Pipeline Helper</strong> page, users can utilize the <strong>AI Pipeline</strong> feature:</p>
+<ol class="arabic simple">
+<li><p>Select the dataset to be analyzed and input the analysis requirements.</p>
+<ul class="simple">
+<li><p>If unsure about how to phrase the requirements, click <strong>Request Templates</strong> to view examples.</p></li>
+</ul>
+</li>
+<li><p>After entering the analysis requirements, click <strong>Next Step</strong>.</p></li>
+<li><p>Ragomics will display the original requirements and the AI-optimized version.</p>
+<ul class="simple">
+<li><p>Users can compare the two, edit them if necessary, or refresh the AI-generated result if unsatisfied.</p></li>
+</ul>
+</li>
+<li><p>Select the finalized requirement text and click <strong>Confirm</strong>.</p></li>
+<li><p>In the next step, choose to either query and match pipelines from the <strong>Pipeline Template Library</strong> or have the AI generate a new pipeline.</p></li>
+<li><p>Once the pipeline is generated, click <strong>Import</strong> to add it to the <strong>Analysis Panel</strong>.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="analysis-nodes">
+<h2>Analysis Nodes<a class="headerlink" href="#analysis-nodes" title="Link to this heading">¶</a></h2>
+<p>In the <strong>Analysis Panel</strong>, each algorithm module connected within the analysis pipeline is referred to as an <strong>Analysis Node</strong>. Users can perform the following operations on nodes:</p>
+<ul class="simple">
+<li><p><strong>Activate Agent Functionality</strong>: Start the intelligent agent for assistance.</p></li>
+<li><p><strong>Adjust Parameters</strong>: Modify parameters as needed.</p></li>
+<li><p><strong>Run Analysis</strong>: Execute the analysis for the node.</p></li>
+<li><p><strong>View Node Code</strong>: Inspect the underlying code for the node.</p></li>
+<li><p><strong>Check Node Outputs</strong>: Access the results generated by the node.</p></li>
+<li><p><strong>View Calculation Logs and Details</strong>: Monitor the computation process.</p></li>
+<li><p><strong>Share Node</strong>: Share the node with collaborators.</p></li>
+<li><p><strong>Configure Computational Resources</strong>: Allocate resources for the node.</p></li>
+<li><p><strong>Download Node Data</strong>: Export the data generated by the node.</p></li>
+</ul>
+<section id="node-design">
+<h3>Node Design<a class="headerlink" href="#node-design" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><strong>Connection Zones</strong>: Located on the left and right sides of the node for assembling pipelines.</p></li>
+<li><p><strong>Node Status</strong>: Indicated by the color at the top of the node.</p></li>
+<li><p><strong>Node Name</strong>: Displays the default name of the algorithm module. Users can click the edit button to customize the node name.</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="adjusting-parameters">
+<h1>Adjusting Parameters<a class="headerlink" href="#adjusting-parameters" title="Link to this heading">¶</a></h1>
+<p>Users can click the <strong>Edit</strong> button within an analysis node to open the parameter adjustment panel.</p>
+<hr class="docutils" />
+<section id="agent">
+<h2>Agent<a class="headerlink" href="#agent" title="Link to this heading">¶</a></h2>
+<p>The <strong>Agent</strong> functionality provides intelligent assistance for tasks within an analysis node.</p>
+</section>
+<hr class="docutils" />
+<section id="visualization-panel">
+<h2>Visualization Panel<a class="headerlink" href="#visualization-panel" title="Link to this heading">¶</a></h2>
+<p>The <strong>Visualization Panel</strong> allows users to explore and interact with the visualized results of their analysis.</p>
 <section id="upload-from-data-source">
 <h3>Upload from data source<a class="headerlink" href="#upload-from-data-source" title="Link to this heading">¶</a></h3>
 <p>In the <strong>Data source</strong> management page, click ==Upload data from device== to upload data
@@ -529,7 +634,33 @@
 <li><a class="reference internal" href="#x-data-upload">2. 10x Data Upload</a></li>
 <li><a class="reference internal" href="#assemble-anndata">3. Assemble AnnData</a></li>
 <li><a class="reference internal" href="#fastq-upload">4. FastQ Upload</a></li>
-<li><a class="reference internal" href="#spaceranger-count-upload">5. Spaceranger Count Upload</a><ul>
+<li><a class="reference internal" href="#spaceranger-count-upload">5. Spaceranger Count Upload</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#analysis-panel">Analysis Panel</a><ul>
+<li><a class="reference internal" href="#importing-data">Importing Data</a><ul>
+<li><a class="reference internal" href="#importing-from-existing-data">1. Importing from Existing Data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#analysis-pipeline">Analysis Pipeline</a><ul>
+<li><a class="reference internal" href="#assembling-an-analysis-pipeline">Assembling an Analysis Pipeline</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pipeline-helper-and-analysis-nodes">Pipeline Helper and Analysis Nodes</a><ul>
+<li><a class="reference internal" href="#pipeline-helper">Pipeline Helper</a></li>
+<li><a class="reference internal" href="#pipeline-template-library">Pipeline Template Library</a></li>
+<li><a class="reference internal" href="#ai-pipeline">AI Pipeline</a></li>
+<li><a class="reference internal" href="#analysis-nodes">Analysis Nodes</a><ul>
+<li><a class="reference internal" href="#node-design">Node Design</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#adjusting-parameters">Adjusting Parameters</a><ul>
+<li><a class="reference internal" href="#agent">Agent</a></li>
+<li><a class="reference internal" href="#visualization-panel">Visualization Panel</a><ul>
 <li><a class="reference internal" href="#upload-from-data-source">Upload from data source</a></li>
 </ul>
 </li>
