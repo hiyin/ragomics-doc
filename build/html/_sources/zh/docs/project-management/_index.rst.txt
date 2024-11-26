@@ -1,0 +1,10 @@
+# Project Management
+
+## Public Examples
+The platform will select some representative and valuable analysis projects as public examples from time to time for display. The analysis projects in the public examples can view all data information in the analysis interface and visual operation interface. However, public examples do not support user editing operations.
+
+## Collaborative sharing
+When faced with collaborative needs, users can click the collaborative sharing button on the analysis task card they want to share, switch the "Public" status button to the on state in the pop-up window, and click the quick copy link below to complete the access address copy of this analysis task. Other users can access and view the analysis task you shared through this link, but guest users are not supported to edit it.
+
+## Create analysis and upload data
+[create analysis and upload data](./create-analysis-and-upload-data/_index.md)
