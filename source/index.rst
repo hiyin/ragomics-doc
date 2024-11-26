@@ -3,14 +3,11 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-ragomics documentation
-======================
+Ragomics Platform Information
 
-Add your content using ``reStructuredText`` syntax. See the
-`reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
-documentation for details.
+The Ragomics platform is independently developed by **Shanghai Ragamuffin Inc.** The platform's UI design and code are protected by copyright and patent laws.
 
-
+The code for Ragomics' functional blocks and specific bioinformatics algorithms is developed by collaborating laboratories. When citing or acknowledging the platform, users are kindly reminded to also reference the relevant laboratory publications.
 
 .. toctree::
    :maxdepth: 3
