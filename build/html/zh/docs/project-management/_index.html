@@ -205,13 +205,9 @@
 <li class="toctree-l1"><a class="reference internal" href="#creation-and-management-of-analysis-tasks"><span style="color:#00bfff"><strong>Creation and Management of Analysis Tasks</strong></span></a></li>
 <li class="toctree-l1"><a class="reference internal" href="#public-analyses-and-databases"><span style="color:#00bfff"><strong>Public Analyses and Databases</strong></span></a></li>
 <li class="toctree-l1"><a class="reference internal" href="#data-upload-and-management"><span style="color:#00bfff"><strong>Data Upload and Management</strong></span></a></li>
-<li class="toctree-l1"><a class="reference internal" href="#analysis-panel">Analysis Panel</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#analysis-pipeline">Analysis Pipeline</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#pipeline-helper-and-analysis-nodes">Pipeline Helper and Analysis Nodes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#analysis-nodes">Analysis Nodes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#adjusting-parameters">Adjusting Parameters</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#running-analysis">Running Analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#node-states">Node States</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#analysis-panel"><span style="color:#00bfff"><strong>Analysis Panel</strong></span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#analysis-pipeline"><span style="color:#00bfff;"><strong>Analysis Pipeline</strong></span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#analysis-nodes"><span style="color:#00bfff;"><strong>Analysis Nodes</strong></span></a></li>
 <li class="toctree-l1"><a class="reference internal" href="#node-output-results"><strong style="color: #00bfff; font-weight:bold;">Node Output Results</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="#calculation-logs"><strong style="color: #00bfff; font-weight:bold;">Calculation Logs</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="#calculation-details"><strong style="color: #00bfff;">Calculation Details</strong></a></li>
@@ -428,12 +424,12 @@
 <li><p>Add Spaceranger Count data by dragging and dropping or clicking the upload area.</p></li>
 <li><p>On the right side of the upload panel, you can find format requirements and mandatory file examples.</p></li>
 <li><p>Once the data is uploaded, click the <strong>Assemble</strong> button to complete the data assembly.
-<img alt="spaceranger-count-upload" src="zh/img/data-upload-and-management/spaceranger%20count%20upload.png" /></p></li>
+<img alt="spaceranger-count-upload" src="../../../_images/spaceranger-count-upload.png" /></p></li>
 </ul>
 </section>
 <section id="importing-data">
 <h2><span style="color:#00bfff"><strong>Importing Data</strong></span><a class="headerlink" href="#importing-data" title="Link to this heading">¶</a></h2>
-<p>In the <strong>Analysis Panel</strong>, users can import data through <strong>Add</strong> (<img alt="add-button" src="../../../_images/add-button.png" />) button under the <span style="color:#00bfff">Data Source</span> tab on the left sidebar. There are three methods for importing data:</p>
+<p>In the <span style="color:#00bfff">Analysis Panel</span>, users can import data through <strong>Add</strong> (<img alt="add-button" src="../../../_images/add-button.png" />) button under the <span style="color:#00bfff">Data Source</span> tab on the left sidebar. There are three methods for importing data:</p>
 <section id="importing-from-existing-data">
 <h3>1. Importing from Existing Data<a class="headerlink" href="#importing-from-existing-data" title="Link to this heading">¶</a></h3>
 <ul class="simple">
@@ -446,96 +442,100 @@
 </section>
 <hr class="docutils" />
 <section class="tex2jax_ignore mathjax_ignore" id="analysis-panel">
-<h1>Analysis Panel<a class="headerlink" href="#analysis-panel" title="Link to this heading">¶</a></h1>
-<p>In the <strong>Analysis Panel</strong>, users can freely perform various analysis operations, such as uploading data, importing data, selecting <strong>Function Blocks</strong>, and assembling analysis pipelines. After completing the analysis, users can view the results directly or navigate to the corresponding <strong>Visualization Panel</strong> to explore the visualized outcomes.</p>
+<h1><span style="color:#00bfff"><strong>Analysis Panel</strong></span><a class="headerlink" href="#analysis-panel" title="Link to this heading">¶</a></h1>
+<p>In the <span style="color:#00bfff">Analysis Panel</span>, users can freely perform various analysis operations, such as <span style="color:#00bfff">Data Upload</span>, <span style="color:#00bfff">Importing Data</span>, <strong>Function Blocks</strong> option, and <span style="color:#00bfff">Analysis Pipeline Assembly</span>. After completing the analysis, users can view the results directly or navigate to the corresponding <span style="color:#00bfff">Visualization Panel</span> to explore the visualized outcomes.
+Users can choose between manual or <a class="reference internal" href="#automatic-layout"><span class="xref myst"><span style="color:#00bfff">Automatic Layout</span></span></a> option of the analysis pipeline on the current analysis panel. To switch to another analysis task, users can click the top-left <strong>Ragomics</strong> (<img alt="ragomics-button" src="../../../_images/ragomics-button.png" />) button to return to the homepage.</p>
 <section id="automatic-layout">
-<h2><strong><span style="color:#00bfff;">Automatic Layout</span></strong><a class="headerlink" href="#automatic-layout" title="Link to this heading">¶</a></h2>
-<p>Users can manually arrange the nodes of the analysis pipeline or enable an automatic layout feature. By clicking the button on the bottom toolbar of the analysis panel, users can activate automatic layout in the pop-up options. When enabled, any subsequently connected analysis nodes will be automatically arranged. To instantly rearrange the entire analysis pipeline, users can click the bottom toolbar button, and all nodes in the current analysis panel will be automatically laid out immediately.</p>
+<h2><strong><span style="color:#00bfff;" id="automatic-layout">Automatic Layout</span></strong><a class="headerlink" href="#automatic-layout" title="Link to this heading">¶</a></h2>
+<p>Users can manually arrange the nodes of the analysis pipeline or enable an automatic layout feature. By clicking the <strong>Settings</strong> (<img alt="settings-button" src="../../../_images/settings-button.png" />) button on the bottom toolbar of the analysis panel, users can activate automatic layout in the pop-up options. When enabled, any subsequently connected analysis nodes will be automatically arranged. To instantly rearrange the entire analysis pipeline, users can click the bottom toolbar button, and all nodes in the current analysis panel will be automatically laid out immediately.</p>
 </section>
 <section id="analysis-pipeline-thumbnail">
 <h2><strong><span style="color:#00bfff;">Analysis Pipeline Thumbnail</span></strong><a class="headerlink" href="#analysis-pipeline-thumbnail" title="Link to this heading">¶</a></h2>
-<p>For large analysis pipelines that are difficult to overview, users can enable the thumbnail feature by clicking the button on the bottom toolbar of the analysis panel. The thumbnail allows users to quickly locate which part of the pipeline they are currently operating on within the broader analysis pipeline.</p>
+<p>For large analysis pipelines that are difficult to overview, users can enable the thumbnail feature by clicking the <strong>Zoom</strong> (<img alt="enlarge-button" src="../../../_images/enlarge-button.png" />) button on the bottom toolbar of the analysis panel. The thumbnail allows users to quickly locate which part of the pipeline they are currently operating on within the broader analysis pipeline.
+<img alt="thumbnail" src="../../../_images/analysis-pipeline-thumbnail.png" /></p>
 </section>
 <section id="analysis-node-status-panel">
-<h2><strong><span style="color:#00bfff;">Analysis Node Status Panel</span></strong> <em>(分析节点状态面板)</em><a class="headerlink" href="#analysis-node-status-panel" title="Link to this heading">¶</a></h2>
+<h2><strong><span style="color:#00bfff;">Analysis Node Status Panel</span></strong><a class="headerlink" href="#analysis-node-status-panel" title="Link to this heading">¶</a></h2>
 <p>If users need an overview of the status of all analysis nodes in the current pipeline, they can refer to the bottom toolbar. The toolbar displays the total number of nodes in the current panel, along with counts for nodes that are running, failed, successful, waiting, or under bug-fix debugging.</p>
 <p>Users can click the number next to &quot;Nodes&quot; to open the <strong>Analysis Node Status Panel</strong>. When the highlight setting is enabled, clicking any node card in the analysis panel will highlight the corresponding row in the status panel. Similarly, clicking a node name in the status panel will cause the analysis panel to focus on the corresponding node in the pipeline.</p>
-<p>Additionally, clicking the icons next to each node in the status panel allows users to view the code for that specific node.</p>
+<p>Additionally, clicking the <strong>View Code</strong> (<img alt="detail-code" src="../../../_images/detail.png" />) icon next to each node in the status panel allows users to view the code for that specific node.
+<img alt="analysis-dashboard" src="../../../_images/analysis-dashboard.png" /></p>
 </section>
 <section id="sharing-analysis-tasks">
-<h2><strong><span style="color:#00bfff;">Sharing Analysis Tasks</span></strong><a class="headerlink" href="#sharing-analysis-tasks" title="Link to this heading">¶</a></h2>
+<h2><span style="color:#00bfff;"><strong>Sharing Analysis Tasks</strong></span><a class="headerlink" href="#sharing-analysis-tasks" title="Link to this heading">¶</a></h2>
 <p>To share a specific analysis task with others, users can click the <strong>&quot;Share&quot;</strong> button at the top of the analysis panel. In the pop-up window, enable the <strong>&quot;Public&quot;</strong> setting and click the <strong>&quot;Copy Link&quot;</strong> button to generate a link for the current analysis task. Other users can use this link to access and view the shared task; however, guest users will not be able to make edits.</p>
-<p>If editing permissions are required, users can manage collaborators in the settings below.</p>
+<p>If editing permissions are required, users can perform <span style="color:#00bfff;">Collaborator Management</span> in the settings below.</p>
 </section>
 <section id="in-app-notifications">
-<h2><strong><span style="color:#00bfff;">In-App Notifications</span></strong><a class="headerlink" href="#in-app-notifications" title="Link to this heading">¶</a></h2>
-<p>When an analysis node runs successfully or fails, or when a user receives a collaboration invitation, the in-app notification button at the top of the analysis panel will display an alert. Clicking the button will show a list of all notifications, allowing users to view and respond to the information accordingly.</p>
+<h2><span style="color:#00bfff;"><strong>In-App Notifications</strong></span><a class="headerlink" href="#in-app-notifications" title="Link to this heading">¶</a></h2>
+<p>When an analysis node runs successfully or fails, or when a user receives a collaboration invitation, the in-app notification (<img alt="in-app-notification" src="../../../_images/in-app-notification.png" />) button at the top of the analysis panel will display an alert. Clicking the button will show a list of all notifications, allowing users to view and respond to the information accordingly.</p>
 </section>
 </section>
 <hr class="docutils" />
 <section class="tex2jax_ignore mathjax_ignore" id="analysis-pipeline">
-<h1>Analysis Pipeline<a class="headerlink" href="#analysis-pipeline" title="Link to this heading">¶</a></h1>
+<h1><span style="color:#00bfff;"><strong>Analysis Pipeline</strong></span><a class="headerlink" href="#analysis-pipeline" title="Link to this heading">¶</a></h1>
 <section id="assembling-an-analysis-pipeline">
-<h2>Assembling an Analysis Pipeline<a class="headerlink" href="#assembling-an-analysis-pipeline" title="Link to this heading">¶</a></h2>
+<h2><span style="color:#00bfff;"><strong>Assembling an Analysis Pipeline</strong></span><a class="headerlink" href="#assembling-an-analysis-pipeline" title="Link to this heading">¶</a></h2>
 <ol class="arabic simple">
-<li><p>In the <strong>Analysis Panel</strong>, select any dataset from either the <strong>Public Data List</strong> or the <strong>Imported Data List</strong> on the left sidebar.</p></li>
+<li><p>In the <span style="color:#00bfff;">Analysis Panel</span>, select any dataset from either the <strong>Public</strong> or the <strong>Imported</strong> list on the left sidebar.</p></li>
 <li><p>Drag the selected data into the main analysis area of the panel.</p></li>
 <li><p>Based on your analysis requirements, choose the appropriate algorithm modules and drag them into the main analysis area.</p></li>
-<li><p>Independent algorithm modules can be connected to uploaded single-cell sequencing data or other analysis nodes.</p></li>
-<li><p>To connect, select the connection point on one side and drag it to another function block or data node.</p></li>
+<li><p>Independent algorithm modules can be connected to uploaded single-cell sequencing data or other <span style="color:#00bfff;">Analysis Nodes</span>.</p></li>
+<li><p>To connect, select the connection point on one side and drag it to another function block or data node.
+<img alt="analysis-pipeline-assembly" src="../../../_images/analysis-pipeline-assembly.png" /></p></li>
 </ol>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="pipeline-helper-and-analysis-nodes">
-<h1>Pipeline Helper and Analysis Nodes<a class="headerlink" href="#pipeline-helper-and-analysis-nodes" title="Link to this heading">¶</a></h1>
+<section id="pipeline-helper-and-analysis-nodes">
+<h2><span style="color:#00bfff;"><strong>Pipeline Helper and Analysis Nodes</strong></span><a class="headerlink" href="#pipeline-helper-and-analysis-nodes" title="Link to this heading">¶</a></h2>
 <section id="pipeline-helper">
-<h2>Pipeline Helper<a class="headerlink" href="#pipeline-helper" title="Link to this heading">¶</a></h2>
-<p>If users require assistance when assembling analysis pipelines, they can enable <strong>Guidance</strong> during the creation of an analysis or click the <strong>Pipeline Helper</strong> button in the top-left corner of the main area in the <strong>Analysis Panel</strong>.</p>
+<h3><span style="color:#00bfff;"><strong>Pipeline Helper</strong></span><a class="headerlink" href="#pipeline-helper" title="Link to this heading">¶</a></h3>
+<p>If users require assistance when assembling analysis pipelines, they can enable <strong>Guidance</strong> during the <span style="color:#00bfff;">Creating an Analysis</span> step or click the <strong>Pipeline Helper</strong> button in the top-left corner of the main area in the <span style="color:#00bfff;">Analysis Panel</span>.</p>
 </section>
 <section id="pipeline-template-library">
-<h2>Pipeline Template Library<a class="headerlink" href="#pipeline-template-library" title="Link to this heading">¶</a></h2>
+<h3><span style="color:#00bfff;"><strong>Pipeline Template Library</strong></span><a class="headerlink" href="#pipeline-template-library" title="Link to this heading">¶</a></h3>
 <p>In the <strong>Pipeline Helper</strong> page, users can select a suitable analysis pipeline from Ragomics' <strong>Pipeline Template Library</strong> and import it into the <strong>Analysis Panel</strong> for use.</p>
 <p>Users can select analysis pipelines from Ragomics' <strong>Pipeline Template Library</strong> and import them into the analysis panel on the Analysis Pipeline Assistant page.</p>
-<p>If the template library does not have a suitable template, users can use the <strong>AI Pipeline</strong> feature to generate a new analysis pipeline.</p>
+<p>If the template library does not have a suitable template, users can use the <span style="color:#00bfff;">AI Pipeline</span> feature to generate a new analysis pipeline.
+<img alt="pipeline-template" src="../../../_images/pipeline-template.png" /></p>
+</section>
 </section>
 </section>
 <hr class="docutils" />
 <section class="tex2jax_ignore mathjax_ignore" id="analysis-nodes">
-<h1>Analysis Nodes<a class="headerlink" href="#analysis-nodes" title="Link to this heading">¶</a></h1>
-<p>In the <strong>Analysis Panel</strong>, each algorithm module connected within the analysis pipeline is referred to as an <strong>Analysis Node</strong>. Users can perform the following operations on nodes:</p>
+<h1><span style="color:#00bfff;"><strong>Analysis Nodes</strong></span><a class="headerlink" href="#analysis-nodes" title="Link to this heading">¶</a></h1>
+<p>In the <span style="color:#00bfff;">Analysis Panel</span>, each algorithm module connected within the <span style="color:#00bfff;">Analysis Pipeline</span> is referred to as an <span style="color:#00bfff;">Analysis Node</span>. Users can perform the following operations on nodes:</p>
 <ul class="simple">
-<li><p><strong>Activate Agent Functionality</strong>: Start the intelligent agent for assistance.</p></li>
-<li><p><strong>Adjust Parameters</strong>: Modify parameters as needed.</p></li>
-<li><p><strong>Run Analysis</strong>: Execute the analysis for the node.</p></li>
-<li><p><strong>View Node Code</strong>: Inspect the underlying code for the node.</p></li>
-<li><p><strong>Check Node Outputs</strong>: Access the results generated by the node.</p></li>
-<li><p><strong>View Calculation Logs and Details</strong>: Monitor the computation process.</p></li>
-<li><p><strong>Share Node</strong>: Share the node with collaborators.</p></li>
-<li><p><strong>Configure Computational Resources</strong>: Allocate resources for the node.</p></li>
-<li><p><strong>Download Node Data</strong>: Export the data generated by the node.</p></li>
+<li><p><span style="color:#00bfff;">Fine-Tuning Parameter</span></p></li>
+<li><p><span style="color:#00bfff;">Analysis Execution</span></p></li>
+<li><p><span style="color:#00bfff;">Node Code</span>, <span style="color:#00bfff;">Analysis Log</span>, and <span style="color:#00bfff;">Analysis Details</span> View</p></li>
+<li><p><span style="color:#00bfff;">Node Sharing</span></p></li>
+<li><p><span style="color:#00bfff;">Computational Resource Configuration</span></p></li>
+<li><p><span style="color:#00bfff;">Node Data Download</span></p></li>
 </ul>
 <p>Node Design</p>
 <ul class="simple">
-<li><p><strong>Connection Zones</strong>: Located on the left and right sides of the node for assembling pipelines.</p></li>
-<li><p><strong>Node Status</strong>: Indicated by the color at the top of the node.</p></li>
-<li><p><strong>Node Name</strong>: Displays the default name of the algorithm module. Users can click the edit button to customize the node name.</p></li>
+<li><p>Connection Zones: Located on the left and right sides of the node for <span style="color:#00bfff;">Analysis Pipeline Assembly</span>.</p></li>
+<li><p><span style="color:#00bfff;">Node Status</span>: Indicated by the color at the top of the node.</p></li>
+<li><p>Node Name: Displays the default name of the algorithm module. Users can click the <strong>Edit</strong> (<img alt="edit-button" src="../../../_images/edit-button1.png" />) button to customize the node name.</p></li>
 </ul>
+<section id="adjusting-parameters">
+<h2><span style="color:#00bfff;"><strong>Adjusting Parameters</strong></span><a class="headerlink" href="#adjusting-parameters" title="Link to this heading">¶</a></h2>
+<p>Users can click the <strong>Parameter</strong> (<img alt="parameter-button" src="../../../_images/parameter-button.png" />) button within an analysis node to open the parameter adjustment panel.
+In the parameters panel, parameters marked with a red asterisk are required. If users are unclear about the meaning and function of a parameter, they can click the <strong>Information</strong> (<img alt="information-icon" src="../../../_images/information-icon.png" />) icon next to each parameter to view a description. Once the parameters are filled in, users can click the <strong>&quot;Update&quot;</strong> button to save the parameters, or click the <strong>&quot;Update and Run&quot;</strong> button to execute the current analysis node.
+Clicking the <strong>&quot;Reset&quot;</strong> button will revert the parameters to their last updated state.
+Clicking the <strong>&quot;Set as Default&quot;</strong> button will reset all parameters in the analysis node to their default values. If users need assistance from the <span style="color:#00bfff;">Agent</span> while filling in parameters, they can use the <span style="color:#00bfff;">AI Parameter</span> module.</p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="adjusting-parameters">
-<h1>Adjusting Parameters<a class="headerlink" href="#adjusting-parameters" title="Link to this heading">¶</a></h1>
-<p>Users can click the <strong>Edit</strong> button within an analysis node to open the parameter adjustment panel.</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="running-analysis">
-<h1>Running Analysis<a class="headerlink" href="#running-analysis" title="Link to this heading">¶</a></h1>
-<p>When users need to run a specific analysis node, they have three options:</p>
+<section id="running-analysis">
+<h2><span style="color:#00bfff;"><strong>Running Analysis</strong></span><a class="headerlink" href="#running-analysis" title="Link to this heading">¶</a></h2>
+<p>When users need to run a specific <span style="color:#00bfff;">Analysis Node</span>, they have three options:</p>
 <ol class="arabic simple">
-<li><p>Users can click the &quot;Update and Run&quot; button in the parameter panel of the analysis node to run the current node.</p></li>
-<li><p>Users can click the button on the node card of the analysis node to start the analysis.</p></li>
-<li><p>Users can click the button on the node card of the analysis node, then select &quot;Run Sub Tree&quot; in the secondary popup. In this case, the node and all subsequent child nodes will be executed sequentially.</p></li>
+<li><p>Users can click the <strong>&quot;Update and Run&quot;</strong> button in the parameter panel of the analysis node to run the current node.</p></li>
+<li><p>Users can click the <strong>&quot;Start&quot;</strong> (<img alt="start-button" src="../../../_images/start-button.png" />) button on the node card of the <span style="color:#00bfff;">Analysis Node</span> to start the analysis.</p></li>
+<li><p>Users can click the <strong>&quot;More&quot;</strong> (<img alt="more-button" src="../../../_images/more-button.png" />) button on the node card of the <span style="color:#00bfff;">Analysis Node</span>, then select <strong>&quot;Run Sub Tree&quot;</strong> in the secondary popup. In this case, the node and all subsequent child nodes will be executed sequentially.</p></li>
 </ol>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="node-states">
-<h1>Node States<a class="headerlink" href="#node-states" title="Link to this heading">¶</a></h1>
+<section id="node-states">
+<h2><span style="color:#00bfff;"><strong>Node States</strong></span><a class="headerlink" href="#node-states" title="Link to this heading">¶</a></h2>
 <p>In the analysis panel, there are four possible states for an analysis node:</p>
 <ol class="arabic simple">
 <li><p><strong style="color:#00bfff;">Ready to Run</strong>: The top of the node card is white, indicating that the node has not been run yet.</p></li>
@@ -543,6 +543,7 @@
 <li><p><span style="color:#00bfff; font-weight:bold;">Run Completed</span>: The top of the node card is green, indicating that the node has successfully run.</p></li>
 <li><p><span style="color:#00bfff; font-weight:bold;">Run Error</span>: The top of the node card is red, indicating that an error occurred during the node's run, requiring troubleshooting.</p></li>
 </ol>
+</section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="node-output-results">
 <h1><strong style="color: #00bfff; font-weight:bold;">Node Output Results</strong><a class="headerlink" href="#node-output-results" title="Link to this heading">¶</a></h1>
@@ -828,27 +829,29 @@ In <strong>Violin Plot</strong> mode, users can choose an <strong>X-axis</strong
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#analysis-panel">Analysis Panel</a><ul>
-<li><a class="reference internal" href="#automatic-layout"><strong><span style="color:#00bfff;">Automatic Layout</span></strong></a></li>
+<li><a class="reference internal" href="#analysis-panel"><span style="color:#00bfff"><strong>Analysis Panel</strong></span></a><ul>
+<li><a class="reference internal" href="#automatic-layout"><strong><span style="color:#00bfff;" id="automatic-layout">Automatic Layout</span></strong></a></li>
 <li><a class="reference internal" href="#analysis-pipeline-thumbnail"><strong><span style="color:#00bfff;">Analysis Pipeline Thumbnail</span></strong></a></li>
-<li><a class="reference internal" href="#analysis-node-status-panel"><strong><span style="color:#00bfff;">Analysis Node Status Panel</span></strong> <em>(分析节点状态面板)</em></a></li>
-<li><a class="reference internal" href="#sharing-analysis-tasks"><strong><span style="color:#00bfff;">Sharing Analysis Tasks</span></strong></a></li>
-<li><a class="reference internal" href="#in-app-notifications"><strong><span style="color:#00bfff;">In-App Notifications</span></strong></a></li>
+<li><a class="reference internal" href="#analysis-node-status-panel"><strong><span style="color:#00bfff;">Analysis Node Status Panel</span></strong></a></li>
+<li><a class="reference internal" href="#sharing-analysis-tasks"><span style="color:#00bfff;"><strong>Sharing Analysis Tasks</strong></span></a></li>
+<li><a class="reference internal" href="#in-app-notifications"><span style="color:#00bfff;"><strong>In-App Notifications</strong></span></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#analysis-pipeline">Analysis Pipeline</a><ul>
-<li><a class="reference internal" href="#assembling-an-analysis-pipeline">Assembling an Analysis Pipeline</a></li>
+<li><a class="reference internal" href="#analysis-pipeline"><span style="color:#00bfff;"><strong>Analysis Pipeline</strong></span></a><ul>
+<li><a class="reference internal" href="#assembling-an-analysis-pipeline"><span style="color:#00bfff;"><strong>Assembling an Analysis Pipeline</strong></span></a></li>
+<li><a class="reference internal" href="#pipeline-helper-and-analysis-nodes"><span style="color:#00bfff;"><strong>Pipeline Helper and Analysis Nodes</strong></span></a><ul>
+<li><a class="reference internal" href="#pipeline-helper"><span style="color:#00bfff;"><strong>Pipeline Helper</strong></span></a></li>
+<li><a class="reference internal" href="#pipeline-template-library"><span style="color:#00bfff;"><strong>Pipeline Template Library</strong></span></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#pipeline-helper-and-analysis-nodes">Pipeline Helper and Analysis Nodes</a><ul>
-<li><a class="reference internal" href="#pipeline-helper">Pipeline Helper</a></li>
-<li><a class="reference internal" href="#pipeline-template-library">Pipeline Template Library</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#analysis-nodes">Analysis Nodes</a></li>
-<li><a class="reference internal" href="#adjusting-parameters">Adjusting Parameters</a></li>
-<li><a class="reference internal" href="#running-analysis">Running Analysis</a></li>
-<li><a class="reference internal" href="#node-states">Node States</a></li>
+<li><a class="reference internal" href="#analysis-nodes"><span style="color:#00bfff;"><strong>Analysis Nodes</strong></span></a><ul>
+<li><a class="reference internal" href="#adjusting-parameters"><span style="color:#00bfff;"><strong>Adjusting Parameters</strong></span></a></li>
+<li><a class="reference internal" href="#running-analysis"><span style="color:#00bfff;"><strong>Running Analysis</strong></span></a></li>
+<li><a class="reference internal" href="#node-states"><span style="color:#00bfff;"><strong>Node States</strong></span></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#node-output-results"><strong style="color: #00bfff; font-weight:bold;">Node Output Results</strong></a></li>
 <li><a class="reference internal" href="#calculation-logs"><strong style="color: #00bfff; font-weight:bold;">Calculation Logs</strong></a></li>
 <li><a class="reference internal" href="#calculation-details"><strong style="color: #00bfff;">Calculation Details</strong></a></li>

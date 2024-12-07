@@ -121,10 +121,10 @@ Ragomics currently supports the following five data formats for upload:
 - Add Spaceranger Count data by dragging and dropping or clicking the upload area.  
 - On the right side of the upload panel, you can find format requirements and mandatory file examples.  
 - Once the data is uploaded, click the **Assemble** button to complete the data assembly.
-![spaceranger-count-upload](../../img/data-upload-and-management/spaceranger%20count%20upload.png)
+![spaceranger-count-upload](../../img/data-upload-and-management/spaceranger-count-upload.png)
 
 ## <span style="color:#00bfff">**Importing Data**</span>
-In the **Analysis Panel**, users can import data through **Add** (![add-button](../../img/data-upload-and-management/add-button.png)) button under the <span style="color:#00bfff">Data Source</span> tab on the left sidebar. There are three methods for importing data:
+In the <span style="color:#00bfff">Analysis Panel</span>, users can import data through **Add** (![add-button](../../img/data-upload-and-management/add-button.png)) button under the <span style="color:#00bfff">Data Source</span> tab on the left sidebar. There are three methods for importing data:
 
 ### 1. Importing from Existing Data
 - If users have already uploaded the target data to their account via the data upload feature, they can choose to import it from existing data.  
@@ -133,90 +133,90 @@ In the **Analysis Panel**, users can import data through **Add** (![add-button](
 
 ---
 
-# Analysis Panel
+# <span style="color:#00bfff">**Analysis Panel**</span>
 
-In the **Analysis Panel**, users can freely perform various analysis operations, such as uploading data, importing data, selecting **Function Blocks**, and assembling analysis pipelines. After completing the analysis, users can view the results directly or navigate to the corresponding **Visualization Panel** to explore the visualized outcomes.
+In the <span style="color:#00bfff">Analysis Panel</span>, users can freely perform various analysis operations, such as <span style="color:#00bfff">Data Upload</span>, <span style="color:#00bfff">Importing Data</span>, **Function Blocks** option, and <span style="color:#00bfff">Analysis Pipeline Assembly</span>. After completing the analysis, users can view the results directly or navigate to the corresponding <span style="color:#00bfff">Visualization Panel</span> to explore the visualized outcomes. 
+Users can choose between manual or [<span style="color:#00bfff">Automatic Layout</span>](#automatic-layout) option of the analysis pipeline on the current analysis panel. To switch to another analysis task, users can click the top-left **Ragomics** (![ragomics-button](../../img/analysis-panel/ragomics-button.png)) button to return to the homepage.
 
-## **<span style="color:#00bfff;">Automatic Layout</span>**  
-Users can manually arrange the nodes of the analysis pipeline or enable an automatic layout feature. By clicking the button on the bottom toolbar of the analysis panel, users can activate automatic layout in the pop-up options. When enabled, any subsequently connected analysis nodes will be automatically arranged. To instantly rearrange the entire analysis pipeline, users can click the bottom toolbar button, and all nodes in the current analysis panel will be automatically laid out immediately.
+## **<span style="color:#00bfff;" id="automatic-layout">Automatic Layout</span>**  
+Users can manually arrange the nodes of the analysis pipeline or enable an automatic layout feature. By clicking the **Settings** (![settings-button](../../img/analysis-panel/settings-button.png)) button on the bottom toolbar of the analysis panel, users can activate automatic layout in the pop-up options. When enabled, any subsequently connected analysis nodes will be automatically arranged. To instantly rearrange the entire analysis pipeline, users can click the bottom toolbar button, and all nodes in the current analysis panel will be automatically laid out immediately.
 
 ## **<span style="color:#00bfff;">Analysis Pipeline Thumbnail</span>**
-For large analysis pipelines that are difficult to overview, users can enable the thumbnail feature by clicking the button on the bottom toolbar of the analysis panel. The thumbnail allows users to quickly locate which part of the pipeline they are currently operating on within the broader analysis pipeline.
+For large analysis pipelines that are difficult to overview, users can enable the thumbnail feature by clicking the **Zoom** (![enlarge-button](../../img/analysis-panel/enlarge-button.png)) button on the bottom toolbar of the analysis panel. The thumbnail allows users to quickly locate which part of the pipeline they are currently operating on within the broader analysis pipeline.
+![thumbnail](../../img/analysis-panel/analysis-pipeline-thumbnail.png)
 
-## **<span style="color:#00bfff;">Analysis Node Status Panel</span>** *(分析节点状态面板)*
-
+## **<span style="color:#00bfff;">Analysis Node Status Panel</span>**
 If users need an overview of the status of all analysis nodes in the current pipeline, they can refer to the bottom toolbar. The toolbar displays the total number of nodes in the current panel, along with counts for nodes that are running, failed, successful, waiting, or under bug-fix debugging.  
 
 Users can click the number next to "Nodes" to open the **Analysis Node Status Panel**. When the highlight setting is enabled, clicking any node card in the analysis panel will highlight the corresponding row in the status panel. Similarly, clicking a node name in the status panel will cause the analysis panel to focus on the corresponding node in the pipeline.  
 
-Additionally, clicking the icons next to each node in the status panel allows users to view the code for that specific node.
+Additionally, clicking the **View Code** (![detail-code](../../img/analysis-panel/detail.png)) icon next to each node in the status panel allows users to view the code for that specific node.
+![analysis-dashboard](../../img/analysis-panel/analysis-dashboard.png)
 
-## **<span style="color:#00bfff;">Sharing Analysis Tasks</span>**
-
+## <span style="color:#00bfff;">**Sharing Analysis Tasks**</span>
 To share a specific analysis task with others, users can click the **"Share"** button at the top of the analysis panel. In the pop-up window, enable the **"Public"** setting and click the **"Copy Link"** button to generate a link for the current analysis task. Other users can use this link to access and view the shared task; however, guest users will not be able to make edits.  
 
-If editing permissions are required, users can manage collaborators in the settings below.
+If editing permissions are required, users can perform <span style="color:#00bfff;">Collaborator Management</span> in the settings below.
 
-## **<span style="color:#00bfff;">In-App Notifications</span>**
-
-When an analysis node runs successfully or fails, or when a user receives a collaboration invitation, the in-app notification button at the top of the analysis panel will display an alert. Clicking the button will show a list of all notifications, allowing users to view and respond to the information accordingly.
+## <span style="color:#00bfff;">**In-App Notifications**</span>
+When an analysis node runs successfully or fails, or when a user receives a collaboration invitation, the in-app notification (![in-app-notification](../../img/analysis-panel/in-app-notification.png)) button at the top of the analysis panel will display an alert. Clicking the button will show a list of all notifications, allowing users to view and respond to the information accordingly.
 
 ---
 
-# Analysis Pipeline
+# <span style="color:#00bfff;">**Analysis Pipeline**</span>
 
-## Assembling an Analysis Pipeline
-1. In the **Analysis Panel**, select any dataset from either the **Public Data List** or the **Imported Data List** on the left sidebar.  
+## <span style="color:#00bfff;">**Assembling an Analysis Pipeline**</span>
+1. In the <span style="color:#00bfff;">Analysis Panel</span>, select any dataset from either the **Public** or the **Imported** list on the left sidebar.  
 2. Drag the selected data into the main analysis area of the panel.  
 3. Based on your analysis requirements, choose the appropriate algorithm modules and drag them into the main analysis area.  
-4. Independent algorithm modules can be connected to uploaded single-cell sequencing data or other analysis nodes.  
+4. Independent algorithm modules can be connected to uploaded single-cell sequencing data or other <span style="color:#00bfff;">Analysis Nodes</span>.  
 5. To connect, select the connection point on one side and drag it to another function block or data node.
+![analysis-pipeline-assembly](../../img/analysis-pipeline/analysis-pipeline-assembly.png)
 
-# Pipeline Helper and Analysis Nodes
+## <span style="color:#00bfff;">**Pipeline Helper and Analysis Nodes**</span>
 
-## Pipeline Helper
-If users require assistance when assembling analysis pipelines, they can enable **Guidance** during the creation of an analysis or click the **Pipeline Helper** button in the top-left corner of the main area in the **Analysis Panel**.
+### <span style="color:#00bfff;">**Pipeline Helper**</span>
+If users require assistance when assembling analysis pipelines, they can enable **Guidance** during the <span style="color:#00bfff;">Creating an Analysis</span> step or click the **Pipeline Helper** button in the top-left corner of the main area in the <span style="color:#00bfff;">Analysis Panel</span>.
 
-## Pipeline Template Library
+### <span style="color:#00bfff;">**Pipeline Template Library**</span>
 In the **Pipeline Helper** page, users can select a suitable analysis pipeline from Ragomics' **Pipeline Template Library** and import it into the **Analysis Panel** for use.
 
 Users can select analysis pipelines from Ragomics' **Pipeline Template Library** and import them into the analysis panel on the Analysis Pipeline Assistant page.  
 
-If the template library does not have a suitable template, users can use the **AI Pipeline** feature to generate a new analysis pipeline.
+If the template library does not have a suitable template, users can use the <span style="color:#00bfff;">AI Pipeline</span> feature to generate a new analysis pipeline.
+![pipeline-template](../../img/analysis-pipeline/pipeline-template.png)
 
 ---
 
-# Analysis Nodes
-In the **Analysis Panel**, each algorithm module connected within the analysis pipeline is referred to as an **Analysis Node**. Users can perform the following operations on nodes:
+# <span style="color:#00bfff;">**Analysis Nodes**</span>
+In the <span style="color:#00bfff;">Analysis Panel</span>, each algorithm module connected within the <span style="color:#00bfff;">Analysis Pipeline</span> is referred to as an <span style="color:#00bfff;">Analysis Node</span>. Users can perform the following operations on nodes:
 
-- **Activate Agent Functionality**: Start the intelligent agent for assistance.
-- **Adjust Parameters**: Modify parameters as needed.
-- **Run Analysis**: Execute the analysis for the node.
-- **View Node Code**: Inspect the underlying code for the node.
-- **Check Node Outputs**: Access the results generated by the node.
-- **View Calculation Logs and Details**: Monitor the computation process.
-- **Share Node**: Share the node with collaborators.
-- **Configure Computational Resources**: Allocate resources for the node.
-- **Download Node Data**: Export the data generated by the node.
+- <span style="color:#00bfff;">Fine-Tuning Parameter</span>
+- <span style="color:#00bfff;">Analysis Execution</span>
+- <span style="color:#00bfff;">Node Code</span>, <span style="color:#00bfff;">Analysis Log</span>, and <span style="color:#00bfff;">Analysis Details</span> View
+- <span style="color:#00bfff;">Node Sharing</span>
+- <span style="color:#00bfff;">Computational Resource Configuration</span>
+- <span style="color:#00bfff;">Node Data Download</span>
 
 Node Design
-- **Connection Zones**: Located on the left and right sides of the node for assembling pipelines.
-- **Node Status**: Indicated by the color at the top of the node.
-- **Node Name**: Displays the default name of the algorithm module. Users can click the edit button to customize the node name.
+- Connection Zones: Located on the left and right sides of the node for <span style="color:#00bfff;">Analysis Pipeline Assembly</span>.
+- <span style="color:#00bfff;">Node Status</span>: Indicated by the color at the top of the node.
+- Node Name: Displays the default name of the algorithm module. Users can click the **Edit** (![edit-button](../../img/analysis-node/edit-button.png)) button to customize the node name.
 
-# Adjusting Parameters
-Users can click the **Edit** button within an analysis node to open the parameter adjustment panel.
+## <span style="color:#00bfff;">**Adjusting Parameters**</span>
+Users can click the **Parameter** (![parameter-button](../../img/analysis-node/parameter-button.png)) button within an analysis node to open the parameter adjustment panel.
+In the parameters panel, parameters marked with a red asterisk are required. If users are unclear about the meaning and function of a parameter, they can click the **Information** (![information-icon](../../img/analysis-node/information-icon.png)) icon next to each parameter to view a description. Once the parameters are filled in, users can click the **"Update"** button to save the parameters, or click the **"Update and Run"** button to execute the current analysis node. 
+Clicking the **"Reset"** button will revert the parameters to their last updated state. 
+Clicking the **"Set as Default"** button will reset all parameters in the analysis node to their default values. If users need assistance from the <span style="color:#00bfff;">Agent</span> while filling in parameters, they can use the <span style="color:#00bfff;">AI Parameter</span> module.
 
-# Running Analysis
+## <span style="color:#00bfff;">**Running Analysis**</span>
+When users need to run a specific <span style="color:#00bfff;">Analysis Node</span>, they have three options:
 
-When users need to run a specific analysis node, they have three options:
+1. Users can click the **"Update and Run"** button in the parameter panel of the analysis node to run the current node.
+2. Users can click the **"Start"** (![start-button](../../img/analysis-node/start-button.png)) button on the node card of the <span style="color:#00bfff;">Analysis Node</span> to start the analysis.
+3. Users can click the **"More"** (![more-button](../../img/analysis-node/more-button.png)) button on the node card of the <span style="color:#00bfff;">Analysis Node</span>, then select **"Run Sub Tree"** in the secondary popup. In this case, the node and all subsequent child nodes will be executed sequentially.
 
-1. Users can click the "Update and Run" button in the parameter panel of the analysis node to run the current node.
-2. Users can click the button on the node card of the analysis node to start the analysis.
-3. Users can click the button on the node card of the analysis node, then select "Run Sub Tree" in the secondary popup. In this case, the node and all subsequent child nodes will be executed sequentially.
-
-# Node States
-
+## <span style="color:#00bfff;">**Node States**</span>
 In the analysis panel, there are four possible states for an analysis node:
 
 1. <strong style="color:#00bfff;">Ready to Run</strong>: The top of the node card is white, indicating that the node has not been run yet.
