@@ -1,8 +1,0 @@
-
-This section covers project management features.
-
-.. toctree::
-   :maxdepth: 2
-
-   create-analysis-and-upload/_index.md
-   project-management-main-panel/_index.md

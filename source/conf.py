@@ -16,6 +16,13 @@ release = '2024-11-18'
 
 extensions = ['myst_parser']
 
+myst_enable_extensions = [
+    "dollarmath",
+    "amsmath",
+    "deflist",
+    "html_admonition",
+    "html_image",
+]
 templates_path = ['_templates']
 exclude_patterns = []
 
@@ -28,8 +35,14 @@ language = 'zh'
 #html_theme = 'sphinx_rtd_theme'
 html_theme = 'furo'
 html_static_path = ['_static']
+html_css_files = ['custom.css']
 
 html_theme_options = {
     'navigation_depth': 4,
     'collapse_navigation': False,
 }
+
+rst_prolog = """
+.. role:: blue
+   :class: blue-text
+"""

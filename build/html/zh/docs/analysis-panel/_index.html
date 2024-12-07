@@ -3,13 +3,14 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="索引" href="../../../genindex.html" /><link rel="search" title="搜索" href="../../../search.html" /><link rel="next" title="上传数据" href="../create-analysis-upload-data/_index.html" /><link rel="prev" title="Project Management" href="../project-management/_index.html" />
+<link rel="index" title="索引" href="../../../genindex.html" /><link rel="search" title="搜索" href="../../../search.html" /><link rel="next" title="上传数据" href="../create-analysis-upload-data/_index.html" /><link rel="prev" title="Platform Login and Registration" href="../project-management/_index.html" />
 
     <!-- Generated with Sphinx 7.4.7 and Furo 2024.08.06 -->
-        <title>分析面板（Analysis Panel） - ragomics 2024-11-18 文档</title>
+        <title>&lt;no title&gt; - ragomics 2024-11-18 文档</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?v=302659d7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=3de42232" />
     
     
 
@@ -178,7 +179,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -199,9 +200,29 @@
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../project-management/_index.html">Project Management</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">分析面板（Analysis Panel）</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../project-management/_index.html">Platform Login and Registration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project-management/_index.html#creation-and-management-of-analysis-tasks">Creation and Management of Analysis Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project-management/_index.html#managing-analysis-tasks">Managing Analysis Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project-management/_index.html#public-analyses-and-databases">Public Analyses and Databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project-management/_index.html#data-upload-and-management">Data Upload and Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project-management/_index.html#supported-data-formats-for-upload-in-ragomics">Supported Data Formats for Upload in Ragomics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project-management/_index.html#analysis-panel">Analysis Panel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project-management/_index.html#analysis-pipeline">Analysis Pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project-management/_index.html#pipeline-helper-and-analysis-nodes">Pipeline Helper and Analysis Nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project-management/_index.html#adjusting-parameters">Adjusting Parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project-management/_index.html#running-analysis">Running Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project-management/_index.html#node-states">Node States</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project-management/_index.html#node-output-results"><strong style="color: #00bfff; font-weight:bold;">Node Output Results</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project-management/_index.html#calculation-logs"><strong style="color: #00bfff; font-weight:bold;">Calculation Logs</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project-management/_index.html#calculation-details"><strong style="color: #00bfff;">Calculation Details</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project-management/_index.html#share-node"><strong style="color: #00bfff;">Share Node</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project-management/_index.html#configure-computational-resources"><strong style="color: #00bfff;">Configure Computational Resources</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project-management/_index.html#download-node-data"><strong style="color: #00bfff;">Download Node Data</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project-management/_index.html#chart-display"><strong style="color: #00bfff;">Chart Display</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project-management/_index.html#stop-analysis"><strong style="color: #00bfff;">Stop Analysis</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project-management/_index.html#agent"><span style="color: #00bfff; font-size: 32px;"><strong>Agent</strong></span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project-management/_index.html#visualization-panel"><span style="color:blue"><strong>Visualization Panel</strong></span></a></li>
 <li class="toctree-l1"><a class="reference internal" href="../create-analysis-upload-data/_index.html">上传数据</a></li>
 </ul>
 
@@ -237,20 +258,13 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="analysis-panel">
-<h1>分析面板（Analysis Panel）<a class="headerlink" href="#analysis-panel" title="Link to this heading">¶</a></h1>
-<section id="id1">
-<h2>目录<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
-<p>{{<section summary >}}</p>
-</section>
-</section>
-
+          
         </article>
       </div>
       <footer>
@@ -272,7 +286,7 @@
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Project Management</div>
+                <div class="title">Platform Login and Registration</div>
                 
               </div>
             </a>
@@ -294,27 +308,8 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer">
+    <aside class="toc-drawer no-toc">
       
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            On this page
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">分析面板（Analysis Panel）</a><ul>
-<li><a class="reference internal" href="#id1">目录</a></li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      </div>
       
       
     </aside>
