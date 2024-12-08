@@ -186,16 +186,20 @@ Users can select analysis pipelines from Ragomics' **Pipeline Template Library**
 If the template library does not have a suitable template, users can use the <span style="color:#00bfff;">AI Pipeline</span> feature to generate a new analysis pipeline.
 ![pipeline-template](../../img/analysis-pipeline/pipeline-template.png)
 
+
+
 ---
+
+
 
 # <span style="color:#00bfff;">**Analysis Nodes**</span>
 In the <span style="color:#00bfff;">Analysis Panel</span>, each algorithm module connected within the <span style="color:#00bfff;">Analysis Pipeline</span> is referred to as an <span style="color:#00bfff;">Analysis Node</span>. Users can perform the following operations on nodes:
 
-- <span style="color:#00bfff;">Fine-Tuning Parameter</span>
+- <span style="color:#00bfff;">Parameter Fine-tuning</span>
 - <span style="color:#00bfff;">Analysis Execution</span>
-- <span style="color:#00bfff;">Node Code</span>, <span style="color:#00bfff;">Analysis Log</span>, and <span style="color:#00bfff;">Analysis Details</span> View
+- <span style="color:#00bfff;">Node Code</span>, <span style="color:#00bfff;">Analysis Logs</span>, and <span style="color:#00bfff;">Analysis Details</span> View
 - <span style="color:#00bfff;">Node Sharing</span>
-- <span style="color:#00bfff;">Computational Resource Configuration</span>
+- <span style="color:#00bfff;">Computational Resources Configuration</span>
 - <span style="color:#00bfff;">Node Data Download</span>
 
 Node Design
@@ -203,7 +207,7 @@ Node Design
 - <span style="color:#00bfff;">Node Status</span>: Indicated by the color at the top of the node.
 - Node Name: Displays the default name of the algorithm module. Users can click the **Edit** (![edit-button](../../img/analysis-node/edit-button.png)) button to customize the node name.
 
-## <span style="color:#00bfff;">**Adjusting Parameters**</span>
+## <span style="color:#00bfff;">**Parameter Fine-tuning**</span>
 Users can click the **Parameter** (![parameter-button](../../img/analysis-node/parameter-button.png)) button within an analysis node to open the parameter adjustment panel.
 In the parameters panel, parameters marked with a red asterisk are required. If users are unclear about the meaning and function of a parameter, they can click the **Information** (![information-icon](../../img/analysis-node/information-icon.png)) icon next to each parameter to view a description. Once the parameters are filled in, users can click the **"Update"** button to save the parameters, or click the **"Update and Run"** button to execute the current analysis node. 
 Clicking the **"Reset"** button will revert the parameters to their last updated state. 
@@ -219,100 +223,128 @@ When users need to run a specific <span style="color:#00bfff;">Analysis Node</sp
 ## <span style="color:#00bfff;">**Node States**</span>
 In the analysis panel, there are four possible states for an analysis node:
 
-1. <strong style="color:#00bfff;">Ready to Run</strong>: The top of the node card is white, indicating that the node has not been run yet.
-2. <span style="color:#00bfff; font-weight:bold;">Running</span>: The top of the node card is gray, indicating that the node is currently running.
-3. <span style="color:#00bfff; font-weight:bold;">Run Completed</span>: The top of the node card is green, indicating that the node has successfully run.
-4. <span style="color:#00bfff; font-weight:bold;">Run Error</span>: The top of the node card is red, indicating that an error occurred during the node's run, requiring troubleshooting.
+1. Ready to run: The top of the node card is white, indicating that the node has not been run yet.
+![status-1](../../img/analysis-node/status-ready-to-run.png)
+2. Running: The top of the node card is gray, indicating that the node is currently running.
+![status-2](../../img/analysis-node/status-running.png)
+3. Run completed: The top of the node card is green, indicating that the node has successfully run.
+![status-3](../../img/analysis-node/status-completed.png)
+4. Run error: The top of the node card is red, indicating that an error occurred during the node's run, requiring <span style="color:#00bfff;">Bug Fixer</span>.
+![status-4](../../img/analysis-node/status-running-and-error.png)
 
-# <strong style="color: #00bfff; font-weight:bold;">Node Output Results</strong>
+## <strong style="color: #00bfff; font-weight:bold;">Node Output Results</strong>
+When certain nodes generate downloadable CSV files after execution, users can click the **"More"** (![more-button](../../img/analysis-node/more-button.png)) button on the analysis node card, select **"Output"** in the secondary popup, and choose the file they need to download.
+![node-output](../../img/analysis-node/node-output.png)
 
-When certain nodes generate downloadable CSV files after execution, users can click the button on the analysis node card, select "Output" in the secondary popup, and choose the file they need to download.
+## <strong style="color: #00bfff; font-weight:bold;">Analysis Logs</strong>
+After a node has been analysed at least once, users can click the **"More"** (![more-button](../../img/analysis-node/more-button.png)) button on the analysis node card, select "Analysis Logs" in the secondary popup to view it. Users can click the export button to export the logs as a CSV file and download it to their local machine.
+![analysis-logs](../../img/analysis-node/analysis-logs.png)
 
-# <strong style="color: #00bfff; font-weight:bold;">Calculation Logs</strong>
+## <strong style="color: #00bfff;">Analysis Details</strong>
+After a node has been calculated at least once, users can click the button on the analysis node card, select "Analysis Details" in the secondary popup to view it.
+![analysis-details](../../img/analysis-node/analysis-details.png)
 
-After a node has been calculated at least once, users can click the button on the analysis node card, select "Calculation Logs" in the secondary popup to view it. Users can click the export button to export the calculation logs as a CSV file and download it to their local machine.
-
-# <strong style="color: #00bfff;">Calculation Details</strong>
-
-After a node has been calculated at least once, users can click the button on the analysis node card, select "Calculation Details" in the secondary popup to view it.
-
-# <strong style="color: #00bfff;">Share Node</strong>
-
-When a user has opened a <span style="color: #00bfff;">Sharing analysis task</span> but wishes to focus on a specific analysis node to share with others, they can click the button on the analysis node card, select "Share" in the secondary popup. This action will automatically copy the link to the current node, and other users can access and view the shared analysis task using the link. 
+## <strong style="color: #00bfff;">Node Sharing</strong>
+When a user has opened a <span style="color: #00bfff;">Sharing Analysis Task</span> task but wishes to focus on a specific analysis node to share with others, they can click the **"More"** (![more-button](../../img/analysis-node/more-button.png)) button on the analysis node card, select **"Share"** in the secondary popup. This action will automatically copy the link to the current node, and other users can access and view the shared analysis task using the link. 
 Please note that guest users will not have permission to edit the shared analysis.
 
-# <strong style="color: #00bfff;">Configure Computational Resources</strong>
-
+# <strong style="color: #00bfff;">Computational Resources Configuration</strong>
 When users analyze data or algorithm modules that require significant computational resources, they can click the button on the analysis node card, select "Configure Computational Resources" in the secondary popup, and choose parameters like CPU, memory, timeout limits, etc., according to their needs. After configuration, the node will follow this setup when running.
 
-# <strong style="color: #00bfff;">Download Node Data</strong>
-
-After a node completes its calculation, users can click the button on the top-right of the analysis node card to download the current node's h5ad file.
+# <strong style="color: #00bfff;">Node Data Download</strong>
+After a node completes its calculation, users can click the **"Download"** (![download-button](../../img/analysis-node/download-button.png)) button on the top-right of the analysis node card to download the current node's h5ad file.
 
 # <strong style="color: #00bfff;">Chart Display</strong>
+After an analysis node with charting functionality completes its execution, users can click the **Settings** (![settings-button](../../img/analysis-panel/settings-button.png)) button in the toolbar at the bottom of the analysis panel to enable **"Show Chart"**. The chart output will be displayed at the bottom of the node, and clicking the chart will redirect to the corresponding <span style="color: #00bfff;">Visualization Panel</span> page.
+![chart-display](../../img/analysis-node/chart-display.png)
 
-After an analysis node with charting functionality completes its execution, users can click the button in the toolbar at the bottom of the analysis panel to enable "Show Chart." The chart output will be displayed at the bottom of the node, and clicking the chart will redirect to the corresponding <span style="color: #00bfff;">visualization panel</span> page.
+# <strong style="color: #00bfff;">Cancelling Analysis</strong>
+If users need to stop the current running analysis process for any reason, they can click the **"More"** (![more-button](../../img/analysis-node/more-button.png)) button on the analysis node card, and in the secondary popup, select "Cancel Analysis."
 
-# <strong style="color: #00bfff;">Stop Analysis</strong>
-
-If users need to stop the current running analysis process for any reason, they can click the button on the analysis node card, and in the secondary popup, select "Cancel Calculation."
-
-If multiple analysis nodes are running simultaneously and the user wants to stop all computations at once, they can click the "Stop All" button in the toolbar at the bottom of the analysis panel.
+If multiple analysis nodes are running simultaneously and the user wants to stop all analyses at once, they can click the **"Cancel All"** button in the toolbar at the bottom of the analysis panel.
 
 
-# <span style="color: #00bfff; font-size: 32px;"><strong>Agent</strong></span>
 
+---
+
+
+
+# <span style="color: #00bfff"><strong>Agent</strong></span>
 An agent is a series of AI-assisted analysis features based on large language models in Ragomics.
 
 ## <span style="color: #00bfff;"><strong>AI Pipeline</strong></span>
-
-In the AI Pipeline Helper page, users can utilize the AI Pipeline feature to select the data they wish to analyze and input their analysis requirements. If the user is unsure about how to input the analysis requirements, they can click on the <span style="color: #00bfff;">Request Templates</span> on the page to obtain examples. After filling in the analysis requirements, the user clicks "Next." Ragomics will display the user’s original requirements alongside the AI-optimized version. Users can compare the two and click the button to edit. If the user is dissatisfied with the current AI-generated optimized result, they can click the button to refresh it. The user needs to select the final requirements text to use and click the "Confirm" button. In the next step, the user must choose between querying analysis pipelines from the <span style="color: #00bfff;">Pipeline Template</span> library or generating an analysis pipeline directly through AI. After generation, they can click the "Import" button to bring the current generated analysis pipeline into the analysis panel.
+In the <span style="color: #00bfff;">AI Pipeline Helper</span> page, users can utilize the AI Pipeline feature to select the data they wish to analyze and input their analysis requirements. If the user is unsure about how to input the analysis requirements, they can click on the **Request Templates** on the page to obtain examples. After filling in the analysis requirements, the user clicks **"Next"**, Ragomics will display the user’s original requirements alongside the AI-optimized version. Users can compare the two and click the **"Edit"** (![edit-button](../../img/agent/edit-button)) button to edit. If the user is dissatisfied with the current AI-generated optimized result, they can click the **"Refresh"** (![refresh-button](../../img/agent/refresh-button.png)) button to refresh it. The user needs to select the final requirements text to use and click the **"Confirm"** button. In the next step, the user must choose between querying analysis pipelines from the <span style="color: #00bfff;">Pipeline Template</span> library or generating an analysis pipeline directly through AI. After generation, they can click the **"Import"** button to bring the current generated analysis pipeline into the analysis panel.
 
 ## <span style="color: #00bfff;"><strong>AI Parameter</strong></span>
-
 If users encounter difficulties when filling in the parameters for an analysis node, they can click the AI Parameter button at the bottom-left of the parameter panel. In the popup menu, users can select either <span style="color: #00bfff;">Fill All Parameters</span> or <span style="color: #00bfff;">Complete Unfilled Parameters</span>.
 
-- **Fill All Parameters**: In this case, the agent will automatically fill in the appropriate parameters based on the user’s current analysis data, pipeline, and analysis node.
+- **"Fill All Parameters"**: In this case, the agent will automatically fill in the appropriate parameters based on the user’s current analysis data, pipeline, and analysis node.
   
-- **Complete Unfilled Parameters**: In this case, the agent will retain the existing parameters and automatically complete the remaining parameters based on the user’s current analysis data, pipeline, and analysis node.
+- **"Complete Unfilled Parameters"**: In this case, the agent will retain the existing parameters and automatically complete the remaining parameters based on the user’s current analysis data, pipeline, and analysis node.
 
-When users click the Show Parameter Update History button, a popup will display the entire history of parameters generated using the AI Parameter function in this node.
+When users click the **"Show Parameter Update History"** button, a popup will display the entire history of parameters generated using the AI Parameter function in this node.
+![ai-parameter](../../img/agent/ai-parameter.png)
 
-## <span style="color: #00bfff;"><strong>Error Fixing</strong></span>
-
+## <span style="color: #00bfff;"><strong>Bug Fixing</strong></span>
 During the analysis process, users may encounter errors in certain analysis nodes. In such cases, users can click on the erroring node, and the error message for that node will appear on the right side of the analysis panel. The error message includes a description of the error, suggested fixes, and logs. Users can use this information to manually fix the error.
 
-If users are still unable to fix the error, they can try using the <span style="color: #00bfff;">Bug Fixer</span> to resolve the issue. Users can click the button in the toolbar at the bottom of the analysis panel, select the Bug Fixer option in the popup, and input the maximum retry count for fixing. Afterward, they can re-run the erroring node, and the <span style="color: #00bfff;">Bug Fixer</span> will automatically attempt to fix the error.
+![bug-fixing](../../img/agent/bug-fixing.png)
+
+If users are still unable to fix the error, they can try using the **Bug Fixer** to resolve the issue. Users can click the button in the toolbar at the bottom of the analysis panel, select the **Bug Fixer** option in the popup, and input the maximum retry count for fixing. Afterward, they can re-run the erroring node, and the **Bug Fixer** will automatically attempt to fix the error.
+
+![bug-fixer](../../img/agent/bug-fixer.png)
 
 ## <span style="color: #00bfff;"><strong>AI Interpretation</strong></span>
+Once an analysis node has completed execution, users can click to select the node. In the <span style="color: #00bfff;">AI Interpretation</span> section of the control panel on the right, users can click **"Generate"**, and the agent module will provide biological interpretations of the data from that node, along with suggestions for subsequent analysis.
 
-Once an analysis node has completed execution, users can click to select the node. In the <span style="color: #00bfff;">AI Interpretation</span> section of the control panel on the right, users can click "Generate," and the agent module will provide biological interpretations of the data from that node, along with suggestions for subsequent analysis.
+
+
+---
+
+
 
 # <span style="color:#00bfff">**Visualization Panel**</span>  
-Once the user completes the run of any analysis node, they can click the analysis node and open the **Visualization Panel** by clicking the top of the right panel. The **Visualization Panel** is divided into three sections: **Data Information Area**, **Main Image Display and Plotting Function Area**, and **Cell and Gene Group Management Area**.
+Once the user completes the run of any analysis node, they can click the analysis node and open the <span style="color:#00bfff">Visualization Panel</span> by clicking the top of the right panel. The <span style="color:#00bfff">Visualization Panel</span> is divided into three sections: <span style="color:#00bfff">Data Information Area</span>, <span style="color:#00bfff">Main Image Display and Plotting Function Area</span>, and <span style="color:#00bfff">Cell and Gene Group Management Area</span>.
+![viz-panel](../../img/visualization-panel/visualization-panel.png)
 
 ## <span style="color:#00bfff">**Data Information Area**</span>  
-The **Data Information Area** includes the **Observations (obs)** tab, **Gene List** tab, and **Observations Matrix (obsm)** tab.
+The **Data Information Area** includes the <span style="color:#00bfff">Observations (obs)</span> tab, <span style="color:#00bfff">Gene List</span> tab, and Observations Matrix (obsm) tab.
 
-- <span style="color:#00bfff">**Observations (obs) Tab**</span>  
-  The **Observations Tab** contains two data blocks: **Cell Categories (category)** and **Continuous Values (Continuous)**.
+### <span style="color:#00bfff">**Observations (obs) Tab**</span>  
+The <span style="color:#00bfff">Observations Tab</span> contains two data blocks: <span style="color:#00bfff">Cell Categories (category)</span> and <span style="color:#00bfff">Continuous Values</span>.
 
-  - <span style="color:#00bfff">**Cell Categories (category) Data Area**</span>  
-    In the **Cell Categories (category) Data Area**, metadata about cells is displayed, such as cell types and sample information. This helps users better understand the data characteristics and background information of each cell.  
+#### <span style="color:#00bfff">**Cell Categories (category) Data Area**</span>  
+In the <span style="color:#00bfff">**Cell Categories (category) Data Area**</span>, metadata about cells is displayed, such as cell types and sample information. This helps users better understand the data characteristics and background information of each cell.  
 
-  - <span style="color:#00bfff">**Cell Categories (category) Coloring**</span>  
-    When the main image display is in Embedding mode, users can click the button next to any dimension of the cell category to color the plot based on that category.
+  - <span style="color:#00bfff">**Cell Categories Coloring**</span>  
+    When the <span style="color:#00bfff">Main Image Display and Plotting Area</span> is in <span style="color:#00bfff">Embedding</span> mode, users can click the **"Color"** (![color-button](../../img/visualization-panel/color-button.png)) button next to any dimension of the cell category to color the plot based on that category.
     
-    Users can expand the cell category row to view subcategories under the current cell category and define the colors for these subcategories manually by clicking the color block icon next to each one.
+    ![coloring-cell-category](../../img/visualization-panel/coloring-cell-category.png)
+
+    Users can expand the cell category row to view subcategories under the current category.
+    
+    ![expanding-cell-subcategory-1](../../img/visualization-panel/expanding-cell-subcategory-1.png)
+    ![expanding-cell-subcategory-2](../../img/visualization-panel/expanding-cell-subcategory-2.png)
+    
+    Users can define the colors for these subcategories manually by clicking the **"Paint"** (![paint-button](../../img/visualization-panel/paint-button.png)) button to choose different color pallette or manually choose the color for each subcategory by clicking the **"Color"** (![color-button](../../img/visualization-panel/color-button.png)) button.
+    
+    ![painting-cell-subcategory-1](../../img/visualization-panel/painting-cell-subcategory-1.png)
+    ![coloring-cell-subcategory-2](../../img/visualization-panel/coloring-cell-subcategory-2.png)
+
+    When a cell category is colored, users can expand the subcategories of other cell categories to cross-examine and compare data under different categories.
+    
+    ![cross-view](../../img/visualization-panel/cross-view.png)
+
+    Users can click the **"More"** (![more-button](../../img/visualization-panel/more-button.png)) button to directly edit the cell category, the pop-up contains renaming, deleting and other operations.
 
   - <span style="color:#00bfff">**Subcategory Clustering Analysis**</span>  
-    If users want to perform clustering on subcategories of a specific cell category, they can click the button next to that subcategory and choose the clustering algorithm to apply. After the algorithm completes, they can view the results in the corresponding analysis node.
+    If users want to perform clustering on subcategories of a specific cell category, they can click the **"Cluster"** (![cluster-button](../../img/visualization-panel/cluster-button.png)) button next to that subcategory and choose the clustering algorithm to apply. After the algorithm completes, they can view the results in the corresponding analysis node.
 
   - <span style="color:#00bfff">**Cell Category Display Control**</span>  
-    Users can toggle the display of cell categories or subcategories by clicking the buttons next to them, which helps users focus on specific cells within the Embedding page.
+    Users can toggle the display of cell categories or subcategories by clicking the **"Togle"** (![toggle-button](../../img/visualization-panel/hide-button.png)) buttons next to them, which helps users focus on specific cells within the Embedding page.
 
-  - <span style="color:#00bfff">**Continuous Values (Continuous)**</span>  
-    In the **Continuous Values** data area, users can select one or more continuous values to color the plot. They can also choose a color scheme for the coloring or manually define the colors for the start, middle, and end of the continuous values.
+#### <span style="color:#00bfff">**Continuous Values**</span>  
+    In the <span style="color:#00bfff">Continuous Values</span> data area, users can select one or more continuous values to color the plot. They can also click **"Paint"** (![paint-button](../../img/visualization-panel/paint-button.png)) button to choose a color scheme for the coloring or manually define the colors for the start, middle, and end of the continuous values.
 
     If users want to filter cells based on continuous values, they can click the button next to the continuous value to expand the histogram and filter cells accordingly.
 
