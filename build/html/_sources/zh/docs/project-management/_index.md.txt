@@ -346,7 +346,7 @@ In the <span style="color:#00bfff">**Cell Categories (category) Data Area**</spa
 #### <span style="color:#00bfff">**Continuous Values**</span>  
     In the <span style="color:#00bfff">Continuous Values</span> data area, users can select one or more continuous values to color the plot. They can also click **"Paint"** (![paint-button](../../img/visualization-panel/paint-button.png)) button to choose a color scheme for the coloring or manually define the colors for the start, middle, and end of the continuous values.
 
-    If users want to filter cells based on continuous values, they can click the button next to the continuous value to expand the histogram and filter cells accordingly.
+    If users want to filter cells based on continuous values, they can click the **"Expand"** (![expand-button](../../img/visualization-panel/expand-button.png)) button next to the continuous value to expand the histogram and filter cells accordingly.
 
     Users can also set the **X-axis** or **Y-axis** of the Embedding plot directly using buttons next to the continuous values or genes.
 

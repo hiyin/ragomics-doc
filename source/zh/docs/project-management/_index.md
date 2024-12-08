@@ -344,65 +344,84 @@ In the <span style="color:#00bfff">**Cell Categories (category) Data Area**</spa
     Users can toggle the display of cell categories or subcategories by clicking the **"Togle"** (![toggle-button](../../img/visualization-panel/hide-button.png)) buttons next to them, which helps users focus on specific cells within the Embedding page.
 
 #### <span style="color:#00bfff">**Continuous Values**</span>  
-    In the <span style="color:#00bfff">Continuous Values</span> data area, users can select one or more continuous values to color the plot. They can also click **"Paint"** (![paint-button](../../img/visualization-panel/paint-button.png)) button to choose a color scheme for the coloring or manually define the colors for the start, middle, and end of the continuous values.
+In the <span style="color:#00bfff">Continuous Values</span> data area, users can select one or more continuous values to color the plot. They can also click **"Paint"** (![paint-button](../../img/visualization-panel/paint-button.png)) button to choose a color scheme for the coloring or manually define the colors for the start, middle, and end of the continuous values.
 
-    If users want to filter cells based on continuous values, they can click the button next to the continuous value to expand the histogram and filter cells accordingly.
+If users want to filter cells based on continuous values, they can click the **"Expand"** (![expand-button](../../img/visualization-panel/expand-button.png)) button next to the continuous value to expand the histogram and filter cells accordingly.
 
-    Users can also set the **X-axis** or **Y-axis** of the Embedding plot directly using buttons next to the continuous values or genes.
+Users can also set the **X-axis** or **Y-axis** of the Embedding plot directly using **"X-Y"** (![xy-button](../../img/visualization-panel/xyvalue-button.png)) buttons next to the continuous values or genes, this function is also available in <span style="color:#00bfff">Gene List</span> and <span style="color:#00bfff">Gene Set</span>.
 
-- <span style="color:#00bfff">**Observations (obs) Tab Data Changes**</span>  
-  As analysis progresses, changes in cell categories and continuous values will appear in the **Observations Tab**. Users can click the **Filter** button at the top to filter the displayed data based on the following conditions:
-  - **All**: Includes all cell categories and continuous values from the current analysis node.
-  - **New**: Only shows the newly generated data from the current analysis node.
-  - **Changed**: Shows data that has been modified in the current node.
-  - **Unchanged**: Displays data that has not been modified in the current node, usually inherited from previous analysis nodes.
-  - **Deleted**: Displays only the deleted data, which cannot be modified.
-  - **Annotation Generated**: Displays only cells with generated cell annotations (Cell Type Annotation).
+#### <span style="color:#00bfff">**Observations (obs) Tab Data Changes**</span>  
+  As analysis progresses, changes in cell categories and continuous values will appear in the <span style="color:#00bfff">Observations Tab</span>. Users can click the **"Filter"** button at the top to filter the displayed data based on the following conditions:
+  - All: Includes all cell categories and continuous values from the current analysis node.
+  - New: Only shows the newly generated data from the current analysis node.
+  - Changed: Shows data that has been modified in the current node.
+  - Unchanged: Displays data that has not been modified in the current node, usually inherited from previous analysis nodes.
+  - Deleted: Displays only the deleted data, which cannot be modified.
+  - Annotation Generated: Displays only data of cells with <span style="color:#00bfff">Cell Type Annotations</span> generated.
 
-- <span style="color:#00bfff">**Gene List (gene)**</span>  
-  In the **Gene List Tab**, users can select one or more genes to color the plot. They can also choose a color scheme for the genes or manually define the colors for their start, middle, and end values.
+![continuous-value-3](../../img/visualization-panel/continuous-value-3.png)
 
-  Users can also set a gene to the **X-axis** or **Y-axis** directly by clicking buttons next to the gene row.
+### <span style="color:#00bfff">**Gene List**</span>  
+In the <span style="color:#00bfff">**Gene List**</span>, users can click **"Paint"** (![paint-button](../../img/visualization-panel/paint-button.png)) button to select one or more genes to color the plot. They can also choose a color scheme for the genes or manually define the colors for their start, middle, and end values.
+
+Users can also set the **X-axis** or **Y-axis** of the Embedding plot directly using **"X-Y"** (![xy-button](../../img/visualization-panel/xyvalue-button.png)) buttons next to the continuous values or genes, this function is also available in <span style="color:#00bfff">Continuous Values</span> and <span style="color:#00bfff">Gene Set</span>.
+
+![gene-list-1](../../img/visualization-panel/gene-list-1.png)
 
 ## <span style="color:#00bfff">**Main Image and Plotting Function Area**</span>  
-The **Main Image and Plotting Function Area** contains tabs for different image options. Users can click on a tab to view the images generated by various algorithm modules. Common image tabs like **Embedding**, **Pathway**, and **Plot** are always present in each analysis node. An image tab with a red dot indicates that it was newly generated in the current analysis node.
+The <span style="color:#00bfff">Main Image and Plotting Function Area</span> contains tabs for different image options. Users can click on a tab to view the images generated by various algorithm modules. Common image tabs like <span style="color:#00bfff">Embedding</span>, <span style="color:#00bfff">Pathway</span>, and <span style="color:#00bfff">Plot</span> are always present in each analysis node. An image tab with a red dot indicates that it was newly generated in the current analysis node.
+
+![main-plot-1](../../img/visualization-panel/main-plot-1.png)
 
 ### **Quick Gene Algorithms**  
   The **Main Image and Plotting Function Area** contains quick access to algorithms such as **Highly Variable Genes (HVG)** and **Rank Genes Group**.
   
-  - Users can click the **HVG** button to input the number of highly variable genes and run the algorithm. The result can be viewed after the algorithm completes.
+  - Users can click the **"HVG"** button to input the number of highly variable genes and run the algorithm. The result can be viewed after the algorithm completes.
   
-  - Users can click the **Rank Genes Group** button to select subcategories under the **Cell Categories** tab. After selecting the subcategories, they can choose the method for ranking genes and run the algorithm. The results will be available in the corresponding analysis node after completion.
+  - Users can click the **"Rank Genes Group"** button to select subcategories under the <span style="color:#00bfff">Cell Categories</span> tab. After selecting the subcategories, they can choose the method for ranking genes and run the algorithm. The results will be available in the corresponding analysis node after completion. 
+    After making selections, click the **"Method"** (![method-button](../../img/visualization-panel/method-button.png)) button to choose the desired method, then click **Submit**. Next, click the **Run** button to start the analysis. The analysis panel will display and execute the **Rank Genes Group** analysis node. Once the analysis is complete, you can view the results in the lower section of the <span style="color:#00bfff">Cell and Gene Group Management Area</span> within the visualization panel of the analysis node.
+
 
 ### <span style="color:#00bfff">**Embedding**</span>  
-- **Dimension Selection**  
-  In the **Embedding** image tab, users can click the **2D/3D Toggle** button to switch between 2D and 3D views. Clicking the **Dimensions** button will display a list of dimensions generated by the current and previous analysis nodes. Users can quickly switch between them. If custom dimensions are needed, users can choose the **Select Dimensions** option to set **X-axis**, **Y-axis**, and **Z-axis** in a popup.
 
-- **Cell Selection**  
-  Users can click the **Drag** button at the top of the **Embedding** image tab to enter selection mode. They can then click on the starting point and drag to form a selection box around the desired cells. Once the selection is closed, only the selected cells will be displayed. Users can save the selected cells as a **Cell Set** for further analysis.
+#### <span style="color:#00bfff">Dimension Selection</span>  
+  In the <span style="color:#00bfff">Embedding</span> image tab, users can click the **"2D/3D Toggle"** button to switch between 2D and 3D views. Clicking the **"Dimensions"** button will display a list of dimensions generated by the current and previous analysis nodes. Users can quickly switch between them. If custom dimensions are needed, users can choose the **"Select Dimensions"** option to set **X-axis**, **Y-axis**, and **Z-axis** in a popup.
 
-- **Cell Filtering**  
-  In **Continuous Values** and **Gene Coloring**, users can filter cells directly in the **Embedding** image tab using histograms. Users can also filter cells by adjusting sliders to refine the displayed cells.
+#### <span style="color:#00bfff">Cell Selection</span>
+  Users can click the **"Drag"** (![drag-button](../../img/visualization-panel/drag-button.png)) button at the top of the <span style="color:#00bfff">Embedding</span> image tab, then **"Select"** button (![select-button](../../img/visualization-panel/select-button.png)) to enter selection mode. They can then click on the starting point and drag to form a selection box around the desired cells. Once the selection is closed, only the selected cells will be displayed. Users can click the **"Save"** (![save-button](../../img/visualization-panel/save-button.png)) button to save the selected cells as a <span style="color:#00bfff">Cell Set</span> for further analysis.
 
-- **Color Clipping**  
+  During the selection process, you can right-click or click the **"Cross"** (![cross-button](../../img/visualization-panel/cross-button.png)) button on the bottom toolbar to clear the current selection. If you wish to exit selection mode and return to drag mode, click the **"Select"** button at the top and then click the button in the pop-up window.
+
+#### <span style="color:#00bfff">Cell Filtering</span>  
+  In <span style="color:#00bfff">Continuous Values</span> and **Gene Coloring**, users can filter cells directly in the <span style="color:#00bfff">Embedding</span> image tab using histograms. users can expand the histogram of a data row even if it has not been used for highlighting. By clicking and dragging on the histogram, users can select a filtering range, and the cell points displayed on the <span style="color:#00bfff">Embedding</span> page will be filtered accordingly. 
+  Clicking any blank area on the histogram will exit the filtering state. Additionally, filters for <span style="color:#00bfff">Continuous Values</span> and <span style="color:#00bfff">Gene Sets</span> can be applied simultaneously and combined.
+  
+  ![cell-filtering](../../img/visualization-panel/cell-filtering.png)
+
+  Users can also filter cells by adjusting sliders to refine the displayed cells. Users can also achieve the same filtering effect by adjusting the filter slider in the top-right corner of the <span style="color:#00bfff">Embedding</span> tab when <span style="color:#00bfff">Continuous Values</span> or <span style="color:#00bfff">Gene Sets</span> have already been highlighted.
+  
+  ![cell-filtering-2](../../img/visualization-panel/cell-filtering-2.png)
+
+
+#### <span style="color:#00bfff">Color Clipping</span> 
   The **Clipping** feature in the **Embedding** page helps manage color gradients in plots. The user can adjust the sliding bars to control where the color transition should start and end.
 
-- **Resetting Filters and Operations**  
+#### <span style="color:#00bfff">Resetting Filters and Operations</span>  
   After performing various filtering operations, users can click the **Filter** button in the **Embedding** page to reset the filters. Clicking the **Reset** button restores the visualization to its initial state.
 
-- **Full Screen**  
+#### <span style="color:#00bfff">Full Screen</span>  
   Users can toggle full-screen mode by clicking the full-screen button at the top of the **Embedding** page. Clicking it again exits full-screen mode.
 
-- **Graph Download**  
+#### <span style="color:#00bfff">Graph Download</span>  
   Users can download the current visualization by clicking the **Download** button and selecting the desired image format.
 
-- **Plot Beautification Settings**  
+#### <span style="color:#00bfff">Plot Beautification Settings</span>  
   **Embedding** provides several customization options to beautify the plots, including:
   - **Coordinate Axes**: Users can toggle the visibility of axes or adjust their appearance.
   - **Cell Labels**: Users can toggle the display of cell labels on scatter plots and adjust their appearance.
   - **Cell Category Legend**: Users can toggle the display of the cell category legend and adjust its appearance.
 
-### <span style="color:#00bfff">**Pathway**</span>  
+#### <span style="color:#00bfff">**Pathway**</span>  
 In the **Pathway Tab**, users can create, view, and manage Pathway calculation results.
 
 - **Create Pathway**  
