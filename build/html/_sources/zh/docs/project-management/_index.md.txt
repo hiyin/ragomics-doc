@@ -1,5 +1,4 @@
 ![logo](../../img/logo.png)
-
 # <span style="color:#00bfff">**Platform Login and Registration**</span>
 
 ## <span style="color:#00bfff">**Platform Login**</span>
