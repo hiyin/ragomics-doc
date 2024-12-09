@@ -381,7 +381,7 @@ The <span style="color:#00bfff">Main Image and Plotting Function Area</span> con
 
 ![main-plot-1](../../img/visualization-panel/main-plot-1.png)
 
-### **Quick Gene Algorithms**  
+### <span style="color:#00bfff">**Quick Gene Algorithms**</span>  
   The **Main Image and Plotting Function Area** contains quick access to algorithms such as **Highly Variable Genes (HVG)** and **Rank Genes Group**.
   
   - Users can click the **"HVG"** button to input the number of highly variable genes and run the algorithm. The result can be viewed after the algorithm completes.
