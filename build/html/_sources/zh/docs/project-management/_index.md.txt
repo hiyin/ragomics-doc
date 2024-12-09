@@ -404,74 +404,82 @@ The <span style="color:#00bfff">Main Image and Plotting Function Area</span> con
 
 
 #### <span style="color:#00bfff">Color Clipping</span> 
-  The **Clipping** feature in the **Embedding** page helps manage color gradients in plots. The user can adjust the sliding bars to control where the color transition should start and end.
+  The **Clipping** feature in the <span style="color:#00bfff">Embedding</span> page helps manage color gradients in plots. The user can adjust the sliding bars to control where the color transition should start and end.
+  
+  The slider contains two draggable handles that primarily define the critical points for color transitions. When users adjust the handles, the areas of the image outside these two points will be color-saturated to match the color values at the handle positions. This overrides the original gradient effect, creating uniform coloring and emphasizing specific regions of the image.
+
+  ![clipping-1](../../img/visualization-panel/clipping-1.png)
 
 #### <span style="color:#00bfff">Resetting Filters and Operations</span>  
-  After performing various filtering operations, users can click the **Filter** button in the **Embedding** page to reset the filters. Clicking the **Reset** button restores the visualization to its initial state.
+  If users have applied multiple filters on the <span style="color:#00bfff">Embedding</span> page and wish to quickly revert to the unfiltered state, they can click the **"Filters"** button on the bottom toolbar. A pop-up window will display hidden items from <span style="color:#00bfff">Cell Categories</span> and filtered items from <span style="color:#00bfff">Continuous Values</span> (including genes). 
+  
+  Users can click the **"Cross"** (![cross-button](../../img/visualization-panel/small-cross-button.png)) buttons for each item to remove the specific filter or use the **"Clear"** (![clear-button](../../img/visualization-panel/clear-button.png)) button to clear all filters at once.  
+
+  Alternatively, users can click the **"Reset"** button on the toolbar to restore the visualization panel to its initial state.
 
 #### <span style="color:#00bfff">Full Screen</span>  
-  Users can toggle full-screen mode by clicking the full-screen button at the top of the **Embedding** page. Clicking it again exits full-screen mode.
+  Users can toggle full-screen mode by clicking the **"Full-screen"** (![fs-button](../../img/visualization-panel/fullscreen-button.png)) button at the top of the <span style="color:#00bfff">Embedding</span> page. Clicking it again exits full-screen mode.
 
 #### <span style="color:#00bfff">Graph Download</span>  
-  Users can download the current visualization by clicking the **Download** button and selecting the desired image format.
+  Users can download the current visualization by clicking the **"Download"** (![download-button](../../img/visualization-panel/small-download-button.png)) button and selecting the desired image format.
 
 #### <span style="color:#00bfff">Plot Beautification Settings</span>  
-  **Embedding** provides several customization options to beautify the plots, including:
-  - **Coordinate Axes**: Users can toggle the visibility of axes or adjust their appearance.
-  - **Cell Labels**: Users can toggle the display of cell labels on scatter plots and adjust their appearance.
-  - **Cell Category Legend**: Users can toggle the display of the cell category legend and adjust its appearance.
+  <span style="color:#00bfff">Embedding</span> provides several customization options to beautify the plots, including:
+  - **Coordinate Axes**: Users can toggle the display of axes on the <span style="color:#00bfff">Embedding</span> page by clicking the **"Display Axes"** (![axes-button](../../img/visualization-panel/display-axes-button-1.png)) button on the top toolbar. For more detailed adjustments, users can click the **"Tool"** (![tool-button](../../img/visualization-panel/tool-button.png)) button on the right to expand the **Styling Toolbar** and open the **Axis Styling Parameters** pop-up window by clicking **"Beautify Axes"** (![axes-button](../../img/visualization-panel/display-axes-button-2.png)) button.
+  - **Cell Labels**: Users can toggle the display of cell labels on the scatterplot by clicking the **"Show Label"** (![show-label](../../img/visualization-panel/show-label-button-1.png)) button on the top toolbar of the <span style="color:#00bfff">Embedding</span> page. For more detailed adjustments, users can click the **"Tool"** (![tool-button](../../img/visualization-panel/tool-button.png)) button on the right to expand the **Styling Toolbar** and open the **Cell Label Styling Parameters** pop-up window by clicking **"Beautify Label"** (![label-button](../../img/visualization-panel/show-label-button-2.png)) button.
+  - **Cell Category Legend**: Users can toggle the display of the cell categories legend by clicking the **"Show Legend"** (![show-legend-1](../../img/visualization-panel/show-legend-button-1.png)) button on the top toolbar of the <span style="color:#00bfff">Embedding</span> page. For more detailed adjustments, users can click the **"Tool"** (![tool-button](../../img/visualization-panel/tool-button.png)) button on the right to expand the **Styling Toolbar** and open the **Cell Categories Legend Styling Parameters** pop-up window by clicking **"Beautify Legend"** (![show-legend-2](../../img/visualization-panel/show-legend-button-2.png)) button.
 
 #### <span style="color:#00bfff">**Pathway**</span>  
-In the **Pathway Tab**, users can create, view, and manage Pathway calculation results.
+In the <span style="color:#00bfff">Pathway</span> tab, users can create, view, and manage Pathway analysis results.
 
-- **Create Pathway**  
-  Users can click the button in the **Pathway Tab**, input a task name, select the gene set and species, choose the required library, and click **OK** to start the pathway analysis. After completion, the results will be available in the corresponding analysis node.
+- <span style="color:#00bfff">**Create Pathway**</span>  
+  Users can click the **"Create Pathway"** (![create-pathway](../../img/visualization-panel/create-pathway.png)) button in the <span style="color:#00bfff">Pathway</span> tab, input a task name, select the gene set and species, choose the required library, and click **"OK"** to start the pathway analysis. After completion, the results will be available in the corresponding analysis node.
 
-- **View Pathway**  
-  The **Pathway Tab** lists the current and previous Pathway tasks. Users can click any task to view details and return to the task list.
+- <span style="color:#00bfff">**View Pathway**</span>  
+  The <span style="color:#00bfff">Pathway</span> tab lists the current and previous Pathway tasks. Users can click any task to view details and click **"Back"** (![back-button](../../img/visualization-panel/back-button.png)) button to return to the task list.
 
 ### <span style="color:#00bfff">**Plot**</span>  
-In the **Plot Tab**, users can toggle between different plot types, such as bar plots and violin plots.
+In the <span style="color:#00bfff">Plot</span> tab, users can toggle between different plot types, such as <span style="color:#00bfff">Bar Plots</span> and <span style="color:#00bfff">Violin Plots</span>.
+ 
+![plot](../../img/visualization-panel/plot.png)
 
-- **Bar Plot**  
-  In the **Bar Plot** mode, users can click a **Cell Category** and select an **X-axis** to create the bar plot.
+- <span style="color:#00bfff">**Bar Plot**</span>  
+  In the <span style="color:#00bfff">Bar Plot</span> mode, users can click a <span style="color:#00bfff">Cell Category</span> and select an **X-axis** to create the bar plot.
 
-- **Violin Plot**  
-  In **Violin Plot** mode, users can choose an **X-axis** and either **obs** continuous values or a **Gene Set** for the **Y-axis** to generate a violin plot.
+- <span style="color:#00bfff">**Violin Plot**</span>  
+  In <span style="color:#00bfff">Violin Plot</span> mode, users can choose an **X-axis** and either <span style="color:#00bfff">Obs Continuous Values</span> or a <span style="color:#00bfff">Gene Set</span> for the **Y-axis** to generate a violin plot.
 
 ##  **<span style="color:#00bfff">Cell and Gene Group Management Area</span> ##
+In the <span style="color:#00bfff">Cell and Gene Group Management Area</span>, users can create and view <span style="color:#00bfff">Cell Sets</span> and <span style="color:#00bfff">Gene Sets</span>. They can also perform <span style="color:#00bfff">Cell Annotation</span> and save the annotations as `obs` data.
 
 ### **<span style="color:#00bfff">Cell Sets</span>**
-Apart from saving cell sets on the Embedding page, users can also create cell sets by clicking the button under the **<span style="color:#00bfff">Cell Sets</span>** tab. Additionally, users can upload an existing cell set CSV file by clicking the button under the **<span style="color:#00bfff">Cell Sets</span>** tab to create a cell set.
+Apart from saving cell sets on the <span style="color:#00bfff">Embedding</span> page, users can also create cell sets by clicking the **"Add"** button (![add-button](../../img/visualization-panel/viz-add-button.png)) under the <span style="color:#00bfff">Cell Sets</span> tab. Additionally, users can upload an existing cell set CSV file by clicking the **"Upload"** (![upload-button](../../img/visualization-panel/viz-upload-button.png)) button under the <span style="color:#00bfff">Cell Sets</span> tab to create a cell set.
 
-Once the cell set is created, users can click the button next to the cell set to save the current cell set to the **<span style="color:#00bfff">Cell Type Annotation</span>** group (cell type annotation). Users can also click the button next to the cell set and choose the required clustering algorithm or use the cell set as target data for analysis.
+Once the cell set is created, users can click the **"Annotate"** (![annotate-button](../../img/visualization-panel/viz-annotate-button.png)) button next to the cell set to save the current cell set to the <span style="color:#00bfff">Cell Type Annotation</span> group. Users can also click the **"Cluster"** (![cluster-button](../../img/visualization-panel/cluster-button.png)) button next to the cell set and choose the required clustering algorithm or use the cell set as target data for analysis.
 
 ### **<span style="color:#00bfff">Gene Sets</span>**
-Users can create gene sets by clicking the button under the **<span style="color:#00bfff">Gene Sets</span>** tab. Users can also upload an existing gene set CSV file by clicking the button under the **<span style="color:#00bfff">Gene Sets</span>** tab to create a gene set. Once the gene set is created, users can click the button to export the gene set as a CSV file.
+Users can create gene sets by clicking the **"Add"** button under the <span style="color:#00bfff">Gene Sets</span> tab. Users can also upload an existing gene set CSV file by clicking the **"Upload"** (![upload-button](../../img/visualization-panel/viz-upload-button.png)) button under the <span style="color:#00bfff">Gene Sets</span> tab to create a gene set. Once the gene set is created, users can click the **"Export"** (![export-button](../../img/visualization-panel/export-button.png)) button to export the gene set as a CSV file.
 
-Users can click any gene set or the button next to the gene in the gene set to select a single-color or multi-color mode and use the gene set or gene for coloring the plot. When a gene set or gene is colored, users can click the button to choose a different color scheme for the current coloring. Users can also click the color block icon next to each gene set or gene to manually define the color used for each gene in the gene set.
+Users can click any gene set or the **"Color"** (![color-button](../../img/visualization-panel/color-button.png)) button next to the gene in the gene set to select a single-color or multi-color mode and use the gene set or gene for coloring the plot. When a gene set or gene is colored, users can click the **"Paint"** (![paint-button](../../img/visualization-panel/paint-button.png)) button to choose a different color scheme for the current coloring. Users can also click the color block icon next to each gene set or gene to manually define the color used for each gene in the gene set.
 
-When in the **<span style="color:#00bfff">Cell Type Annotation</span>** state (cell type annotation) process, if users don't want to display gene expression only for unannotated cells, they can click the **hide anno** button next to the gene set, which will exclude the already annotated cells and re-calculate and draw the histogram of the expression levels.
+When in the <span style="color:#00bfff">Cell Type Annotation</span> state process, if users don't want to display gene expression only for unannotated cells, they can click the **hide anno** button next to the gene set, which will exclude the already annotated cells and re-calculate and draw the histogram of the expression levels.
 
 ### **<span style="color:#00bfff">Cell Type Annotation</span>**
-When users need to annotate cell types, they can click the **<span style="color:#00bfff">Cell Type Annotation</span>** tab and select either **manual annotation** or **automatic annotation** by clicking the button.
+When users need to annotate cell types, they can click the **<span style="color:#00bfff">Cell Type Annotation</span>** tab and select either **manual annotation** or **automatic annotation** by clicking the **"Add"** (![add-button](../../img/visualization-panel/viz-add-button.png)) button.
 
 #### **<span style="color:#00bfff">Manual Annotation</span>**
-After creating the annotation group, users can click the button, and the cell category area will enter the selection state. Users can select options in the checkboxes on the right of the cell subcategories. After selection, they can click to save the selected subcategory cells to the cell annotation group. **Overwrite**
+After creating the annotation group, users can click the **"Add from Obs"** (![add-from](../../img/visualization-panel/add-from-obs-button.png)) button, and the cell category area will enter the selection state. Users can select options in the checkboxes on the right of the cell subcategories. After selection, they can click **"Save to annotation"** (![save-to-anno](../../img/visualization-panel/save-to-anno-button.png)) button to save the selected subcategory cells to the cell annotation group. 
 
-Once all the cells are annotated, users can click the button to save the annotation results to **obs** (observations).
+When the cells included in a certain selection are duplicated with cells that already exist in the annotation group, a pop-up window will appear. If the user chooses to keep the original annotation group, these duplicate cells will be removed from the newly selected cells. If the user chooses to save as a new annotation group, these duplicate cells in the original annotation group will be deleted and saved as a new annotation group.
+
+![annotation-1](../../img/visualization-panel/manual-anno-1.png)
+
+![annotation-2](../../img/visualization-panel/manual-anno-2.png)
+
+Once all the cells are annotated, users can click the **"Upload"** (![upload-button](../../img/visualization-panel/viz-upload-button.png)) button to save the annotation results to **obs** (observations).
 
 #### **<span style="color:#00bfff">Automatic Annotation</span>**
-After selecting **automatic annotation**, users choose the model type that matches the source data species type and the corresponding annotation category. After clicking OK, the analysis panel will appear, and the automatic annotation analysis node will run. Once completed, users can view the analysis results in the visualization panel of the analysis node.
+After selecting <span style="color:#00bfff">Automatic Annotation</span>, users choose the model type that matches the source data species type and the corresponding annotation category. After clicking OK, the analysis panel will appear, and the automatic annotation analysis node will run. Once completed, users can view the analysis results in the visualization panel of the analysis node.
 
-<div style="display: none; align-items: center;">
-  <div style="flex: 1; padding-right: 10px;">
-    <p>
-      This is a paragraph on the left. You can provide details about the content
-      here, explain the context, or introduce the video that appears on the right.
-    </p>
-  </div>
-  <div style="flex: 1; padding-left: 10px;">
-    <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-  </div>
-</div>
+![auto-anno](../../img/visualization-panel/auto-anno.png)
+
