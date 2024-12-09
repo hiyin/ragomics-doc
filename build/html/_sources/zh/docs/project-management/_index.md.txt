@@ -224,12 +224,19 @@ When users need to run a specific <span style="color:#00bfff;">Analysis Node</sp
 In the analysis panel, there are four possible states for an analysis node:
 
 1. Ready to run: The top of the node card is white, indicating that the node has not been run yet.
+
 ![status-1](../../img/analysis-node/status-ready-to-run.png)
+
 2. Running: The top of the node card is gray, indicating that the node is currently running.
+
 ![status-2](../../img/analysis-node/status-running.png)
+
 3. Run completed: The top of the node card is green, indicating that the node has successfully run.
+
 ![status-3](../../img/analysis-node/status-completed.png)
+
 4. Run error: The top of the node card is red, indicating that an error occurred during the node's run, requiring <span style="color:#00bfff;">Bug Fixer</span>.
+
 ![status-4](../../img/analysis-node/status-running-and-error.png)
 
 ## <strong style="color: #00bfff; font-weight:bold;">Node Output Results</strong>
@@ -256,6 +263,7 @@ After a node completes its calculation, users can click the **"Download"** (![do
 
 # <strong style="color: #00bfff;">Chart Display</strong>
 After an analysis node with charting functionality completes its execution, users can click the **Settings** (![settings-button](../../img/analysis-panel/settings-button.png)) button in the toolbar at the bottom of the analysis panel to enable **"Show Chart"**. The chart output will be displayed at the bottom of the node, and clicking the chart will redirect to the corresponding <span style="color: #00bfff;">Visualization Panel</span> page.
+
 ![chart-display](../../img/analysis-node/chart-display.png)
 
 # <strong style="color: #00bfff;">Cancelling Analysis</strong>
@@ -273,7 +281,7 @@ If multiple analysis nodes are running simultaneously and the user wants to stop
 An agent is a series of AI-assisted analysis features based on large language models in Ragomics.
 
 ## <span style="color: #00bfff;"><strong>AI Pipeline</strong></span>
-In the <span style="color: #00bfff;">AI Pipeline Helper</span> page, users can utilize the AI Pipeline feature to select the data they wish to analyze and input their analysis requirements. If the user is unsure about how to input the analysis requirements, they can click on the **Request Templates** on the page to obtain examples. After filling in the analysis requirements, the user clicks **"Next"**, Ragomics will display the user’s original requirements alongside the AI-optimized version. Users can compare the two and click the **"Edit"** (![edit-button](../../img/agent/edit-button)) button to edit. If the user is dissatisfied with the current AI-generated optimized result, they can click the **"Refresh"** (![refresh-button](../../img/agent/refresh-button.png)) button to refresh it. The user needs to select the final requirements text to use and click the **"Confirm"** button. In the next step, the user must choose between querying analysis pipelines from the <span style="color: #00bfff;">Pipeline Template</span> library or generating an analysis pipeline directly through AI. After generation, they can click the **"Import"** button to bring the current generated analysis pipeline into the analysis panel.
+In the <span style="color: #00bfff;">AI Pipeline Helper</span> page, users can utilize the AI Pipeline feature to select the data they wish to analyze and input their analysis requirements. If the user is unsure about how to input the analysis requirements, they can click on the **Request Templates** on the page to obtain examples. After filling in the analysis requirements, the user clicks **"Next"**, Ragomics will display the user’s original requirements alongside the AI-optimized version. Users can compare the two and click the **"Edit"** (![edit-button](../../img/agent/edit-button.png)) button to edit. If the user is dissatisfied with the current AI-generated optimized result, they can click the **"Refresh"** (![refresh-button](../../img/agent/refresh-button.png)) button to refresh it. The user needs to select the final requirements text to use and click the **"Confirm"** button. In the next step, the user must choose between querying analysis pipelines from the <span style="color: #00bfff;">Pipeline Template</span> library or generating an analysis pipeline directly through AI. After generation, they can click the **"Import"** button to bring the current generated analysis pipeline into the analysis panel.
 
 ## <span style="color: #00bfff;"><strong>AI Parameter</strong></span>
 If users encounter difficulties when filling in the parameters for an analysis node, they can click the AI Parameter button at the bottom-left of the parameter panel. In the popup menu, users can select either <span style="color: #00bfff;">Fill All Parameters</span> or <span style="color: #00bfff;">Complete Unfilled Parameters</span>.
