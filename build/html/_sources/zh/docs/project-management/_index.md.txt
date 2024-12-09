@@ -449,7 +449,7 @@ In the <span style="color:#00bfff">Plot</span> tab, users can toggle between dif
 - <span style="color:#00bfff">**Violin Plot**</span>  
   In <span style="color:#00bfff">Violin Plot</span> mode, users can choose an **X-axis** and either <span style="color:#00bfff">Obs Continuous Values</span> or a <span style="color:#00bfff">Gene Set</span> for the **Y-axis** to generate a violin plot.
 
-##  **<span style="color:#00bfff">Cell and Gene Group Management Area</span> ##
+##  <span style="color:#00bfff">**Cell and Gene Group Management Area**</span>
 In the <span style="color:#00bfff">Cell and Gene Group Management Area</span>, users can create and view <span style="color:#00bfff">Cell Sets</span> and <span style="color:#00bfff">Gene Sets</span>. They can also perform <span style="color:#00bfff">Cell Annotation</span> and save the annotations as `obs` data.
 
 ### **<span style="color:#00bfff">Cell Sets</span>**
