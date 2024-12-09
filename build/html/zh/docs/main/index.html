@@ -1,0 +1,969 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../../../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="prev" title="&lt;no title&gt;" href="../../index.zh.html" />
+
+    <!-- Generated with Sphinx 7.4.7 and Furo 2024.08.06 -->
+        <title>Platform Login and Registration - Ragomics 2024-11-18 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?v=302659d7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=3de42232" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../../index.html"><div class="brand">Ragomics 2024-11-18 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../../../_static/logo.png" alt="Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Ragomics 2024-11-18 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#"><span style="color:#00bfff"><strong>Platform Login and Registration</strong></span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#creation-and-management-of-analysis-tasks"><span style="color:#00bfff"><strong>Creation and Management of Analysis Tasks</strong></span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#public-analyses-and-databases"><span style="color:#00bfff"><strong>Public Analyses and Databases</strong></span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#data-upload-and-management"><span style="color:#00bfff"><strong>Data Upload and Management</strong></span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#analysis-panel"><span style="color:#00bfff"><strong>Analysis Panel</strong></span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#analysis-pipeline"><span style="color:#00bfff;"><strong>Analysis Pipeline</strong></span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#analysis-nodes"><span style="color:#00bfff;"><strong>Analysis Nodes</strong></span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#computational-resources-configuration"><strong style="color: #00bfff;">Computational Resources Configuration</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#node-data-download"><strong style="color: #00bfff;">Node Data Download</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#chart-display"><strong style="color: #00bfff;">Chart Display</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#cancelling-analysis"><strong style="color: #00bfff;">Cancelling Analysis</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#agent"><span style="color: #00bfff"><strong>Agent</strong></span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#visualization-panel"><span style="color:#00bfff"><strong>Visualization Panel</strong></span></a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="../../../_sources/zh/docs/main/index.md.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section class="tex2jax_ignore mathjax_ignore" id="platform-login-and-registration">
+<h1><span style="color:#00bfff"><strong>Platform Login and Registration</strong></span><a class="headerlink" href="#platform-login-and-registration" title="Link to this heading">¶</a></h1>
+<section id="platform-login">
+<h2><span style="color:#00bfff"><strong>Platform Login</strong></span><a class="headerlink" href="#platform-login" title="Link to this heading">¶</a></h2>
+<p>On the login page, users can enter their account credentials (mobile number) and password, then click the <strong>Log in</strong> button to access the platform. If users do not have an account, they can click the <strong>Register</strong> button to proceed with <span style="color:#00bfff">account registration</span>. In case users forget their password, they can click the <strong>Forgot password</strong> button to <span style="color:#00bfff">reset password</span>.</p>
+</section>
+<section id="account-registration">
+<h2><span style="color:#00bfff"><strong>Account Registration</strong></span><a class="headerlink" href="#account-registration" title="Link to this heading">¶</a></h2>
+<p>On the registration page, users need to input their username, password, and mobile number (used as the login account). After entering these details, users can click the <strong>Send</strong> button to receive and input a mobile verification code. If users do not have an invitation code, they can contact customer service by emailing <strong>yuze&#64;raganetwork.com</strong> for assistance.</p>
+</section>
+<section id="password-reset">
+<h2><span style="color:#00bfff"><strong>Password Reset</strong></span><a class="headerlink" href="#password-reset" title="Link to this heading">¶</a></h2>
+<p>On the password reset page, users must enter their mobile number (login account) and click the <strong>Send</strong> button to receive a mobile verification code. Users then input the verification code along with their new password. Once the information is filled in, they can click the <strong>Next step</strong> button to proceed to the password reset result page. If the reset is successful, users can click the <strong>To login</strong> button to return to the login page.</p>
+</section>
+<section id="guest-mode">
+<h2><span style="color:#00bfff"><strong>Guest Mode</strong></span><a class="headerlink" href="#guest-mode" title="Link to this heading">¶</a></h2>
+<p>If users do not have a platform account and prefer not to register, they can choose to log in as a guest (<strong>Login as a guest</strong>). In visitor mode, all editing operations will be disabled. However, guests can still view public analyses or those shared by other users.
+<img alt="guest-mode" src="../../../_images/image.png" /></p>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="creation-and-management-of-analysis-tasks">
+<h1><span style="color:#00bfff"><strong>Creation and Management of Analysis Tasks</strong></span><a class="headerlink" href="#creation-and-management-of-analysis-tasks" title="Link to this heading">¶</a></h1>
+<section id="workflow">
+<h2><span style="color:#00bfff"><strong>Workflow</strong></span><a class="headerlink" href="#workflow" title="Link to this heading">¶</a></h2>
+<p>After logging into the homepage, the <span style="color:#00bfff">Workflow</span> tab includes two sections: <span style="color:#00bfff">Analysis Task</span> and <span style="color:#00bfff">Data Source</span>.</p>
+<ul class="simple">
+<li><p>In the <span style="color:#00bfff">Analysis Task</span> section, users can create and manage analysis tasks and view <span style="color:#00bfff">Public Analyses</span> at the top of the page to explore examples of analyses provided by Ragomics.</p></li>
+<li><p>In the &lt;<span style="color:#00bfff">Data Source</span> section, users can import datasets from <span style="color:#00bfff">Public Databases</span> into their accounts or <span style="color:#00bfff">Upload Data</span> from local sources.</p></li>
+</ul>
+</section>
+<section id="creating-an-analysis">
+<h2><span style="color:#00bfff"><strong>Creating an Analysis</strong></span><a class="headerlink" href="#creating-an-analysis" title="Link to this heading">¶</a></h2>
+<p>Once logged in, users can go to the <span style="color:#00bfff">Analysis Task</span> page under the <span style="color:#00bfff">Workflow</span> tab and click the <strong>Create New Analysis Task</strong> button to create a new analysis task.</p>
+<ol class="arabic simple">
+<li><p>In the pop-up form, users must enter a name for the analysis task. While the task description is optional, it helps the <span style="color:#00bfff"><strong>Agent</strong></span> module provide more accurate assistance.</p></li>
+<li><p>Users can choose to enable the <strong>With Guidance</strong> feature. If enabled, the <span style="color:#00bfff">Pipeline Helper</span> will automatically launch the first time the user accesses the <span style="color:#00bfff">Analysis Panel</span> of the task, helping them quickly select an analysis pipeline tailored to their needs.</p></li>
+<li><p>Once the task is created, users will be directed to its <span style="color:#00bfff">Analysis Panel</span>.
+<img alt="create-analysis" src="../../../_images/create-new-analysis-task.png" /></p></li>
+</ol>
+</section>
+<section id="managing-analysis-tasks">
+<h2><span style="color:#00bfff"><strong>Managing Analysis Tasks</strong></span><a class="headerlink" href="#managing-analysis-tasks" title="Link to this heading">¶</a></h2>
+<p>After logging in, users can view and manage previously created analysis tasks in the <span style="color:#00bfff">Workflow</span> - <span style="color:#00bfff">Analysis Task</span> tab. Each analysis task card contains several buttons for task management. Click <strong>Open</strong> button on the analysis card to enter the <strong>Analysis Panel</strong> of the selected task.</p>
+<ul class="simple">
+<li><p><strong>Collaborator Management Button</strong> (<img alt="collaborate-button" src="../../../_images/collaborate-button.png" />): Click to open the <span style="color:#00bfff">Collaborator Management</span> page and invite collaborators to participate in the project analysis.</p></li>
+<li><p><strong>Edit Button</strong> (<img alt="edit-button" src="../../../_images/edit-button.png" />): Click to edit the task name and description.</p></li>
+<li><p><strong>Copy Button</strong> (<img alt="copy-button" src="../../../_images/copy-button.png" />): Click to duplicate the current analysis task. Note that the duplicated task will only retain the <strong>Data Source</strong> and any unexecuted analysis pipelines. Analysis results will not be copied.</p></li>
+<li><p><strong>Delete Button</strong> (<img alt="delete-button" src="../../../_images/delete-button.png" />): Click to delete the current analysis task. <strong>This action is irreversible.</strong></p></li>
+<li><p><strong>Share Button</strong> (<img alt="share-button" src="../../../_images/share-button.png" />): Click to access the sharing page. Users can enable sharing for the task and click the quick copy link below to generate a shareable access URL. Other users can use the link to view the shared analysis task but cannot edit it as guest users.</p></li>
+</ul>
+</section>
+<section id="collaborator-management">
+<h2><span style="color:#00bfff"><strong>Collaborator Management</strong></span><a class="headerlink" href="#collaborator-management" title="Link to this heading">¶</a></h2>
+<p>When an analysis task requires collaboration with other users, the <strong>Collaborator List</strong> can be opened.</p>
+<ul class="simple">
+<li><p>Click the <strong>Add Collaborator</strong> (<img alt="add-collaborator-button" src="../../../_images/add-collaborator-button.png" />) button in the top-left corner to invite collaborators.</p></li>
+<li><p>Users can assign editing permissions to collaborators as needed.</p></li>
+<li><p>Once added, the invited collaborator must accept the invitation through the <span style="color:#00bfff">In-app Notifications</span> to access and edit the analysis task.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="public-analyses-and-databases">
+<h1><span style="color:#00bfff"><strong>Public Analyses and Databases</strong></span><a class="headerlink" href="#public-analyses-and-databases" title="Link to this heading">¶</a></h1>
+<section id="public-analyses">
+<h2><span style="color:#00bfff"><strong>Public Analyses</strong></span><a class="headerlink" href="#public-analyses" title="Link to this heading">¶</a></h2>
+<p>Ragomics provides users with a series of completed analysis examples. Users can directly access these <strong>Public Analyses</strong> to review the analysis process and results. However, users cannot perform any editing actions on these public analyses.</p>
+</section>
+<section id="public-databases">
+<h2><span style="color:#00bfff"><strong>Public Databases</strong></span><a class="headerlink" href="#public-databases" title="Link to this heading">¶</a></h2>
+<p>On the <span style="color:#00bfff">Workflow</span> - <span style="color:#00bfff">Data Source</span> page, users can explore datasets from public databases:</p>
+<ol class="arabic simple">
+<li><p>Click the <strong>Show More</strong> button to view additional datasets in the public database.</p></li>
+<li><p>Select an interesting dataset and click the <strong>Import</strong> button to add it to the user’s account database.</p></li>
+</ol>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="data-upload-and-management">
+<h1><span style="color:#00bfff"><strong>Data Upload and Management</strong></span><a class="headerlink" href="#data-upload-and-management" title="Link to this heading">¶</a></h1>
+<section id="data-upload">
+<h2><span style="color:#00bfff"><strong>Data Upload</strong></span><a class="headerlink" href="#data-upload" title="Link to this heading">¶</a></h2>
+<p>Ragomics offers two methods for uploading data:</p>
+<p>Method 1</p>
+<ul class="simple">
+<li><p>Navigate to <span style="color:#00bfff">Workflow</span> - <span style="color:#00bfff">Data Source</span> - <strong>My Data</strong> section.</p></li>
+<li><p>Click the <strong>Upload</strong> (<img alt="upload-button" src="../../../_images/upload-button.png" />) button to start the data upload process.</p></li>
+</ul>
+<p>Method 2</p>
+<ul class="simple">
+<li><p>In the <strong>Analysis Panel</strong>, click the <strong>Add</strong> (<img alt="add-button" src="../../../_images/add-button.png" />) button under the Data Source tab on the left sidebar, choose <strong>Upload from Device</strong> button to begin uploading data directly from your device.
+<img alt="upload-from-device" src="../../../_images/upload-from-device.png" /></p></li>
+</ul>
+<p>Supported Data Formats for Upload in Ragomics</p>
+<p>Ragomics currently supports the following five data formats for upload:</p>
+<ol class="arabic simple">
+<li><p>AnnData Upload</p></li>
+</ol>
+<ul class="simple">
+<li><p>Users can add <code class="docutils literal notranslate"><span class="pre">.h5ad</span></code> files by dragging and dropping or clicking the <strong>Add</strong> (<img alt="add-button" src="../../../_images/anndata-add-button.png" />) button.</p></li>
+<li><p>Select the corresponding species information and provide a description of the data.</p></li>
+<li><p>Once the file is selected and all information is filled out, click the <strong>Upload</strong> (<img alt="upload-button" src="../../../_images/anndata-upload-button.png" />) button to start uploading.</p></li>
+<li><p>When the upload status indicates success <img alt="complete-status" src="../../../_images/complete-status.png" />, the data upload is complete.</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>10x Data Upload</p></li>
+</ol>
+<ul class="simple">
+<li><p>Enter the data name, species information, and data description.</p></li>
+<li><p>Click the <strong>Next Step</strong> button, then click <strong>Add a Sample</strong> to create a new sample row.</p></li>
+<li><p>For multiple samples, add the corresponding number of sample rows.</p></li>
+<li><p>In each sample row, upload the following three files:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">barcodes.tsv</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">genes.tsv</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">matrix.mtx</span></code></p></li>
+</ul>
+</li>
+<li><p>Once all data is uploaded, click the <strong>Assemble</strong> button to complete the upload process.</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p>Assemble AnnData</p></li>
+</ol>
+<ul class="simple">
+<li><p>Enter species information and data description, then click the <strong>Next Step</strong> button.</p></li>
+<li><p>Upload the required files by dragging and dropping or clicking the upload area:</p>
+<ul>
+<li><p>Mandatory Files:</p>
+<ul>
+<li><p>In the central <strong>Layers</strong> section, upload <code class="docutils literal notranslate"><span class="pre">X</span></code>, or <code class="docutils literal notranslate"><span class="pre">unspliced</span></code> and <code class="docutils literal notranslate"><span class="pre">spliced</span></code> files.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">var</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">obs</span></code></p></li>
+</ul>
+</li>
+<li><p>Optional Files:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">obsp</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">obsm</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">varm</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">varp</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Once all files are uploaded, click the <strong>Assemble</strong> button to finalize the AnnData assembly.</p></li>
+<li><p>Click the <strong>Complete</strong> button to finish the upload process.</p></li>
+</ul>
+<ol class="arabic simple" start="4">
+<li><p>FastQ Upload</p></li>
+</ol>
+<ul class="simple">
+<li><p>Select the corresponding species information and provide a description of the data.</p></li>
+<li><p>Click the <strong>Next Step</strong> button.</p></li>
+<li><p>Add FastQ <code class="docutils literal notranslate"><span class="pre">.zip</span></code> files by dragging and dropping or clicking the central upload area.</p></li>
+</ul>
+<ol class="arabic simple" start="5">
+<li><p>Spaceranger Count Upload</p></li>
+</ol>
+<ul class="simple">
+<li><p>Enter the data name, select the corresponding species information, and provide a description of the data.</p></li>
+<li><p>Click the <strong>Next Step</strong> button.</p></li>
+<li><p>Add Spaceranger Count data by dragging and dropping or clicking the upload area.</p></li>
+<li><p>On the right side of the upload panel, you can find format requirements and mandatory file examples.</p></li>
+<li><p>Once the data is uploaded, click the <strong>Assemble</strong> button to complete the data assembly.
+<img alt="spaceranger-count-upload" src="../../../_images/spaceranger-count-upload.png" /></p></li>
+</ul>
+</section>
+<section id="importing-data">
+<h2><span style="color:#00bfff"><strong>Importing Data</strong></span><a class="headerlink" href="#importing-data" title="Link to this heading">¶</a></h2>
+<p>In the <span style="color:#00bfff">Analysis Panel</span>, users can import data through <strong>Add</strong> (<img alt="add-button" src="../../../_images/add-button.png" />) button under the <span style="color:#00bfff">Data Source</span> tab on the left sidebar. There are three methods for importing data:</p>
+<section id="importing-from-existing-data">
+<h3>1. Importing from Existing Data<a class="headerlink" href="#importing-from-existing-data" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>If users have already uploaded the target data to their account via the data upload feature, they can choose to import it from existing data.</p></li>
+<li><p>In the import form, select the desired data by checking the boxes on the left.</p></li>
+<li><p>Click <strong>Confirm</strong> to import the data from the account into the current analysis task.</p></li>
+</ul>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="analysis-panel">
+<h1><span style="color:#00bfff"><strong>Analysis Panel</strong></span><a class="headerlink" href="#analysis-panel" title="Link to this heading">¶</a></h1>
+<p>In the <span style="color:#00bfff">Analysis Panel</span>, users can freely perform various analysis operations, such as <span style="color:#00bfff">Data Upload</span>, <span style="color:#00bfff">Importing Data</span>, <strong>Function Blocks</strong> option, and <span style="color:#00bfff">Analysis Pipeline Assembly</span>. After completing the analysis, users can view the results directly or navigate to the corresponding <span style="color:#00bfff">Visualization Panel</span> to explore the visualized outcomes.
+Users can choose between manual or <a class="reference internal" href="#automatic-layout"><span class="xref myst"><span style="color:#00bfff">Automatic Layout</span></span></a> option of the analysis pipeline on the current analysis panel. To switch to another analysis task, users can click the top-left <strong>Ragomics</strong> (<img alt="ragomics-button" src="../../../_images/ragomics-button.png" />) button to return to the homepage.</p>
+<section id="automatic-layout">
+<h2><strong><span style="color:#00bfff;" id="automatic-layout">Automatic Layout</span></strong><a class="headerlink" href="#automatic-layout" title="Link to this heading">¶</a></h2>
+<p>Users can manually arrange the nodes of the analysis pipeline or enable an automatic layout feature. By clicking the <strong>Settings</strong> (<img alt="settings-button" src="../../../_images/settings-button.png" />) button on the bottom toolbar of the analysis panel, users can activate automatic layout in the pop-up options. When enabled, any subsequently connected analysis nodes will be automatically arranged. To instantly rearrange the entire analysis pipeline, users can click the bottom toolbar button, and all nodes in the current analysis panel will be automatically laid out immediately.</p>
+</section>
+<section id="analysis-pipeline-thumbnail">
+<h2><strong><span style="color:#00bfff;">Analysis Pipeline Thumbnail</span></strong><a class="headerlink" href="#analysis-pipeline-thumbnail" title="Link to this heading">¶</a></h2>
+<p>For large analysis pipelines that are difficult to overview, users can enable the thumbnail feature by clicking the <strong>Zoom</strong> (<img alt="enlarge-button" src="../../../_images/enlarge-button.png" />) button on the bottom toolbar of the analysis panel. The thumbnail allows users to quickly locate which part of the pipeline they are currently operating on within the broader analysis pipeline.
+<img alt="thumbnail" src="../../../_images/analysis-pipeline-thumbnail.png" /></p>
+</section>
+<section id="analysis-node-status-panel">
+<h2><strong><span style="color:#00bfff;">Analysis Node Status Panel</span></strong><a class="headerlink" href="#analysis-node-status-panel" title="Link to this heading">¶</a></h2>
+<p>If users need an overview of the status of all analysis nodes in the current pipeline, they can refer to the bottom toolbar. The toolbar displays the total number of nodes in the current panel, along with counts for nodes that are running, failed, successful, waiting, or under bug-fix debugging.</p>
+<p>Users can click the number next to “Nodes” to open the <strong>Analysis Node Status Panel</strong>. When the highlight setting is enabled, clicking any node card in the analysis panel will highlight the corresponding row in the status panel. Similarly, clicking a node name in the status panel will cause the analysis panel to focus on the corresponding node in the pipeline.</p>
+<p>Additionally, clicking the <strong>View Code</strong> (<img alt="detail-code" src="../../../_images/detail.png" />) icon next to each node in the status panel allows users to view the code for that specific node.
+<img alt="analysis-dashboard" src="../../../_images/analysis-dashboard.png" /></p>
+</section>
+<section id="sharing-analysis-tasks">
+<h2><span style="color:#00bfff;"><strong>Sharing Analysis Tasks</strong></span><a class="headerlink" href="#sharing-analysis-tasks" title="Link to this heading">¶</a></h2>
+<p>To share a specific analysis task with others, users can click the <strong>“Share”</strong> button at the top of the analysis panel. In the pop-up window, enable the <strong>“Public”</strong> setting and click the <strong>“Copy Link”</strong> button to generate a link for the current analysis task. Other users can use this link to access and view the shared task; however, guest users will not be able to make edits.</p>
+<p>If editing permissions are required, users can perform <span style="color:#00bfff;">Collaborator Management</span> in the settings below.</p>
+</section>
+<section id="in-app-notifications">
+<h2><span style="color:#00bfff;"><strong>In-App Notifications</strong></span><a class="headerlink" href="#in-app-notifications" title="Link to this heading">¶</a></h2>
+<p>When an analysis node runs successfully or fails, or when a user receives a collaboration invitation, the in-app notification (<img alt="in-app-notification" src="../../../_images/in-app-notification.png" />) button at the top of the analysis panel will display an alert. Clicking the button will show a list of all notifications, allowing users to view and respond to the information accordingly.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="analysis-pipeline">
+<h1><span style="color:#00bfff;"><strong>Analysis Pipeline</strong></span><a class="headerlink" href="#analysis-pipeline" title="Link to this heading">¶</a></h1>
+<section id="assembling-an-analysis-pipeline">
+<h2><span style="color:#00bfff;"><strong>Assembling an Analysis Pipeline</strong></span><a class="headerlink" href="#assembling-an-analysis-pipeline" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p>In the <span style="color:#00bfff;">Analysis Panel</span>, select any dataset from either the <strong>Public</strong> or the <strong>Imported</strong> list on the left sidebar.</p></li>
+<li><p>Drag the selected data into the main analysis area of the panel.</p></li>
+<li><p>Based on your analysis requirements, choose the appropriate algorithm modules and drag them into the main analysis area.</p></li>
+<li><p>Independent algorithm modules can be connected to uploaded single-cell sequencing data or other <span style="color:#00bfff;">Analysis Nodes</span>.</p></li>
+<li><p>To connect, select the connection point on one side and drag it to another function block or data node.
+<img alt="analysis-pipeline-assembly" src="../../../_images/analysis-pipeline-assembly.png" /></p></li>
+</ol>
+</section>
+<section id="pipeline-helper-and-analysis-nodes">
+<h2><span style="color:#00bfff;"><strong>Pipeline Helper and Analysis Nodes</strong></span><a class="headerlink" href="#pipeline-helper-and-analysis-nodes" title="Link to this heading">¶</a></h2>
+<section id="pipeline-helper">
+<h3><span style="color:#00bfff;"><strong>Pipeline Helper</strong></span><a class="headerlink" href="#pipeline-helper" title="Link to this heading">¶</a></h3>
+<p>If users require assistance when assembling analysis pipelines, they can enable <strong>Guidance</strong> during the <span style="color:#00bfff;">Creating an Analysis</span> step or click the <strong>Pipeline Helper</strong> button in the top-left corner of the main area in the <span style="color:#00bfff;">Analysis Panel</span>.</p>
+</section>
+<section id="pipeline-template-library">
+<h3><span style="color:#00bfff;"><strong>Pipeline Template Library</strong></span><a class="headerlink" href="#pipeline-template-library" title="Link to this heading">¶</a></h3>
+<p>In the <strong>Pipeline Helper</strong> page, users can select a suitable analysis pipeline from Ragomics’ <strong>Pipeline Template Library</strong> and import it into the <strong>Analysis Panel</strong> for use.</p>
+<p>Users can select analysis pipelines from Ragomics’ <strong>Pipeline Template Library</strong> and import them into the analysis panel on the Analysis Pipeline Assistant page.</p>
+<p>If the template library does not have a suitable template, users can use the <span style="color:#00bfff;">AI Pipeline</span> feature to generate a new analysis pipeline.
+<img alt="pipeline-template" src="../../../_images/pipeline-template.png" /></p>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="analysis-nodes">
+<h1><span style="color:#00bfff;"><strong>Analysis Nodes</strong></span><a class="headerlink" href="#analysis-nodes" title="Link to this heading">¶</a></h1>
+<p>In the <span style="color:#00bfff;">Analysis Panel</span>, each algorithm module connected within the <span style="color:#00bfff;">Analysis Pipeline</span> is referred to as an <span style="color:#00bfff;">Analysis Node</span>. Users can perform the following operations on nodes:</p>
+<ul class="simple">
+<li><p><span style="color:#00bfff;">Parameter Fine-tuning</span></p></li>
+<li><p><span style="color:#00bfff;">Analysis Execution</span></p></li>
+<li><p><span style="color:#00bfff;">Node Code</span>, <span style="color:#00bfff;">Analysis Logs</span>, and <span style="color:#00bfff;">Analysis Details</span> View</p></li>
+<li><p><span style="color:#00bfff;">Node Sharing</span></p></li>
+<li><p><span style="color:#00bfff;">Computational Resources Configuration</span></p></li>
+<li><p><span style="color:#00bfff;">Node Data Download</span></p></li>
+</ul>
+<p>Node Design</p>
+<ul class="simple">
+<li><p>Connection Zones: Located on the left and right sides of the node for <span style="color:#00bfff;">Analysis Pipeline Assembly</span>.</p></li>
+<li><p><span style="color:#00bfff;">Node Status</span>: Indicated by the color at the top of the node.</p></li>
+<li><p>Node Name: Displays the default name of the algorithm module. Users can click the <strong>Edit</strong> (<img alt="edit-button" src="../../../_images/edit-button1.png" />) button to customize the node name.</p></li>
+</ul>
+<section id="parameter-fine-tuning">
+<h2><span style="color:#00bfff;"><strong>Parameter Fine-tuning</strong></span><a class="headerlink" href="#parameter-fine-tuning" title="Link to this heading">¶</a></h2>
+<p>Users can click the <strong>Parameter</strong> (<img alt="parameter-button" src="../../../_images/parameter-button.png" />) button within an analysis node to open the parameter adjustment panel.
+In the parameters panel, parameters marked with a red asterisk are required. If users are unclear about the meaning and function of a parameter, they can click the <strong>Information</strong> (<img alt="information-icon" src="../../../_images/information-icon.png" />) icon next to each parameter to view a description. Once the parameters are filled in, users can click the <strong>“Update”</strong> button to save the parameters, or click the <strong>“Update and Run”</strong> button to execute the current analysis node.
+Clicking the <strong>“Reset”</strong> button will revert the parameters to their last updated state.
+Clicking the <strong>“Set as Default”</strong> button will reset all parameters in the analysis node to their default values. If users need assistance from the <span style="color:#00bfff;">Agent</span> while filling in parameters, they can use the <span style="color:#00bfff;">AI Parameter</span> module.</p>
+</section>
+<section id="running-analysis">
+<h2><span style="color:#00bfff;"><strong>Running Analysis</strong></span><a class="headerlink" href="#running-analysis" title="Link to this heading">¶</a></h2>
+<p>When users need to run a specific <span style="color:#00bfff;">Analysis Node</span>, they have three options:</p>
+<ol class="arabic simple">
+<li><p>Users can click the <strong>“Update and Run”</strong> button in the parameter panel of the analysis node to run the current node.</p></li>
+<li><p>Users can click the <strong>“Start”</strong> (<img alt="start-button" src="../../../_images/start-button.png" />) button on the node card of the <span style="color:#00bfff;">Analysis Node</span> to start the analysis.</p></li>
+<li><p>Users can click the <strong>“More”</strong> (<img alt="more-button" src="../../../_images/more-button.png" />) button on the node card of the <span style="color:#00bfff;">Analysis Node</span>, then select <strong>“Run Sub Tree”</strong> in the secondary popup. In this case, the node and all subsequent child nodes will be executed sequentially.</p></li>
+</ol>
+</section>
+<section id="node-states">
+<h2><span style="color:#00bfff;"><strong>Node States</strong></span><a class="headerlink" href="#node-states" title="Link to this heading">¶</a></h2>
+<p>In the analysis panel, there are four possible states for an analysis node:</p>
+<ol class="arabic simple">
+<li><p>Ready to run: The top of the node card is white, indicating that the node has not been run yet.</p></li>
+</ol>
+<p><img alt="status-1" src="../../../_images/status-ready-to-run.png" /></p>
+<ol class="arabic simple" start="2">
+<li><p>Running: The top of the node card is gray, indicating that the node is currently running.</p></li>
+</ol>
+<p><img alt="status-2" src="../../../_images/status-running.png" /></p>
+<ol class="arabic simple" start="3">
+<li><p>Run completed: The top of the node card is green, indicating that the node has successfully run.</p></li>
+</ol>
+<p><img alt="status-3" src="../../../_images/status-completed.png" /></p>
+<ol class="arabic simple" start="4">
+<li><p>Run error: The top of the node card is red, indicating that an error occurred during the node’s run, requiring <span style="color:#00bfff;">Bug Fixer</span>.</p></li>
+</ol>
+<p><img alt="status-4" src="../../../_images/status-running-and-error.png" /></p>
+</section>
+<section id="node-output-results">
+<h2><strong style="color: #00bfff; font-weight:bold;">Node Output Results</strong><a class="headerlink" href="#node-output-results" title="Link to this heading">¶</a></h2>
+<p>When certain nodes generate downloadable CSV files after execution, users can click the <strong>“More”</strong> (<img alt="more-button" src="../../../_images/more-button.png" />) button on the analysis node card, select <strong>“Output”</strong> in the secondary popup, and choose the file they need to download.
+<img alt="node-output" src="../../../_images/node-output.png" /></p>
+</section>
+<section id="analysis-logs">
+<h2><strong style="color: #00bfff; font-weight:bold;">Analysis Logs</strong><a class="headerlink" href="#analysis-logs" title="Link to this heading">¶</a></h2>
+<p>After a node has been analysed at least once, users can click the <strong>“More”</strong> (<img alt="more-button" src="../../../_images/more-button.png" />) button on the analysis node card, select “Analysis Logs” in the secondary popup to view it. Users can click the export button to export the logs as a CSV file and download it to their local machine.
+<img alt="analysis-logs" src="../../../_images/analysis-logs.png" /></p>
+</section>
+<section id="analysis-details">
+<h2><strong style="color: #00bfff;">Analysis Details</strong><a class="headerlink" href="#analysis-details" title="Link to this heading">¶</a></h2>
+<p>After a node has been calculated at least once, users can click the button on the analysis node card, select “Analysis Details” in the secondary popup to view it.
+<img alt="analysis-details" src="../../../_images/analysis-details.png" /></p>
+</section>
+<section id="node-sharing">
+<h2><strong style="color: #00bfff;">Node Sharing</strong><a class="headerlink" href="#node-sharing" title="Link to this heading">¶</a></h2>
+<p>When a user has opened a <span style="color: #00bfff;">Sharing Analysis Task</span> task but wishes to focus on a specific analysis node to share with others, they can click the <strong>“More”</strong> (<img alt="more-button" src="../../../_images/more-button.png" />) button on the analysis node card, select <strong>“Share”</strong> in the secondary popup. This action will automatically copy the link to the current node, and other users can access and view the shared analysis task using the link.
+Please note that guest users will not have permission to edit the shared analysis.</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="computational-resources-configuration">
+<h1><strong style="color: #00bfff;">Computational Resources Configuration</strong><a class="headerlink" href="#computational-resources-configuration" title="Link to this heading">¶</a></h1>
+<p>When users analyze data or algorithm modules that require significant computational resources, they can click the button on the analysis node card, select “Configure Computational Resources” in the secondary popup, and choose parameters like CPU, memory, timeout limits, etc., according to their needs. After configuration, the node will follow this setup when running.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="node-data-download">
+<h1><strong style="color: #00bfff;">Node Data Download</strong><a class="headerlink" href="#node-data-download" title="Link to this heading">¶</a></h1>
+<p>After a node completes its calculation, users can click the <strong>“Download”</strong> (<img alt="download-button" src="../../../_images/download-button.png" />) button on the top-right of the analysis node card to download the current node’s h5ad file.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="chart-display">
+<h1><strong style="color: #00bfff;">Chart Display</strong><a class="headerlink" href="#chart-display" title="Link to this heading">¶</a></h1>
+<p>After an analysis node with charting functionality completes its execution, users can click the <strong>Settings</strong> (<img alt="settings-button" src="../../../_images/settings-button.png" />) button in the toolbar at the bottom of the analysis panel to enable <strong>“Show Chart”</strong>. The chart output will be displayed at the bottom of the node, and clicking the chart will redirect to the corresponding <span style="color: #00bfff;">Visualization Panel</span> page.</p>
+<p><img alt="chart-display" src="../../../_images/chart-display.png" /></p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="cancelling-analysis">
+<h1><strong style="color: #00bfff;">Cancelling Analysis</strong><a class="headerlink" href="#cancelling-analysis" title="Link to this heading">¶</a></h1>
+<p>If users need to stop the current running analysis process for any reason, they can click the <strong>“More”</strong> (<img alt="more-button" src="../../../_images/more-button.png" />) button on the analysis node card, and in the secondary popup, select “Cancel Analysis.”</p>
+<p>If multiple analysis nodes are running simultaneously and the user wants to stop all analyses at once, they can click the <strong>“Cancel All”</strong> button in the toolbar at the bottom of the analysis panel.</p>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="agent">
+<h1><span style="color: #00bfff"><strong>Agent</strong></span><a class="headerlink" href="#agent" title="Link to this heading">¶</a></h1>
+<p>An agent is a series of AI-assisted analysis features based on large language models in Ragomics.</p>
+<section id="ai-pipeline">
+<h2><span style="color: #00bfff;"><strong>AI Pipeline</strong></span><a class="headerlink" href="#ai-pipeline" title="Link to this heading">¶</a></h2>
+<p>In the <span style="color: #00bfff;">AI Pipeline Helper</span> page, users can utilize the AI Pipeline feature to select the data they wish to analyze and input their analysis requirements. If the user is unsure about how to input the analysis requirements, they can click on the <strong>Request Templates</strong> on the page to obtain examples. After filling in the analysis requirements, the user clicks <strong>“Next”</strong>, Ragomics will display the user’s original requirements alongside the AI-optimized version. Users can compare the two and click the <strong>“Edit”</strong> (<img alt="edit-button" src="../../../_images/edit-button2.png" />) button to edit. If the user is dissatisfied with the current AI-generated optimized result, they can click the <strong>“Refresh”</strong> (<img alt="refresh-button" src="../../../_images/refresh-button.png" />) button to refresh it. The user needs to select the final requirements text to use and click the <strong>“Confirm”</strong> button. In the next step, the user must choose between querying analysis pipelines from the <span style="color: #00bfff;">Pipeline Template</span> library or generating an analysis pipeline directly through AI. After generation, they can click the <strong>“Import”</strong> button to bring the current generated analysis pipeline into the analysis panel.</p>
+</section>
+<section id="ai-parameter">
+<h2><span style="color: #00bfff;"><strong>AI Parameter</strong></span><a class="headerlink" href="#ai-parameter" title="Link to this heading">¶</a></h2>
+<p>If users encounter difficulties when filling in the parameters for an analysis node, they can click the AI Parameter button at the bottom-left of the parameter panel. In the popup menu, users can select either <span style="color: #00bfff;">Fill All Parameters</span> or <span style="color: #00bfff;">Complete Unfilled Parameters</span>.</p>
+<ul class="simple">
+<li><p><strong>“Fill All Parameters”</strong>: In this case, the agent will automatically fill in the appropriate parameters based on the user’s current analysis data, pipeline, and analysis node.</p></li>
+<li><p><strong>“Complete Unfilled Parameters”</strong>: In this case, the agent will retain the existing parameters and automatically complete the remaining parameters based on the user’s current analysis data, pipeline, and analysis node.</p></li>
+</ul>
+<p>When users click the <strong>“Show Parameter Update History”</strong> button, a popup will display the entire history of parameters generated using the AI Parameter function in this node.
+<img alt="ai-parameter" src="../../../_images/ai-parameter.png" /></p>
+</section>
+<section id="bug-fixing">
+<h2><span style="color: #00bfff;"><strong>Bug Fixing</strong></span><a class="headerlink" href="#bug-fixing" title="Link to this heading">¶</a></h2>
+<p>During the analysis process, users may encounter errors in certain analysis nodes. In such cases, users can click on the erroring node, and the error message for that node will appear on the right side of the analysis panel. The error message includes a description of the error, suggested fixes, and logs. Users can use this information to manually fix the error.</p>
+<p><img alt="bug-fixing" src="../../../_images/bug-fixing.png" /></p>
+<p>If users are still unable to fix the error, they can try using the <strong>Bug Fixer</strong> to resolve the issue. Users can click the button in the toolbar at the bottom of the analysis panel, select the <strong>Bug Fixer</strong> option in the popup, and input the maximum retry count for fixing. Afterward, they can re-run the erroring node, and the <strong>Bug Fixer</strong> will automatically attempt to fix the error.</p>
+<p><img alt="bug-fixer" src="../../../_images/bug-fixer.png" /></p>
+</section>
+<section id="ai-interpretation">
+<h2><span style="color: #00bfff;"><strong>AI Interpretation</strong></span><a class="headerlink" href="#ai-interpretation" title="Link to this heading">¶</a></h2>
+<p>Once an analysis node has completed execution, users can click to select the node. In the <span style="color: #00bfff;">AI Interpretation</span> section of the control panel on the right, users can click <strong>“Generate”</strong>, and the agent module will provide biological interpretations of the data from that node, along with suggestions for subsequent analysis.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="visualization-panel">
+<h1><span style="color:#00bfff"><strong>Visualization Panel</strong></span><a class="headerlink" href="#visualization-panel" title="Link to this heading">¶</a></h1>
+<p>Once the user completes the run of any analysis node, they can click the analysis node and open the <span style="color:#00bfff">Visualization Panel</span> by clicking the top of the right panel. The <span style="color:#00bfff">Visualization Panel</span> is divided into three sections: <span style="color:#00bfff">Data Information Area</span>, <span style="color:#00bfff">Main Image Display and Plotting Function Area</span>, and <span style="color:#00bfff">Cell and Gene Group Management Area</span>.
+<img alt="viz-panel" src="../../../_images/visualization-panel.png" /></p>
+<section id="data-information-area">
+<h2><span style="color:#00bfff"><strong>Data Information Area</strong></span><a class="headerlink" href="#data-information-area" title="Link to this heading">¶</a></h2>
+<p>The <strong>Data Information Area</strong> includes the <span style="color:#00bfff">Observations (obs)</span> tab, <span style="color:#00bfff">Gene List</span> tab, and Observations Matrix (obsm) tab.</p>
+<section id="observations-obs-tab">
+<h3><span style="color:#00bfff"><strong>Observations (obs) Tab</strong></span><a class="headerlink" href="#observations-obs-tab" title="Link to this heading">¶</a></h3>
+<p>The <span style="color:#00bfff">Observations Tab</span> contains two data blocks: <span style="color:#00bfff">Cell Categories (category)</span> and <span style="color:#00bfff">Continuous Values</span>.</p>
+<section id="cell-categories-category-data-area">
+<h4><span style="color:#00bfff"><strong>Cell Categories (category) Data Area</strong></span><a class="headerlink" href="#cell-categories-category-data-area" title="Link to this heading">¶</a></h4>
+<p>In the <span style="color:#00bfff"><strong>Cell Categories (category) Data Area</strong></span>, metadata about cells is displayed, such as cell types and sample information. This helps users better understand the data characteristics and background information of each cell.</p>
+<ul>
+<li><p><span style="color:#00bfff"><strong>Cell Categories Coloring</strong></span><br />
+When the <span style="color:#00bfff">Main Image Display and Plotting Area</span> is in <span style="color:#00bfff">Embedding</span> mode, users can click the <strong>“Color”</strong> (<img alt="color-button" src="../../../_images/color-button.png" />) button next to any dimension of the cell category to color the plot based on that category.</p>
+<p><img alt="coloring-cell-category" src="../../../_images/coloring-cell-category.png" /></p>
+<p>Users can expand the cell category row to view subcategories under the current category.</p>
+<p><img alt="expanding-cell-subcategory-1" src="../../../_images/expanding-cell-subcategory-1.png" />
+<img alt="expanding-cell-subcategory-2" src="../../../_images/expanding-cell-subcategory-2.png" /></p>
+<p>Users can define the colors for these subcategories manually by clicking the <strong>“Paint”</strong> (<img alt="paint-button" src="../../../_images/paint-button.png" />) button to choose different color pallette or manually choose the color for each subcategory by clicking the <strong>“Color”</strong> (<img alt="color-button" src="../../../_images/color-button.png" />) button.</p>
+<p><img alt="painting-cell-subcategory-1" src="../../../_images/painting-cell-subcategory-1.png" />
+<img alt="coloring-cell-subcategory-2" src="../../../_images/coloring-cell-subcategory-2.png" /></p>
+<p>When a cell category is colored, users can expand the subcategories of other cell categories to cross-examine and compare data under different categories.</p>
+<p><img alt="cross-view" src="../../../_images/cross-view.png" /></p>
+<p>Users can click the <strong>“More”</strong> (<img alt="more-button" src="../../../_images/more-button1.png" />) button to directly edit the cell category, the pop-up contains renaming, deleting and other operations.</p>
+</li>
+<li><p><span style="color:#00bfff"><strong>Subcategory Clustering Analysis</strong></span><br />
+If users want to perform clustering on subcategories of a specific cell category, they can click the <strong>“Cluster”</strong> (<img alt="cluster-button" src="../../../_images/cluster-button.png" />) button next to that subcategory and choose the clustering algorithm to apply. After the algorithm completes, they can view the results in the corresponding analysis node.</p></li>
+<li><p><span style="color:#00bfff"><strong>Cell Category Display Control</strong></span><br />
+Users can toggle the display of cell categories or subcategories by clicking the <strong>“Togle”</strong> (<img alt="toggle-button" src="../../../_images/hide-button.png" />) buttons next to them, which helps users focus on specific cells within the Embedding page.</p></li>
+</ul>
+</section>
+<section id="continuous-values">
+<h4><span style="color:#00bfff"><strong>Continuous Values</strong></span><a class="headerlink" href="#continuous-values" title="Link to this heading">¶</a></h4>
+<p>In the <span style="color:#00bfff">Continuous Values</span> data area, users can select one or more continuous values to color the plot. They can also click <strong>“Paint”</strong> (<img alt="paint-button" src="../../../_images/paint-button.png" />) button to choose a color scheme for the coloring or manually define the colors for the start, middle, and end of the continuous values.</p>
+<p>If users want to filter cells based on continuous values, they can click the <strong>“Expand”</strong> (<img alt="expand-button" src="../../../_images/expand-button.png" />) button next to the continuous value to expand the histogram and filter cells accordingly.</p>
+<p>Users can also set the <strong>X-axis</strong> or <strong>Y-axis</strong> of the Embedding plot directly using <strong>“X-Y”</strong> (<img alt="xy-button" src="../../../_images/xyvalue-button.png" />) buttons next to the continuous values or genes, this function is also available in <span style="color:#00bfff">Gene List</span> and <span style="color:#00bfff">Gene Set</span>.</p>
+</section>
+<section id="observations-obs-tab-data-changes">
+<h4><span style="color:#00bfff"><strong>Observations (obs) Tab Data Changes</strong></span><a class="headerlink" href="#observations-obs-tab-data-changes" title="Link to this heading">¶</a></h4>
+<p>As analysis progresses, changes in cell categories and continuous values will appear in the <span style="color:#00bfff">Observations Tab</span>. Users can click the <strong>“Filter”</strong> button at the top to filter the displayed data based on the following conditions:</p>
+<ul class="simple">
+<li><p>All: Includes all cell categories and continuous values from the current analysis node.</p></li>
+<li><p>New: Only shows the newly generated data from the current analysis node.</p></li>
+<li><p>Changed: Shows data that has been modified in the current node.</p></li>
+<li><p>Unchanged: Displays data that has not been modified in the current node, usually inherited from previous analysis nodes.</p></li>
+<li><p>Deleted: Displays only the deleted data, which cannot be modified.</p></li>
+<li><p>Annotation Generated: Displays only data of cells with <span style="color:#00bfff">Cell Type Annotations</span> generated.</p></li>
+</ul>
+<p><img alt="continuous-value-3" src="../../../_images/continuous-value-3.png" /></p>
+</section>
+</section>
+<section id="gene-list">
+<h3><span style="color:#00bfff"><strong>Gene List</strong></span><a class="headerlink" href="#gene-list" title="Link to this heading">¶</a></h3>
+<p>In the <span style="color:#00bfff"><strong>Gene List</strong></span>, users can click <strong>“Paint”</strong> (<img alt="paint-button" src="../../../_images/paint-button.png" />) button to select one or more genes to color the plot. They can also choose a color scheme for the genes or manually define the colors for their start, middle, and end values.</p>
+<p>Users can also set the <strong>X-axis</strong> or <strong>Y-axis</strong> of the Embedding plot directly using <strong>“X-Y”</strong> (<img alt="xy-button" src="../../../_images/xyvalue-button.png" />) buttons next to the continuous values or genes, this function is also available in <span style="color:#00bfff">Continuous Values</span> and <span style="color:#00bfff">Gene Set</span>.</p>
+<p><img alt="gene-list-1" src="../../../_images/gene-list-1.png" /></p>
+</section>
+</section>
+<section id="main-image-and-plotting-function-area">
+<h2><span style="color:#00bfff"><strong>Main Image and Plotting Function Area</strong></span><a class="headerlink" href="#main-image-and-plotting-function-area" title="Link to this heading">¶</a></h2>
+<p>The <span style="color:#00bfff">Main Image and Plotting Function Area</span> contains tabs for different image options. Users can click on a tab to view the images generated by various algorithm modules. Common image tabs like <span style="color:#00bfff">Embedding</span>, <span style="color:#00bfff">Pathway</span>, and <span style="color:#00bfff">Plot</span> are always present in each analysis node. An image tab with a red dot indicates that it was newly generated in the current analysis node.</p>
+<p><img alt="main-plot-1" src="../../../_images/main-plot-1.png" /></p>
+<section id="quick-gene-algorithms">
+<h3><strong>Quick Gene Algorithms</strong><a class="headerlink" href="#quick-gene-algorithms" title="Link to this heading">¶</a></h3>
+<p>The <strong>Main Image and Plotting Function Area</strong> contains quick access to algorithms such as <strong>Highly Variable Genes (HVG)</strong> and <strong>Rank Genes Group</strong>.</p>
+<ul class="simple">
+<li><p>Users can click the <strong>“HVG”</strong> button to input the number of highly variable genes and run the algorithm. The result can be viewed after the algorithm completes.</p></li>
+<li><p>Users can click the <strong>“Rank Genes Group”</strong> button to select subcategories under the <span style="color:#00bfff">Cell Categories</span> tab. After selecting the subcategories, they can choose the method for ranking genes and run the algorithm. The results will be available in the corresponding analysis node after completion.
+After making selections, click the <strong>“Method”</strong> (<img alt="method-button" src="../../../_images/method-button.png" />) button to choose the desired method, then click <strong>Submit</strong>. Next, click the <strong>Run</strong> button to start the analysis. The analysis panel will display and execute the <strong>Rank Genes Group</strong> analysis node. Once the analysis is complete, you can view the results in the lower section of the <span style="color:#00bfff">Cell and Gene Group Management Area</span> within the visualization panel of the analysis node.</p></li>
+</ul>
+</section>
+<section id="embedding">
+<h3><span style="color:#00bfff"><strong>Embedding</strong></span><a class="headerlink" href="#embedding" title="Link to this heading">¶</a></h3>
+<section id="dimension-selection">
+<h4><span style="color:#00bfff">Dimension Selection</span><a class="headerlink" href="#dimension-selection" title="Link to this heading">¶</a></h4>
+<p>In the <span style="color:#00bfff">Embedding</span> image tab, users can click the <strong>“2D/3D Toggle”</strong> button to switch between 2D and 3D views. Clicking the <strong>“Dimensions”</strong> button will display a list of dimensions generated by the current and previous analysis nodes. Users can quickly switch between them. If custom dimensions are needed, users can choose the <strong>“Select Dimensions”</strong> option to set <strong>X-axis</strong>, <strong>Y-axis</strong>, and <strong>Z-axis</strong> in a popup.</p>
+</section>
+<section id="cell-selection">
+<h4><span style="color:#00bfff">Cell Selection</span><a class="headerlink" href="#cell-selection" title="Link to this heading">¶</a></h4>
+<p>Users can click the <strong>“Drag”</strong> (<img alt="drag-button" src="../../../_images/drag-button.png" />) button at the top of the <span style="color:#00bfff">Embedding</span> image tab, then <strong>“Select”</strong> button (<img alt="select-button" src="../../../_images/select-button.png" />) to enter selection mode. They can then click on the starting point and drag to form a selection box around the desired cells. Once the selection is closed, only the selected cells will be displayed. Users can click the <strong>“Save”</strong> (<img alt="save-button" src="../../../_images/save-button.png" />) button to save the selected cells as a <span style="color:#00bfff">Cell Set</span> for further analysis.</p>
+<p>During the selection process, you can right-click or click the <strong>“Cross”</strong> (<img alt="cross-button" src="../../../_images/cross-button.png" />) button on the bottom toolbar to clear the current selection. If you wish to exit selection mode and return to drag mode, click the <strong>“Select”</strong> button at the top and then click the button in the pop-up window.</p>
+</section>
+<section id="cell-filtering">
+<h4><span style="color:#00bfff">Cell Filtering</span><a class="headerlink" href="#cell-filtering" title="Link to this heading">¶</a></h4>
+<p>In <span style="color:#00bfff">Continuous Values</span> and <strong>Gene Coloring</strong>, users can filter cells directly in the <span style="color:#00bfff">Embedding</span> image tab using histograms. users can expand the histogram of a data row even if it has not been used for highlighting. By clicking and dragging on the histogram, users can select a filtering range, and the cell points displayed on the <span style="color:#00bfff">Embedding</span> page will be filtered accordingly.
+Clicking any blank area on the histogram will exit the filtering state. Additionally, filters for <span style="color:#00bfff">Continuous Values</span> and <span style="color:#00bfff">Gene Sets</span> can be applied simultaneously and combined.</p>
+<p><img alt="cell-filtering" src="../../../_images/cell-filtering.png" /></p>
+<p>Users can also filter cells by adjusting sliders to refine the displayed cells. Users can also achieve the same filtering effect by adjusting the filter slider in the top-right corner of the <span style="color:#00bfff">Embedding</span> tab when <span style="color:#00bfff">Continuous Values</span> or <span style="color:#00bfff">Gene Sets</span> have already been highlighted.</p>
+<p><img alt="cell-filtering-2" src="../../../_images/cell-filtering-2.png" /></p>
+</section>
+<section id="color-clipping">
+<h4><span style="color:#00bfff">Color Clipping</span><a class="headerlink" href="#color-clipping" title="Link to this heading">¶</a></h4>
+<p>The <strong>Clipping</strong> feature in the <span style="color:#00bfff">Embedding</span> page helps manage color gradients in plots. The user can adjust the sliding bars to control where the color transition should start and end.</p>
+<p>The slider contains two draggable handles that primarily define the critical points for color transitions. When users adjust the handles, the areas of the image outside these two points will be color-saturated to match the color values at the handle positions. This overrides the original gradient effect, creating uniform coloring and emphasizing specific regions of the image.</p>
+<p><img alt="clipping-1" src="../../../_images/clipping-1.png" /></p>
+</section>
+<section id="resetting-filters-and-operations">
+<h4><span style="color:#00bfff">Resetting Filters and Operations</span><a class="headerlink" href="#resetting-filters-and-operations" title="Link to this heading">¶</a></h4>
+<p>If users have applied multiple filters on the <span style="color:#00bfff">Embedding</span> page and wish to quickly revert to the unfiltered state, they can click the <strong>“Filters”</strong> button on the bottom toolbar. A pop-up window will display hidden items from <span style="color:#00bfff">Cell Categories</span> and filtered items from <span style="color:#00bfff">Continuous Values</span> (including genes).</p>
+<p>Users can click the <strong>“Cross”</strong> (<img alt="cross-button" src="../../../_images/small-cross-button.png" />) buttons for each item to remove the specific filter or use the <strong>“Clear”</strong> (<img alt="clear-button" src="../../../_images/clear-button.png" />) button to clear all filters at once.</p>
+<p>Alternatively, users can click the <strong>“Reset”</strong> button on the toolbar to restore the visualization panel to its initial state.</p>
+</section>
+<section id="full-screen">
+<h4><span style="color:#00bfff">Full Screen</span><a class="headerlink" href="#full-screen" title="Link to this heading">¶</a></h4>
+<p>Users can toggle full-screen mode by clicking the <strong>“Full-screen”</strong> (<img alt="fs-button" src="../../../_images/fullscreen-button.png" />) button at the top of the <span style="color:#00bfff">Embedding</span> page. Clicking it again exits full-screen mode.</p>
+</section>
+<section id="graph-download">
+<h4><span style="color:#00bfff">Graph Download</span><a class="headerlink" href="#graph-download" title="Link to this heading">¶</a></h4>
+<p>Users can download the current visualization by clicking the <strong>“Download”</strong> (<img alt="download-button" src="../../../_images/small-download-button.png" />) button and selecting the desired image format.</p>
+</section>
+<section id="plot-beautification-settings">
+<h4><span style="color:#00bfff">Plot Beautification Settings</span><a class="headerlink" href="#plot-beautification-settings" title="Link to this heading">¶</a></h4>
+<p><span style="color:#00bfff">Embedding</span> provides several customization options to beautify the plots, including:</p>
+<ul class="simple">
+<li><p><strong>Coordinate Axes</strong>: Users can toggle the display of axes on the <span style="color:#00bfff">Embedding</span> page by clicking the <strong>“Display Axes”</strong> (<img alt="axes-button" src="../../../_images/display-axes-button-1.png" />) button on the top toolbar. For more detailed adjustments, users can click the <strong>“Tool”</strong> (<img alt="tool-button" src="../../../_images/tool-button.png" />) button on the right to expand the <strong>Styling Toolbar</strong> and open the <strong>Axis Styling Parameters</strong> pop-up window by clicking <strong>“Beautify Axes”</strong> (<img alt="axes-button" src="../../../_images/display-axes-button-2.png" />) button.</p></li>
+<li><p><strong>Cell Labels</strong>: Users can toggle the display of cell labels on the scatterplot by clicking the <strong>“Show Label”</strong> (<img alt="show-label" src="../../../_images/show-label-button-1.png" />) button on the top toolbar of the <span style="color:#00bfff">Embedding</span> page. For more detailed adjustments, users can click the <strong>“Tool”</strong> (<img alt="tool-button" src="../../../_images/tool-button.png" />) button on the right to expand the <strong>Styling Toolbar</strong> and open the <strong>Cell Label Styling Parameters</strong> pop-up window by clicking <strong>“Beautify Label”</strong> (<img alt="label-button" src="../../../_images/show-label-button-2.png" />) button.</p></li>
+<li><p><strong>Cell Category Legend</strong>: Users can toggle the display of the cell categories legend by clicking the <strong>“Show Legend”</strong> (<img alt="show-legend-1" src="../../../_images/show-legend-button-1.png" />) button on the top toolbar of the <span style="color:#00bfff">Embedding</span> page. For more detailed adjustments, users can click the <strong>“Tool”</strong> (<img alt="tool-button" src="../../../_images/tool-button.png" />) button on the right to expand the <strong>Styling Toolbar</strong> and open the <strong>Cell Categories Legend Styling Parameters</strong> pop-up window by clicking <strong>“Beautify Legend”</strong> (<img alt="show-legend-2" src="../../../_images/show-legend-button-2.png" />) button.</p></li>
+</ul>
+</section>
+<section id="pathway">
+<h4><span style="color:#00bfff"><strong>Pathway</strong></span><a class="headerlink" href="#pathway" title="Link to this heading">¶</a></h4>
+<p>In the <span style="color:#00bfff">Pathway</span> tab, users can create, view, and manage Pathway analysis results.</p>
+<ul class="simple">
+<li><p><span style="color:#00bfff"><strong>Create Pathway</strong></span><br />
+Users can click the <strong>“Create Pathway”</strong> (<img alt="create-pathway" src="../../../_images/create-pathway.png" />) button in the <span style="color:#00bfff">Pathway</span> tab, input a task name, select the gene set and species, choose the required library, and click <strong>“OK”</strong> to start the pathway analysis. After completion, the results will be available in the corresponding analysis node.</p></li>
+<li><p><span style="color:#00bfff"><strong>View Pathway</strong></span><br />
+The <span style="color:#00bfff">Pathway</span> tab lists the current and previous Pathway tasks. Users can click any task to view details and click <strong>“Back”</strong> (<img alt="back-button" src="../../../_images/back-button.png" />) button to return to the task list.</p></li>
+</ul>
+</section>
+</section>
+<section id="plot">
+<h3><span style="color:#00bfff"><strong>Plot</strong></span><a class="headerlink" href="#plot" title="Link to this heading">¶</a></h3>
+<p>In the <span style="color:#00bfff">Plot</span> tab, users can toggle between different plot types, such as <span style="color:#00bfff">Bar Plots</span> and <span style="color:#00bfff">Violin Plots</span>.</p>
+<p><img alt="plot" src="../../../_images/plot.png" /></p>
+<ul class="simple">
+<li><p><span style="color:#00bfff"><strong>Bar Plot</strong></span><br />
+In the <span style="color:#00bfff">Bar Plot</span> mode, users can click a <span style="color:#00bfff">Cell Category</span> and select an <strong>X-axis</strong> to create the bar plot.</p></li>
+<li><p><span style="color:#00bfff"><strong>Violin Plot</strong></span><br />
+In <span style="color:#00bfff">Violin Plot</span> mode, users can choose an <strong>X-axis</strong> and either <span style="color:#00bfff">Obs Continuous Values</span> or a <span style="color:#00bfff">Gene Set</span> for the <strong>Y-axis</strong> to generate a violin plot.</p></li>
+</ul>
+</section>
+</section>
+<section id="cell-and-gene-group-management-area">
+<h2><span style="color:#00bfff"><strong>Cell and Gene Group Management Area</strong></span><a class="headerlink" href="#cell-and-gene-group-management-area" title="Link to this heading">¶</a></h2>
+<p>In the <span style="color:#00bfff">Cell and Gene Group Management Area</span>, users can create and view <span style="color:#00bfff">Cell Sets</span> and <span style="color:#00bfff">Gene Sets</span>. They can also perform <span style="color:#00bfff">Cell Annotation</span> and save the annotations as <code class="docutils literal notranslate"><span class="pre">obs</span></code> data.</p>
+<section id="cell-sets">
+<h3><strong><span style="color:#00bfff">Cell Sets</span></strong><a class="headerlink" href="#cell-sets" title="Link to this heading">¶</a></h3>
+<p>Apart from saving cell sets on the <span style="color:#00bfff">Embedding</span> page, users can also create cell sets by clicking the <strong>“Add”</strong> button (<img alt="add-button" src="../../../_images/viz-add-button.png" />) under the <span style="color:#00bfff">Cell Sets</span> tab. Additionally, users can upload an existing cell set CSV file by clicking the <strong>“Upload”</strong> (<img alt="upload-button" src="../../../_images/viz-upload-button.png" />) button under the <span style="color:#00bfff">Cell Sets</span> tab to create a cell set.</p>
+<p>Once the cell set is created, users can click the <strong>“Annotate”</strong> (<img alt="annotate-button" src="../../../_images/viz-annotate-button.png" />) button next to the cell set to save the current cell set to the <span style="color:#00bfff">Cell Type Annotation</span> group. Users can also click the <strong>“Cluster”</strong> (<img alt="cluster-button" src="../../../_images/cluster-button.png" />) button next to the cell set and choose the required clustering algorithm or use the cell set as target data for analysis.</p>
+</section>
+<section id="gene-sets">
+<h3><strong><span style="color:#00bfff">Gene Sets</span></strong><a class="headerlink" href="#gene-sets" title="Link to this heading">¶</a></h3>
+<p>Users can create gene sets by clicking the <strong>“Add”</strong> button under the <span style="color:#00bfff">Gene Sets</span> tab. Users can also upload an existing gene set CSV file by clicking the <strong>“Upload”</strong> (<img alt="upload-button" src="../../../_images/viz-upload-button.png" />) button under the <span style="color:#00bfff">Gene Sets</span> tab to create a gene set. Once the gene set is created, users can click the <strong>“Export”</strong> (<img alt="export-button" src="../../../_images/export-button.png" />) button to export the gene set as a CSV file.</p>
+<p>Users can click any gene set or the <strong>“Color”</strong> (<img alt="color-button" src="../../../_images/color-button.png" />) button next to the gene in the gene set to select a single-color or multi-color mode and use the gene set or gene for coloring the plot. When a gene set or gene is colored, users can click the <strong>“Paint”</strong> (<img alt="paint-button" src="../../../_images/paint-button.png" />) button to choose a different color scheme for the current coloring. Users can also click the color block icon next to each gene set or gene to manually define the color used for each gene in the gene set.</p>
+<p>When in the <span style="color:#00bfff">Cell Type Annotation</span> state process, if users don’t want to display gene expression only for unannotated cells, they can click the <strong>hide anno</strong> button next to the gene set, which will exclude the already annotated cells and re-calculate and draw the histogram of the expression levels.</p>
+</section>
+<section id="cell-type-annotation">
+<h3><strong><span style="color:#00bfff">Cell Type Annotation</span></strong><a class="headerlink" href="#cell-type-annotation" title="Link to this heading">¶</a></h3>
+<p>When users need to annotate cell types, they can click the <strong><span style="color:#00bfff">Cell Type Annotation</span></strong> tab and select either <strong>manual annotation</strong> or <strong>automatic annotation</strong> by clicking the <strong>“Add”</strong> (<img alt="add-button" src="../../../_images/viz-add-button.png" />) button.</p>
+<section id="manual-annotation">
+<h4><strong><span style="color:#00bfff">Manual Annotation</span></strong><a class="headerlink" href="#manual-annotation" title="Link to this heading">¶</a></h4>
+<p>After creating the annotation group, users can click the <strong>“Add from Obs”</strong> (<img alt="add-from" src="../../../_images/add-from-obs-button.png" />) button, and the cell category area will enter the selection state. Users can select options in the checkboxes on the right of the cell subcategories. After selection, they can click <strong>“Save to annotation”</strong> (<img alt="save-to-anno" src="../../../_images/save-to-anno-button.png" />) button to save the selected subcategory cells to the cell annotation group.</p>
+<p>When the cells included in a certain selection are duplicated with cells that already exist in the annotation group, a pop-up window will appear. If the user chooses to keep the original annotation group, these duplicate cells will be removed from the newly selected cells. If the user chooses to save as a new annotation group, these duplicate cells in the original annotation group will be deleted and saved as a new annotation group.</p>
+<p><img alt="annotation-1" src="../../../_images/manual-anno-1.png" /></p>
+<p><img alt="annotation-2" src="../../../_images/manual-anno-2.png" /></p>
+<p>Once all the cells are annotated, users can click the <strong>“Upload”</strong> (<img alt="upload-button" src="../../../_images/viz-upload-button.png" />) button to save the annotation results to <strong>obs</strong> (observations).</p>
+</section>
+<section id="automatic-annotation">
+<h4><strong><span style="color:#00bfff">Automatic Annotation</span></strong><a class="headerlink" href="#automatic-annotation" title="Link to this heading">¶</a></h4>
+<p>After selecting <span style="color:#00bfff">Automatic Annotation</span>, users choose the model type that matches the source data species type and the corresponding annotation category. After clicking OK, the analysis panel will appear, and the automatic annotation analysis node will run. Once completed, users can view the analysis results in the visualization panel of the analysis node.</p>
+<p><img alt="auto-anno" src="../../../_images/auto-anno.png" /></p>
+</section>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          <a class="prev-page" href="../../index.zh.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">&lt;no title&gt;</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2024, ragomics
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#"><span style="color:#00bfff"><strong>Platform Login and Registration</strong></span></a><ul>
+<li><a class="reference internal" href="#platform-login"><span style="color:#00bfff"><strong>Platform Login</strong></span></a></li>
+<li><a class="reference internal" href="#account-registration"><span style="color:#00bfff"><strong>Account Registration</strong></span></a></li>
+<li><a class="reference internal" href="#password-reset"><span style="color:#00bfff"><strong>Password Reset</strong></span></a></li>
+<li><a class="reference internal" href="#guest-mode"><span style="color:#00bfff"><strong>Guest Mode</strong></span></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#creation-and-management-of-analysis-tasks"><span style="color:#00bfff"><strong>Creation and Management of Analysis Tasks</strong></span></a><ul>
+<li><a class="reference internal" href="#workflow"><span style="color:#00bfff"><strong>Workflow</strong></span></a></li>
+<li><a class="reference internal" href="#creating-an-analysis"><span style="color:#00bfff"><strong>Creating an Analysis</strong></span></a></li>
+<li><a class="reference internal" href="#managing-analysis-tasks"><span style="color:#00bfff"><strong>Managing Analysis Tasks</strong></span></a></li>
+<li><a class="reference internal" href="#collaborator-management"><span style="color:#00bfff"><strong>Collaborator Management</strong></span></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#public-analyses-and-databases"><span style="color:#00bfff"><strong>Public Analyses and Databases</strong></span></a><ul>
+<li><a class="reference internal" href="#public-analyses"><span style="color:#00bfff"><strong>Public Analyses</strong></span></a></li>
+<li><a class="reference internal" href="#public-databases"><span style="color:#00bfff"><strong>Public Databases</strong></span></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data-upload-and-management"><span style="color:#00bfff"><strong>Data Upload and Management</strong></span></a><ul>
+<li><a class="reference internal" href="#data-upload"><span style="color:#00bfff"><strong>Data Upload</strong></span></a></li>
+<li><a class="reference internal" href="#importing-data"><span style="color:#00bfff"><strong>Importing Data</strong></span></a><ul>
+<li><a class="reference internal" href="#importing-from-existing-data">1. Importing from Existing Data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#analysis-panel"><span style="color:#00bfff"><strong>Analysis Panel</strong></span></a><ul>
+<li><a class="reference internal" href="#automatic-layout"><strong><span style="color:#00bfff;" id="automatic-layout">Automatic Layout</span></strong></a></li>
+<li><a class="reference internal" href="#analysis-pipeline-thumbnail"><strong><span style="color:#00bfff;">Analysis Pipeline Thumbnail</span></strong></a></li>
+<li><a class="reference internal" href="#analysis-node-status-panel"><strong><span style="color:#00bfff;">Analysis Node Status Panel</span></strong></a></li>
+<li><a class="reference internal" href="#sharing-analysis-tasks"><span style="color:#00bfff;"><strong>Sharing Analysis Tasks</strong></span></a></li>
+<li><a class="reference internal" href="#in-app-notifications"><span style="color:#00bfff;"><strong>In-App Notifications</strong></span></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#analysis-pipeline"><span style="color:#00bfff;"><strong>Analysis Pipeline</strong></span></a><ul>
+<li><a class="reference internal" href="#assembling-an-analysis-pipeline"><span style="color:#00bfff;"><strong>Assembling an Analysis Pipeline</strong></span></a></li>
+<li><a class="reference internal" href="#pipeline-helper-and-analysis-nodes"><span style="color:#00bfff;"><strong>Pipeline Helper and Analysis Nodes</strong></span></a><ul>
+<li><a class="reference internal" href="#pipeline-helper"><span style="color:#00bfff;"><strong>Pipeline Helper</strong></span></a></li>
+<li><a class="reference internal" href="#pipeline-template-library"><span style="color:#00bfff;"><strong>Pipeline Template Library</strong></span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#analysis-nodes"><span style="color:#00bfff;"><strong>Analysis Nodes</strong></span></a><ul>
+<li><a class="reference internal" href="#parameter-fine-tuning"><span style="color:#00bfff;"><strong>Parameter Fine-tuning</strong></span></a></li>
+<li><a class="reference internal" href="#running-analysis"><span style="color:#00bfff;"><strong>Running Analysis</strong></span></a></li>
+<li><a class="reference internal" href="#node-states"><span style="color:#00bfff;"><strong>Node States</strong></span></a></li>
+<li><a class="reference internal" href="#node-output-results"><strong style="color: #00bfff; font-weight:bold;">Node Output Results</strong></a></li>
+<li><a class="reference internal" href="#analysis-logs"><strong style="color: #00bfff; font-weight:bold;">Analysis Logs</strong></a></li>
+<li><a class="reference internal" href="#analysis-details"><strong style="color: #00bfff;">Analysis Details</strong></a></li>
+<li><a class="reference internal" href="#node-sharing"><strong style="color: #00bfff;">Node Sharing</strong></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#computational-resources-configuration"><strong style="color: #00bfff;">Computational Resources Configuration</strong></a></li>
+<li><a class="reference internal" href="#node-data-download"><strong style="color: #00bfff;">Node Data Download</strong></a></li>
+<li><a class="reference internal" href="#chart-display"><strong style="color: #00bfff;">Chart Display</strong></a></li>
+<li><a class="reference internal" href="#cancelling-analysis"><strong style="color: #00bfff;">Cancelling Analysis</strong></a></li>
+<li><a class="reference internal" href="#agent"><span style="color: #00bfff"><strong>Agent</strong></span></a><ul>
+<li><a class="reference internal" href="#ai-pipeline"><span style="color: #00bfff;"><strong>AI Pipeline</strong></span></a></li>
+<li><a class="reference internal" href="#ai-parameter"><span style="color: #00bfff;"><strong>AI Parameter</strong></span></a></li>
+<li><a class="reference internal" href="#bug-fixing"><span style="color: #00bfff;"><strong>Bug Fixing</strong></span></a></li>
+<li><a class="reference internal" href="#ai-interpretation"><span style="color: #00bfff;"><strong>AI Interpretation</strong></span></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#visualization-panel"><span style="color:#00bfff"><strong>Visualization Panel</strong></span></a><ul>
+<li><a class="reference internal" href="#data-information-area"><span style="color:#00bfff"><strong>Data Information Area</strong></span></a><ul>
+<li><a class="reference internal" href="#observations-obs-tab"><span style="color:#00bfff"><strong>Observations (obs) Tab</strong></span></a><ul>
+<li><a class="reference internal" href="#cell-categories-category-data-area"><span style="color:#00bfff"><strong>Cell Categories (category) Data Area</strong></span></a></li>
+<li><a class="reference internal" href="#continuous-values"><span style="color:#00bfff"><strong>Continuous Values</strong></span></a></li>
+<li><a class="reference internal" href="#observations-obs-tab-data-changes"><span style="color:#00bfff"><strong>Observations (obs) Tab Data Changes</strong></span></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#gene-list"><span style="color:#00bfff"><strong>Gene List</strong></span></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#main-image-and-plotting-function-area"><span style="color:#00bfff"><strong>Main Image and Plotting Function Area</strong></span></a><ul>
+<li><a class="reference internal" href="#quick-gene-algorithms"><strong>Quick Gene Algorithms</strong></a></li>
+<li><a class="reference internal" href="#embedding"><span style="color:#00bfff"><strong>Embedding</strong></span></a><ul>
+<li><a class="reference internal" href="#dimension-selection"><span style="color:#00bfff">Dimension Selection</span></a></li>
+<li><a class="reference internal" href="#cell-selection"><span style="color:#00bfff">Cell Selection</span></a></li>
+<li><a class="reference internal" href="#cell-filtering"><span style="color:#00bfff">Cell Filtering</span></a></li>
+<li><a class="reference internal" href="#color-clipping"><span style="color:#00bfff">Color Clipping</span></a></li>
+<li><a class="reference internal" href="#resetting-filters-and-operations"><span style="color:#00bfff">Resetting Filters and Operations</span></a></li>
+<li><a class="reference internal" href="#full-screen"><span style="color:#00bfff">Full Screen</span></a></li>
+<li><a class="reference internal" href="#graph-download"><span style="color:#00bfff">Graph Download</span></a></li>
+<li><a class="reference internal" href="#plot-beautification-settings"><span style="color:#00bfff">Plot Beautification Settings</span></a></li>
+<li><a class="reference internal" href="#pathway"><span style="color:#00bfff"><strong>Pathway</strong></span></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#plot"><span style="color:#00bfff"><strong>Plot</strong></span></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cell-and-gene-group-management-area"><span style="color:#00bfff"><strong>Cell and Gene Group Management Area</strong></span></a><ul>
+<li><a class="reference internal" href="#cell-sets"><strong><span style="color:#00bfff">Cell Sets</span></strong></a></li>
+<li><a class="reference internal" href="#gene-sets"><strong><span style="color:#00bfff">Gene Sets</span></strong></a></li>
+<li><a class="reference internal" href="#cell-type-annotation"><strong><span style="color:#00bfff">Cell Type Annotation</span></strong></a><ul>
+<li><a class="reference internal" href="#manual-annotation"><strong><span style="color:#00bfff">Manual Annotation</span></strong></a></li>
+<li><a class="reference internal" href="#automatic-annotation"><strong><span style="color:#00bfff">Automatic Annotation</span></strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../../../_static/documentation_options.js?v=cc491f29"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/scripts/furo.js?v=5fa4622c"></script>
+    </body>
+</html>
