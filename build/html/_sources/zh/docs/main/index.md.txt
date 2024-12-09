@@ -157,7 +157,7 @@ Users can click the number next to "Nodes" to open the **Analysis Node Status Pa
 Additionally, clicking the **View Code** (![detail-code](../../img/analysis-panel/detail.png)) icon next to each node in the status panel allows users to view the code for that specific node.
 ![analysis-dashboard](../../img/analysis-panel/analysis-dashboard.png)
 
-## <span style="color:#00bfff;">**Sharing Analysis Tasks**</span>
+## <span style="color:#00bfff;">**Sharing Analysis Task**</span>
 To share a specific analysis task with others, users can click the **"Share"** button at the top of the analysis panel. In the pop-up window, enable the **"Public"** setting and click the **"Copy Link"** button to generate a link for the current analysis task. Other users can use this link to access and view the shared task; however, guest users will not be able to make edits.  
 
 If editing permissions are required, users can perform [<span style="color:#00bfff;">Collaborator Management</span>](#collaborator-management) in the settings below.
@@ -257,7 +257,7 @@ After a node has been calculated at least once, users can click the button on th
 ![analysis-details](../../img/analysis-node/analysis-job-details.png)
 
 ## <strong style="color: #00bfff;">Node Sharing</strong>
-When a user has opened a [<span style="color: #00bfff;">Sharing Analysis</span>](#sharing-analysis-tasks) task but wishes to focus on a specific analysis node to share with others, they can click the **"More"** (![more-button](../../img/analysis-node/more-button.png)) button on the analysis node card, select **"Share"** in the secondary popup. This action will automatically copy the link to the current node, and other users can access and view the shared analysis task using the link. 
+When a user has opened a [<span style="color: #00bfff;">Sharing Analysis Task</span>](#sharing-analysis-task) but wishes to focus on a specific analysis node to share with others, they can click the **"More"** (![more-button](../../img/analysis-node/more-button.png)) button on the analysis node card, select **"Share"** in the secondary popup. This action will automatically copy the link to the current node, and other users can access and view the shared analysis task using the link. 
 Please note that guest users will not have permission to edit the shared analysis.
 
 # <strong style="color: #00bfff;">Computational Resources Configuration</strong>
