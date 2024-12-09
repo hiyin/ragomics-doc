@@ -1,12 +1,12 @@
 # <span style="color:#00bfff">**Platform Login and Registration**</span>
 
 ## <span style="color:#00bfff">**Platform Login**</span>
-On the login page, users can enter their account credentials (mobile number) and password, then click the **Log in** button to access the platform. If users do not have an account, they can click the **Register** button to proceed with <span style="color:#00bfff">account registration</span>. In case users forget their password, they can click the **Forgot password** button to <span style="color:#00bfff">reset password</span>.
+On the login page, users can enter their account credentials (mobile number) and password, then click the **Log in** button to access the platform. If users do not have an account, they can click the **Register** button to proceed with [<span style="color:#00bfff">Account Registration</span>](#acc-regist). In case users forget their password, they can click the **Forgot password** button to [<span style="color:#00bfff">Password Reset</span>](#password-reset).
 
-## <span style="color:#00bfff">**Account Registration**</span>
+## <span style="color:#00bfff" id="acc-regist">**Account Registration**</span>
 On the registration page, users need to input their username, password, and mobile number (used as the login account). After entering these details, users can click the **Send** button to receive and input a mobile verification code. If users do not have an invitation code, they can contact customer service by emailing **yuze@raganetwork.com** for assistance.
 
-## <span style="color:#00bfff">**Password Reset**</span>
+## <span style="color:#00bfff" id="passwd-reset">**Password Reset**</span>
 On the password reset page, users must enter their mobile number (login account) and click the **Send** button to receive a mobile verification code. Users then input the verification code along with their new password. Once the information is filled in, they can click the **Next step** button to proceed to the password reset result page. If the reset is successful, users can click the **To login** button to return to the login page.
 
 ## <span style="color:#00bfff">**Guest Mode**</span>
@@ -69,7 +69,7 @@ Ragomics offers two methods for uploading data:
 
 Method 1
 - Navigate to <span style="color:#00bfff">Workflow</span> - <span style="color:#00bfff">Data Source</span> - **My Data** section.
-- Click the **Upload** (![upload-button](../../img/data-upload-and-management/upload-button.png)) button to start the data upload process.
+- Click the **Upload** (![upload-button](../../img/data-upload-and-management/upload-from-device-button.png)) button to start the data upload process.
 
 Method 2
 - In the **Analysis Panel**, click the **Add** (![add-button](../../img/data-upload-and-management/add-button.png)) button under the Data Source tab on the left sidebar, choose **Upload from Device** button to begin uploading data directly from your device.
@@ -197,7 +197,7 @@ In the <span style="color:#00bfff;">Analysis Panel</span>, each algorithm module
 
 - <span style="color:#00bfff;">Parameter Fine-tuning</span>
 - <span style="color:#00bfff;">Analysis Execution</span>
-- <span style="color:#00bfff;">Node Code</span>, <span style="color:#00bfff;">Analysis Logs</span>, and <span style="color:#00bfff;">Analysis Details</span> View
+- <span style="color:#00bfff;">Node Code</span>, <span style="color:#00bfff;">Calculation Logs</span>, and <span style="color:#00bfff;">Job Info</span> View
 - <span style="color:#00bfff;">Node Sharing</span>
 - <span style="color:#00bfff;">Computational Resources Configuration</span>
 - <span style="color:#00bfff;">Node Data Download</span>
@@ -241,15 +241,16 @@ In the analysis panel, there are four possible states for an analysis node:
 
 ## <strong style="color: #00bfff; font-weight:bold;">Node Output Results</strong>
 When certain nodes generate downloadable CSV files after execution, users can click the **"More"** (![more-button](../../img/analysis-node/more-button.png)) button on the analysis node card, select **"Output"** in the secondary popup, and choose the file they need to download.
+
 ![node-output](../../img/analysis-node/node-output.png)
 
-## <strong style="color: #00bfff; font-weight:bold;">Analysis Logs</strong>
-After a node has been analysed at least once, users can click the **"More"** (![more-button](../../img/analysis-node/more-button.png)) button on the analysis node card, select "Analysis Logs" in the secondary popup to view it. Users can click the export button to export the logs as a CSV file and download it to their local machine.
-![analysis-logs](../../img/analysis-node/analysis-logs.png)
+## <strong style="color: #00bfff; font-weight:bold;">Calculation Logs</strong>
+After a node has been calculated at least once, users can click the **"More"** (![more-button](../../img/analysis-node/more-button.png)) button on the analysis node card, select "Calculation Logs" in the secondary popup to view it. Users can click the export button to export the logs as a CSV file and download it to their local machine.
+![analysis-logs](../../img/analysis-node/analysis-calculation-log.png)
 
-## <strong style="color: #00bfff;">Analysis Details</strong>
-After a node has been calculated at least once, users can click the button on the analysis node card, select "Analysis Details" in the secondary popup to view it.
-![analysis-details](../../img/analysis-node/analysis-details.png)
+## <strong style="color: #00bfff;">Job Info</strong>
+After a node has been calculated at least once, users can click the button on the analysis node card, select "Job Info" in the secondary popup to view it.
+![analysis-details](../../img/analysis-node/analysis-job-details.png)
 
 ## <strong style="color: #00bfff;">Node Sharing</strong>
 When a user has opened a <span style="color: #00bfff;">Sharing Analysis Task</span> task but wishes to focus on a specific analysis node to share with others, they can click the **"More"** (![more-button](../../img/analysis-node/more-button.png)) button on the analysis node card, select **"Share"** in the secondary popup. This action will automatically copy the link to the current node, and other users can access and view the shared analysis task using the link. 
