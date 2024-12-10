@@ -1,4 +1,21 @@
+# <span style="color:#00bfff">**Quickstart**</span>
+
+<div style="display: block; align-items: center;">
+  <div style="flex: 1; padding-right: 10px;">
+    <p>
+      Placeholder
+    </p>
+  </div>
+  <div style="flex: 1; padding-left: 10px;">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
 # <span style="color:#00bfff">**Platform Login and Registration**</span>
+
+## <span style="color:#00bfff">**Guest Mode**</span>
+If users do not have a platform account and prefer not to register, they can choose to log in as a guest (**Login as a guest**). In visitor mode, all editing operations will be disabled. However, guests can still view public analyses or those shared by other users.
+![guest-mode](../../img/platform-login-and-registeration/image.png)
 
 ## <span style="color:#00bfff">**Platform Login**</span>
 On the login page, users can enter their account credentials (mobile number) and password, then click the **Log in** button to access the platform. If users do not have an account, they can click the **Register** button to proceed with [<span style="color:#00bfff">Account Registration</span>](#acc-regist). In case users forget their password, they can click the **Forgot password** button to [<span style="color:#00bfff">Password Reset</span>](#password-reset).
@@ -9,11 +26,11 @@ On the registration page, users need to input their username, password, and mobi
 ## <span style="color:#00bfff" id="passwd-reset">**Password Reset**</span>
 On the password reset page, users must enter their mobile number (login account) and click the **Send** button to receive a mobile verification code. Users then input the verification code along with their new password. Once the information is filled in, they can click the **Next step** button to proceed to the password reset result page. If the reset is successful, users can click the **To login** button to return to the login page.
 
-## <span style="color:#00bfff">**Guest Mode**</span>
-If users do not have a platform account and prefer not to register, they can choose to log in as a guest (**Login as a guest**). In visitor mode, all editing operations will be disabled. However, guests can still view public analyses or those shared by other users.
-![guest-mode](../../img/platform-login-and-registeration/image.png)
+
 
 ---
+
+
 
 # <span style="color:#00bfff">**Creation and Management of Analysis Tasks**</span>
 
@@ -135,7 +152,11 @@ In the [<span style="color:#00bfff">Analysis Panel</span>](#analysis-panel), use
 - In the import form, select the desired data by checking the boxes on the left.  
 - Click **Confirm** to import the data from the account into the current analysis task.
 
+
+
 ---
+
+
 
 # <span style="color:#00bfff">**Analysis Panel**</span>
 
@@ -487,7 +508,10 @@ When users need to annotate cell types, they can click the [<span style="color:#
 #### **<span style="color:#00bfff">Manual Annotation</span>**
 After creating the annotation group, users can click the **"Add from Obs"** (![add-from](../../img/visualization-panel/add-from-obs-button.png)) button, and the cell category area will enter the selection state. Users can select options in the checkboxes on the right of the cell subcategories. After selection, they can click **"Save to annotation"** (![save-to-anno](../../img/visualization-panel/save-to-anno-button.png)) button to save the selected subcategory cells to the cell annotation group. 
 
-When the cells included in a certain selection are duplicated with cells that already exist in the annotation group, a pop-up window will appear. If the user chooses to keep the original annotation group, these duplicate cells will be removed from the newly selected cells. If the user chooses to save as a new annotation group, these duplicate cells in the original annotation group will be deleted and saved as a new annotation group.
+When newly annotated cells (e.g., based on an existing category) overlap with cells already included in an **existing annotation group**, a pop-up notification will appear:  
+
+- If you choose **<Keep Original Annotation Group>**, the overlapping cells will be removed from the new annotation.  
+- If you choose **<Save to New Annotation Group>**, the overlapping cells in the original annotation group will be **moved to** the current annotation group.
 
 ![annotation-1](../../img/visualization-panel/manual-anno-1.png)
 
