@@ -510,8 +510,8 @@ After creating the annotation group, users can click the **"Add from Obs"** (![a
 
 When newly annotated cells (e.g., based on an existing category) overlap with cells already included in an **existing annotation group**, a pop-up notification will appear:  
 
-- If you choose **<Keep Original Annotation Group>**, the overlapping cells will be removed from the new annotation.  
-- If you choose **<Save to New Annotation Group>**, the overlapping cells in the original annotation group will be **moved to** the current annotation group.
+- If you choose **"Keep in Original Annotation"** button, the overlapping cells will be removed from the new annotation.  
+- If you choose **"Save as New Annotation"**, the overlapping cells in the original annotation group will be **moved to** the current annotation group.
 
 ![annotation-1](../../img/visualization-panel/manual-anno-1.png)
 
