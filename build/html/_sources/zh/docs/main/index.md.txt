@@ -1,15 +1,12 @@
 # <span style="color:#00bfff">**Quickstart**</span>
 
-<div style="display: block; align-items: center;">
-  <div style="flex: 1; padding-right: 10px;">
-    <p>
-      Placeholder
-    </p>
-  </div>
-  <div style="flex: 1; padding-left: 10px;">
-    <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-  </div>
-</div>
+After logging into the platform, users can access the [<span style="color:#00bfff">Analysis Panel</span>](#analysis-panel).  
+
+1. Drag any public dataset from the left side into the analysis area.  
+2. Click the [<span style="color:#00bfff">"Pipeline Helper"</span>](#pipeline-helper) button in the top-left corner to choose a suitable pipeline from the Ragomics [<span style="color:#00bfff">Pipeline Template Library</span>](#pipeline-template-library) library and import it into the analysis panel for assembly.  
+3. Once the pipeline is assembled, users can click the **"Run"** (![run-btn](../../img/run-btn.png)) button on a data node to run the analysis.  
+4. After the analysis is complete, users can enter the [<span style="color:#00bfff">Visualization Panel</span>](#visualization-panel) from any analysis node to view the results.  
+![quickstart](../../img/image.gif)
 
 # <span style="color:#00bfff">**Platform Login and Registration**</span>
 
