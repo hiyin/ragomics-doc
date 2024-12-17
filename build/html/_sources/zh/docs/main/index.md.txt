@@ -1,6 +1,6 @@
 # <span style="color:#00bfff">**Quickstart**</span>
 
-After logging into the platform, users can access the [<span style="color:#00bfff">Analysis Panel</span>](#analysis-panel).  
+After opening the platform, users can access the [<span style="color:#00bfff">Analysis Panel</span>](#analysis-panel).  
 
 1. Drag any public dataset from the left side into the analysis area.  
 2. Click the [<span style="color:#00bfff">"Pipeline Helper"</span>](#pipeline-helper) button in the top-left corner to choose a suitable pipeline from the Ragomics [<span style="color:#00bfff">Pipeline Template Library</span>](#pipeline-template-library) library and import it into the analysis panel for assembly.  
@@ -8,6 +8,7 @@ After logging into the platform, users can access the [<span style="color:#00bff
 4. After the analysis is complete, users can enter the [<span style="color:#00bfff">Visualization Panel</span>](#visualization-panel) from any analysis node to view the results.  
 ![quickstart](../../img/image.gif)
 
+<!---
 # <span style="color:#00bfff">**Platform Login and Registration**</span>
 
 ## <span style="color:#00bfff">**Guest Mode**</span>
@@ -26,6 +27,7 @@ On the password reset page, users must enter their mobile number (login account)
 
 
 ---
+-->
 
 
 
