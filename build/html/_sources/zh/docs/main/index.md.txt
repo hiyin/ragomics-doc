@@ -6,7 +6,7 @@ After opening the platform, users can access the [<span style="color:#00bfff">An
 2. Click the [<span style="color:#00bfff">"Pipeline Helper"</span>](#pipeline-helper) button in the top-left corner to choose a suitable pipeline from the Ragomics [<span style="color:#00bfff">Pipeline Template Library</span>](#pipeline-template-library) library and import it into the analysis panel for assembly.  
 3. Once the pipeline is assembled, users can click the **"Run"** (![run-btn](../../img/run-btn.png)) button on a data node to run the analysis.  
 4. After the analysis is complete, users can enter the [<span style="color:#00bfff">Visualization Panel</span>](#visualization-panel) from any analysis node to view the results.  
-![quickstart](../../img/image.gif)
+![quickstart](../../img/quickstart-high-res.gif)
 
 <!---
 # <span style="color:#00bfff">**Platform Login and Registration**</span>
@@ -28,8 +28,10 @@ On the password reset page, users must enter their mobile number (login account)
 
 ---
 -->
+# <span style="color:#00bfff">**Platform Access**</span>
+When users access the platform via the web link, they are directed to the homepage. The homepage displays analysis tasks created by the user and other users.  
 
-
+If a user needs to access analysis tasks created by others, they can do so as a **guest** through [<span style="color: #00bfff;">Sharing Node</span>](#node-sharing). Under this **guest** mode, the user can only view the analysis process and results but will not have editing permissions for the analysis.
 
 # <span style="color:#00bfff">**Creation and Management of Analysis Tasks**</span>
 
@@ -42,26 +44,32 @@ After logging into the homepage, the [<span style="color:#00bfff">Workflow</span
 ## <span style="color:#00bfff">**Creating an Analysis**</span>
 Once logged in, users can go to the <span style="color:#00bfff">Analysis Task</span> page under the [<span style="color:#00bfff">Workflow</span>](#workflow) tab and click the **Create New Analysis Task** button to create a new analysis task. 
 
-1. In the pop-up form, users must enter a name for the analysis task. While the task description is optional, it helps the [<span style="color:#00bfff">Agent</span>](#agent) module provide more accurate assistance.  
+1. In the pop-up form, users must enter a name for the analysis task. While the task description is optional, it helps the [<span style="color:#00bfff">Agent</span>](#agent) module provide more accurate assistance, the user also needs to set an **access password** for the analysis task they create. When reopening the analysis task next time, this password will be required for access.
+
 2. Users can choose to enable the **With Guidance** feature. If enabled, the [<span style="color:#00bfff">Pipeline Helper</span>](#pipeline-helper) will automatically launch the first time the user accesses the [<span style="color:#00bfff">Analysis Panel</span>](#analysis-panel) of the task, helping them quickly select an analysis pipeline tailored to their needs.  
-3. Once the task is created, users will be directed to its [<span style="color:#00bfff">Analysis Panel</span>](#analysis-panel).
+3. Once the task is created, users will be directed to its [<span style="color:#00bfff">Analysis Panel</span>](#analysis-panel). After clicking **"Create"** button, the **access password** and **access link** for the analysis will be displayed. Users are advised to save them.
 ![create-analysis](../../img/analysis-creation-and-management/create-new-analysis-task.png)
 
 ## <span style="color:#00bfff">**Managing Analysis Tasks**</span>
-After logging in, users can view and manage previously created analysis tasks in the [<span style="color:#00bfff">Workflow</span>](#workflow) - <span style="color:#00bfff">Analysis Task</span> tab. Each analysis task card contains several buttons for task management. Click **Open** button on the analysis card to enter the [<span style="color:#00bfff">Analysis Panel</span>](#analysis-panel) of the selected task.
+After logging in, users can view and manage previously created analysis tasks in the [<span style="color:#00bfff">Workflow</span>](#workflow) - <span style="color:#00bfff">Analysis Task</span> tab. If the user has the **access password** for the corresponding analysis task, 
+each analysis task card contains several buttons for task management, they can click the **"Open"** button on the analysis task card and enter the password to access the [<span style="color:#00bfff">Analysis Panel</span>](#analysis-panel) for the selected task.
 
 - **Collaborator Management Button** (![collaborate-button](../../img/analysis-creation-and-management/collaborate-button.png)): Click to open the [<span style="color:#00bfff">Collaborator Management</span>](#collaborator-management) page and invite collaborators to participate in the project analysis.
 - **Edit Button** (![edit-button](../../img/analysis-creation-and-management/edit-button.png)): Click to edit the task name and description.
 - **Copy Button** (![copy-button](../../img/analysis-creation-and-management/copy-button.png)): Click to duplicate the current analysis task. Note that the duplicated task will only retain the **Data Source** and any unexecuted analysis pipelines. Analysis results will not be copied.
 - **Delete Button** (![delete-button](../../img/analysis-creation-and-management/delete-button.png)): Click to delete the current analysis task. **This action is irreversible.**
+<!---
 - **Share Button** (![share-button](../../img/analysis-creation-and-management/share-button.png)): Click to access the sharing page. Users can enable sharing for the task and click the quick copy link below to generate a shareable access URL. Other users can use the link to view the shared analysis task but cannot edit it as guest users.
+-->
 
+<!---
 ## <span style="color:#00bfff">**Collaborator Management**</span>
 When an analysis task requires collaboration with other users, the **Collaborator List** can be opened. 
 
 - Click the **Add Collaborator** (![add-collaborator-button](../../img/analysis-creation-and-management/add-collaborator-button.png)) button in the top-left corner to invite collaborators.
 - Users can assign editing permissions to collaborators as needed.
 - Once added, the invited collaborator must accept the invitation through the [<span style="color:#00bfff">In-app Notifications</span>](#in-app-notifications) to access and edit the analysis task.
+-->
 
 
 
@@ -178,10 +186,11 @@ Additionally, clicking the **View Code** (![detail-code](../../img/analysis-pane
 ![analysis-dashboard](../../img/analysis-panel/analysis-dashboard.png)
 
 ## <span style="color:#00bfff;">**Sharing Analysis Task**</span>
-To share a specific analysis task with others, users can click the **"Share"** button at the top of the analysis panel. In the pop-up window, enable the **"Public"** setting and click the **"Copy Link"** button to generate a link for the current analysis task. Other users can use this link to access and view the shared task; however, guest users will not be able to make edits.  
+To share a specific analysis task with others, users can click the **"Share"** button at the top of the analysis panel. In the pop-up window, enable the **"Public"** setting and click the **"Copy Link"** button to generate a link for the current analysis task. Other users can use this link to access and view the shared task; however, **guest users** will not be able to make edits. If the user wants other users to also be able to edit, they can share the **access link** and **access password** for this analysis task with them. If the user wishes to change the password, they can click the **"Edit"** button next to the **access password** to make the change.
 
+<!---
 If editing permissions are required, users can perform [<span style="color:#00bfff;">Collaborator Management</span>](#collaborator-management) in the settings below.
-
+-->
 ## <span style="color:#00bfff;">**In-App Notifications**</span>
 When an analysis node runs successfully or fails, or when a user receives a collaboration invitation, the in-app notification (![in-app-notification](../../img/analysis-panel/in-app-notification.png)) button at the top of the analysis panel will display an alert. Clicking the button will show a list of all notifications, allowing users to view and respond to the information accordingly.
 

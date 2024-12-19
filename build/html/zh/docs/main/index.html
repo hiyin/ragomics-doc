@@ -205,6 +205,7 @@
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#"><span style="color:#00bfff"><strong>Quickstart</strong></span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#platform-access"><span style="color:#00bfff"><strong>Platform Access</strong></span></a></li>
 <li class="toctree-l1"><a class="reference internal" href="#creation-and-management-of-analysis-tasks"><span style="color:#00bfff"><strong>Creation and Management of Analysis Tasks</strong></span></a></li>
 <li class="toctree-l1"><a class="reference internal" href="#public-analyses-and-databases"><span style="color:#00bfff"><strong>Public Analyses and Databases</strong></span></a></li>
 <li class="toctree-l1"><a class="reference internal" href="#data-upload-and-management"><span style="color:#00bfff"><strong>Data Upload and Management</strong></span></a></li>
@@ -265,7 +266,7 @@
 <li><p>Click the <a class="reference internal" href="#pipeline-helper"><span class="xref myst"><span style="color:#00bfff">”Pipeline Helper”</span></span></a> button in the top-left corner to choose a suitable pipeline from the Ragomics <a class="reference internal" href="#pipeline-template-library"><span class="xref myst"><span style="color:#00bfff">Pipeline Template Library</span></span></a> library and import it into the analysis panel for assembly.</p></li>
 <li><p>Once the pipeline is assembled, users can click the <strong>“Run”</strong> (<img alt="run-btn" src="../../../_images/run-btn.png" />) button on a data node to run the analysis.</p></li>
 <li><p>After the analysis is complete, users can enter the <a class="reference internal" href="#visualization-panel"><span class="xref myst"><span style="color:#00bfff">Visualization Panel</span></span></a> from any analysis node to view the results.<br />
-<img alt="quickstart" src="../../../_images/image.gif" /></p></li>
+<img alt="quickstart" src="../../../_images/quickstart-high-res.gif" /></p></li>
 </ol>
 <!---
 # <span style="color:#00bfff">**Platform Login and Registration**</span>
@@ -288,6 +289,11 @@ On the password reset page, users must enter their mobile number (login account)
 ---
 -->
 </section>
+<section class="tex2jax_ignore mathjax_ignore" id="platform-access">
+<h1><span style="color:#00bfff"><strong>Platform Access</strong></span><a class="headerlink" href="#platform-access" title="Link to this heading">¶</a></h1>
+<p>When users access the platform via the web link, they are directed to the homepage. The homepage displays analysis tasks created by the user and other users.</p>
+<p>If a user needs to access analysis tasks created by others, they can do so as a <strong>guest</strong> through <a class="reference internal" href="#node-sharing"><span class="xref myst"><span style="color: #00bfff;">Sharing Node</span></span></a>. Under this <strong>guest</strong> mode, the user can only view the analysis process and results but will not have editing permissions for the analysis.</p>
+</section>
 <section class="tex2jax_ignore mathjax_ignore" id="creation-and-management-of-analysis-tasks">
 <h1><span style="color:#00bfff"><strong>Creation and Management of Analysis Tasks</strong></span><a class="headerlink" href="#creation-and-management-of-analysis-tasks" title="Link to this heading">¶</a></h1>
 <section id="workflow">
@@ -302,31 +308,33 @@ On the password reset page, users must enter their mobile number (login account)
 <h2><span style="color:#00bfff"><strong>Creating an Analysis</strong></span><a class="headerlink" href="#creating-an-analysis" title="Link to this heading">¶</a></h2>
 <p>Once logged in, users can go to the <span style="color:#00bfff">Analysis Task</span> page under the <a class="reference internal" href="#workflow"><span class="xref myst"><span style="color:#00bfff">Workflow</span></span></a> tab and click the <strong>Create New Analysis Task</strong> button to create a new analysis task.</p>
 <ol class="arabic simple">
-<li><p>In the pop-up form, users must enter a name for the analysis task. While the task description is optional, it helps the <a class="reference internal" href="#agent"><span class="xref myst"><span style="color:#00bfff">Agent</span></span></a> module provide more accurate assistance.</p></li>
+<li><p>In the pop-up form, users must enter a name for the analysis task. While the task description is optional, it helps the <a class="reference internal" href="#agent"><span class="xref myst"><span style="color:#00bfff">Agent</span></span></a> module provide more accurate assistance, the user also needs to set an <strong>access password</strong> for the analysis task they create. When reopening the analysis task next time, this password will be required for access.</p></li>
 <li><p>Users can choose to enable the <strong>With Guidance</strong> feature. If enabled, the <a class="reference internal" href="#pipeline-helper"><span class="xref myst"><span style="color:#00bfff">Pipeline Helper</span></span></a> will automatically launch the first time the user accesses the <a class="reference internal" href="#analysis-panel"><span class="xref myst"><span style="color:#00bfff">Analysis Panel</span></span></a> of the task, helping them quickly select an analysis pipeline tailored to their needs.</p></li>
-<li><p>Once the task is created, users will be directed to its <a class="reference internal" href="#analysis-panel"><span class="xref myst"><span style="color:#00bfff">Analysis Panel</span></span></a>.
+<li><p>Once the task is created, users will be directed to its <a class="reference internal" href="#analysis-panel"><span class="xref myst"><span style="color:#00bfff">Analysis Panel</span></span></a>. After clicking <strong>“Create”</strong> button, the <strong>access password</strong> and <strong>access link</strong> for the analysis will be displayed. Users are advised to save them.
 <img alt="create-analysis" src="../../../_images/create-new-analysis-task.png" /></p></li>
 </ol>
 </section>
 <section id="managing-analysis-tasks">
 <h2><span style="color:#00bfff"><strong>Managing Analysis Tasks</strong></span><a class="headerlink" href="#managing-analysis-tasks" title="Link to this heading">¶</a></h2>
-<p>After logging in, users can view and manage previously created analysis tasks in the <a class="reference internal" href="#workflow"><span class="xref myst"><span style="color:#00bfff">Workflow</span></span></a> - <span style="color:#00bfff">Analysis Task</span> tab. Each analysis task card contains several buttons for task management. Click <strong>Open</strong> button on the analysis card to enter the <a class="reference internal" href="#analysis-panel"><span class="xref myst"><span style="color:#00bfff">Analysis Panel</span></span></a> of the selected task.</p>
+<p>After logging in, users can view and manage previously created analysis tasks in the <a class="reference internal" href="#workflow"><span class="xref myst"><span style="color:#00bfff">Workflow</span></span></a> - <span style="color:#00bfff">Analysis Task</span> tab. If the user has the <strong>access password</strong> for the corresponding analysis task,
+each analysis task card contains several buttons for task management, they can click the <strong>“Open”</strong> button on the analysis task card and enter the password to access the <a class="reference internal" href="#analysis-panel"><span class="xref myst"><span style="color:#00bfff">Analysis Panel</span></span></a> for the selected task.</p>
 <ul class="simple">
 <li><p><strong>Collaborator Management Button</strong> (<img alt="collaborate-button" src="../../../_images/collaborate-button.png" />): Click to open the <a class="reference internal" href="#collaborator-management"><span class="xref myst"><span style="color:#00bfff">Collaborator Management</span></span></a> page and invite collaborators to participate in the project analysis.</p></li>
 <li><p><strong>Edit Button</strong> (<img alt="edit-button" src="../../../_images/edit-button.png" />): Click to edit the task name and description.</p></li>
 <li><p><strong>Copy Button</strong> (<img alt="copy-button" src="../../../_images/copy-button.png" />): Click to duplicate the current analysis task. Note that the duplicated task will only retain the <strong>Data Source</strong> and any unexecuted analysis pipelines. Analysis results will not be copied.</p></li>
 <li><p><strong>Delete Button</strong> (<img alt="delete-button" src="../../../_images/delete-button.png" />): Click to delete the current analysis task. <strong>This action is irreversible.</strong></p></li>
-<li><p><strong>Share Button</strong> (<img alt="share-button" src="../../../_images/share-button.png" />): Click to access the sharing page. Users can enable sharing for the task and click the quick copy link below to generate a shareable access URL. Other users can use the link to view the shared analysis task but cannot edit it as guest users.</p></li>
 </ul>
-</section>
-<section id="collaborator-management">
-<h2><span style="color:#00bfff"><strong>Collaborator Management</strong></span><a class="headerlink" href="#collaborator-management" title="Link to this heading">¶</a></h2>
-<p>When an analysis task requires collaboration with other users, the <strong>Collaborator List</strong> can be opened.</p>
-<ul class="simple">
-<li><p>Click the <strong>Add Collaborator</strong> (<img alt="add-collaborator-button" src="../../../_images/add-collaborator-button.png" />) button in the top-left corner to invite collaborators.</p></li>
-<li><p>Users can assign editing permissions to collaborators as needed.</p></li>
-<li><p>Once added, the invited collaborator must accept the invitation through the <a class="reference internal" href="#in-app-notifications"><span class="xref myst"><span style="color:#00bfff">In-app Notifications</span></span></a> to access and edit the analysis task.</p></li>
-</ul>
+<!---
+- **Share Button** (![share-button](../../img/analysis-creation-and-management/share-button.png)): Click to access the sharing page. Users can enable sharing for the task and click the quick copy link below to generate a shareable access URL. Other users can use the link to view the shared analysis task but cannot edit it as guest users.
+-->
+<!---
+## <span style="color:#00bfff">**Collaborator Management**</span>
+When an analysis task requires collaboration with other users, the **Collaborator List** can be opened. 
+
+- Click the **Add Collaborator** (![add-collaborator-button](../../img/analysis-creation-and-management/add-collaborator-button.png)) button in the top-left corner to invite collaborators.
+- Users can assign editing permissions to collaborators as needed.
+- Once added, the invited collaborator must accept the invitation through the [<span style="color:#00bfff">In-app Notifications</span>](#in-app-notifications) to access and edit the analysis task.
+-->
 </section>
 </section>
 <hr class="docutils" />
@@ -471,8 +479,10 @@ Users can choose between manual or <a class="reference internal" href="#automati
 </section>
 <section id="sharing-analysis-task">
 <h2><span style="color:#00bfff;"><strong>Sharing Analysis Task</strong></span><a class="headerlink" href="#sharing-analysis-task" title="Link to this heading">¶</a></h2>
-<p>To share a specific analysis task with others, users can click the <strong>“Share”</strong> button at the top of the analysis panel. In the pop-up window, enable the <strong>“Public”</strong> setting and click the <strong>“Copy Link”</strong> button to generate a link for the current analysis task. Other users can use this link to access and view the shared task; however, guest users will not be able to make edits.</p>
-<p>If editing permissions are required, users can perform <a class="reference internal" href="#collaborator-management"><span class="xref myst"><span style="color:#00bfff;">Collaborator Management</span></span></a> in the settings below.</p>
+<p>To share a specific analysis task with others, users can click the <strong>“Share”</strong> button at the top of the analysis panel. In the pop-up window, enable the <strong>“Public”</strong> setting and click the <strong>“Copy Link”</strong> button to generate a link for the current analysis task. Other users can use this link to access and view the shared task; however, <strong>guest users</strong> will not be able to make edits. If the user wants other users to also be able to edit, they can share the <strong>access link</strong> and <strong>access password</strong> for this analysis task with them. If the user wishes to change the password, they can click the <strong>“Edit”</strong> button next to the <strong>access password</strong> to make the change.</p>
+<!---
+If editing permissions are required, users can perform [<span style="color:#00bfff;">Collaborator Management</span>](#collaborator-management) in the settings below.
+-->
 </section>
 <section id="in-app-notifications">
 <h2><span style="color:#00bfff;"><strong>In-App Notifications</strong></span><a class="headerlink" href="#in-app-notifications" title="Link to this heading">¶</a></h2>
