@@ -215,9 +215,10 @@ If users require assistance when assembling analysis pipelines, they can enable 
 In the [<span style="color:#00bfff;">Pipeline Helper<span>](#pipeline-helper) page, users can select a suitable analysis pipeline from Ragomics' [<span style="color:#00bfff;">Pipeline Template Library<span>](#pipeline-template-library) and import it into the **Analysis Panel** for use.
 
 Users can select analysis pipelines from Ragomics' [<span style="color:#00bfff;">Pipeline Template Library<span>](#pipeline-template-library) and import them into the analysis panel on the Analysis Pipeline Assistant page.  
-
+<!---
 If the template library does not have a suitable template, users can use the [<span style="color:#00bfff;">AI Pipeline</span>](#ai-pipeline) feature to generate a new analysis pipeline.
 ![pipeline-template](../../img/analysis-pipeline/pipeline-template.png)
+-->
 
 
 
@@ -314,13 +315,14 @@ If multiple analysis nodes are running simultaneously and the user wants to stop
 # <span style="color: #00bfff"><strong>Agent</strong></span>
 An agent is a series of AI-assisted analysis features based on large language models in Ragomics.
 
+<!---
 ## <span style="color: #00bfff;"><strong>AI Pipeline</strong></span>
 In the <span style="color: #00bfff;">AI Pipeline Helper</span> page, users can utilize the AI Pipeline feature to select the data they wish to analyze and input their analysis requirements. If the user is unsure about how to input the analysis requirements, they can click on the **Request Templates** on the page to obtain examples. 
 
 After filling in the analysis requirements, the user clicks **"Next"**, Ragomics will display the user’s original requirements alongside the AI-optimized version. Users can compare the two and click the **"Edit"** (![edit-button](../../img/agent/edit-button.png)) button to edit. If the user is dissatisfied with the current AI-generated optimized result, they can click the **"Refresh"** (![refresh-button](../../img/agent/refresh-button.png)) button to refresh it. 
 
 The user needs to select the final requirements text to use and click the **"Confirm"** button. In the next step, the user must choose between querying analysis pipelines from the [<span style="color: #00bfff;">Pipeline Template Library</span>](#pipeline-template-library) or generating an analysis pipeline directly through AI. After generation, they can click the **"Import"** button to bring the current generated analysis pipeline into the analysis panel.
-
+-->
 ## <span style="color: #00bfff;"><strong>AI Parameter</strong></span>
 If users encounter difficulties when filling in the parameters for an analysis node, they can click the AI Parameter button at the bottom-left of the parameter panel. In the popup menu, users can select either **"Fill All Parameters"** or **"Complete Unfilled Parameters"**.
 
