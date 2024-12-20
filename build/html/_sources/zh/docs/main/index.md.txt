@@ -54,7 +54,9 @@ Once logged in, users can go to the <span style="color:#00bfff">Analysis Task</s
 After logging in, users can view and manage previously created analysis tasks in the [<span style="color:#00bfff">Workflow</span>](#workflow) - <span style="color:#00bfff">Analysis Task</span> tab. If the user has the **access password** for the corresponding analysis task, 
 each analysis task card contains several buttons for task management, they can click the **"Open"** button on the analysis task card and enter the password to access the [<span style="color:#00bfff">Analysis Panel</span>](#analysis-panel) for the selected task.
 
+<!---
 - **Collaborator Management Button** (![collaborate-button](../../img/analysis-creation-and-management/collaborate-button.png)): Click to open the [<span style="color:#00bfff">Collaborator Management</span>](#collaborator-management) page and invite collaborators to participate in the project analysis.
+-->
 - **Edit Button** (![edit-button](../../img/analysis-creation-and-management/edit-button.png)): Click to edit the task name and description.
 - **Copy Button** (![copy-button](../../img/analysis-creation-and-management/copy-button.png)): Click to duplicate the current analysis task. Note that the duplicated task will only retain the **Data Source** and any unexecuted analysis pipelines. Analysis results will not be copied.
 - **Delete Button** (![delete-button](../../img/analysis-creation-and-management/delete-button.png)): Click to delete the current analysis task. **This action is irreversible.**
@@ -187,12 +189,14 @@ Additionally, clicking the **View Code** (![detail-code](../../img/analysis-pane
 
 ## <span style="color:#00bfff;">**Sharing Analysis Task**</span>
 To share a specific analysis task with others, users can click the **"Share"** button at the top of the analysis panel. In the pop-up window, enable the **"Public"** setting and click the **"Copy Link"** button to generate a link for the current analysis task. Other users can use this link to access and view the shared task; however, **guest users** will not be able to make edits. If the user wants other users to also be able to edit, they can share the **access link** and **access password** for this analysis task with them. If the user wishes to change the password, they can click the **"Edit"** button next to the **access password** to make the change.
-
 <!---
 If editing permissions are required, users can perform [<span style="color:#00bfff;">Collaborator Management</span>](#collaborator-management) in the settings below.
--->
+
 ## <span style="color:#00bfff;">**In-App Notifications**</span>
 When an analysis node runs successfully or fails, or when a user receives a collaboration invitation, the in-app notification (![in-app-notification](../../img/analysis-panel/in-app-notification.png)) button at the top of the analysis panel will display an alert. Clicking the button will show a list of all notifications, allowing users to view and respond to the information accordingly.
+-->
+
+
 
 ---
 
