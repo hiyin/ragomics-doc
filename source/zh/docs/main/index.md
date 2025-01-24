@@ -1,6 +1,6 @@
 # <span style="color:#00bfff">**Quickstart**</span>
 
-After opening the platform, users is on the [<span style="color:#00bfff">Analysis Panel</span>](#analysis-panel) page. Follow the quickstart animation and/or steps below when necessary.
+After opening the platform, users is on the homepage. Follow the quickstart animation and/or steps below when necessary.
 
 ![quickstart](../../img/quickstart-server-high-res.gif)
 0. [<span style="color:#00bfff;">Creating an Analysis</span>](#creating-an-analysis)
