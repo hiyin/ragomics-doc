@@ -12,8 +12,7 @@ After opening the platform, users is on the homepage. Follow the quickstart anim
 2. After the analysis is complete, users can enter the [<span style="color:#00bfff">Visualization Panel</span>](#visualization-panel) from any analysis node to view the results.
 3. Click on green nodes (completed runs) to open the right sidebar and generate context-aware interpretations using LLM.  
 4. For custom needs beyond built-in our function block library, use **"Auto-Genie"**, an LLM-based agent, to generate code acoording to Ragomics function block framework for specific tasks.
-5. 
-6. (Optional) Before running the pipeline, user may enable **"Bug Fixer"** option with max try of at least 5 times by clicking the **Settings**. However, this feature is experimental and we are still optimizing it.
+5. (Optional) Before running the pipeline, user may enable **"Bug Fixer"** option with max try of at least 5 times by clicking the **Settings**. However, this feature is experimental and we are still optimizing it.
 <!-- 9. (![settings-button](../../img/analysis-panel/settings-button.png)) button on the bottom toolbar of the [<span style="color:#00bfff">Analysis Panel</span>](#analysis-panel) and toggling the **Bug Fixer** switch to on state. -->
 
 
