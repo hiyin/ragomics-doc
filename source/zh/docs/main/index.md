@@ -7,12 +7,13 @@ After opening the platform, users is on the homepage. Follow the quickstart anim
 1. [<span style="color:#00bfff;">Creating an Analysis</span>](#creating-an-analysis), after analysis created, drag any public dataset from the left side **Data Source** section into the analysis area.  
 2. Click the [<span style="color:#00bfff">"Pipeline Helper"</span>](#pipeline-helper) button in the top-left corner to choose a suitable pipeline from the Ragomics [<span style="color:#00bfff">Pipeline Template</span>](#pipeline-template) and import it into the analysis panel for assembly.  
   
-![enable-bug-fixer](../../img/enable-bug-fixer.png)
+
 1. Once the pipeline is assembled, users can connect the data node to the pipeline by dragging a line between them, then click the **"Run Tree"** button from the "..." menu or click the "Run Single Node" icon (![run-btn](../../img/run-btn.png))  on a data node to run the analysis.  
 2. After the analysis is complete, users can enter the [<span style="color:#00bfff">Visualization Panel</span>](#visualization-panel) from any analysis node to view the results.
 3. Users can click on green nodes (completed runs) to open the right sidebar and generate context-aware interpretations using LLM. For bug troubleshooting a single red node, Ragomics provides LLM generated explanations and solutions on the right bar, with the original error messages and standard outputs.
 4. For custom needs beyond built-in our function block library, users can use **"Auto-Genie"**, an LLM-based agent, to generate code acoording to Ragomics function block framework for specific tasks.
 5. (Optional) Before running the pipeline, users may enable **"Bug Fixer"** option with max try of at least 5 times by clicking the **Settings**. However, this feature is experimental and we are still optimizing it.
+<!-- 6. ![enable-bug-fixer](../../img/enable-bug-fixer.png) -->
 <!-- 9. (![settings-button](../../img/analysis-panel/settings-button.png)) button on the bottom toolbar of the [<span style="color:#00bfff">Analysis Panel</span>](#analysis-panel) and toggling the **Bug Fixer** switch to on state. -->
 
 
