@@ -122,7 +122,7 @@ Ragomics currently supports the following five data formats for upload:
 
 1. AnnData Upload  
 **Important node**:  
-Please ensure that anndata key names do not contain "/". E.g. adata.obs["date/month"] is invalid. It causes issues when the server decomposes the anndata because "/" is going to be treated as a "folder" on cloud storage service. It is a known issue and we have resolved it in the latest version but not in the alpha server.  
+Please ensure that anndata key names do not contain "/". E.g. adata.obs["date/month"] is invalid. It causes issues when the server decomposes the anndata because "/" is treated as a "subfolder" on cloud storage service. It is a known sanity-check related issue. We have resolved it in the latest version but not in the alpha server after NAR technical review.  
 - Users can add `.h5ad` files by dragging and dropping or clicking the **Add** (![add-button](../../img/data-upload-and-management/anndata-add-button.png)) button.  
 - Select the corresponding species information and provide a description of the data.  
 - Once the file is selected and all information is filled out, click the **Upload** (![upload-button](../../img/data-upload-and-management/anndata-upload-button.png)) button to start uploading.  
