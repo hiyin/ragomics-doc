@@ -120,13 +120,15 @@ Supported Data Formats for Upload in Ragomics
 
 Ragomics currently supports the following five data formats for upload:
 
-1. AnnData Upload
+1. AnnData Upload  
+**Important node**:  
+Please ensure that anndata key names do not contain "/". E.g. adata.obs["date/month"] is invalid. It causes issues when the server decomposes the anndata because "/" is going to be treated as a "folder" on cloud storage service. It is a known issue and we have resolved it in the latest version but not in the alpha server.  
 - Users can add `.h5ad` files by dragging and dropping or clicking the **Add** (![add-button](../../img/data-upload-and-management/anndata-add-button.png)) button.  
 - Select the corresponding species information and provide a description of the data.  
 - Once the file is selected and all information is filled out, click the **Upload** (![upload-button](../../img/data-upload-and-management/anndata-upload-button.png)) button to start uploading.  
 - When the upload status indicates success ![complete-status](../../img/data-upload-and-management/complete-status.png), the data upload is complete.
 
-2. 10x Data Upload
+1. 10x Data Upload
 - Enter the data name, species information, and data description.  
 - Click the **Next Step** button, then click **Add a Sample** to create a new sample row.  
 - For multiple samples, add the corresponding number of sample rows.  
@@ -136,7 +138,7 @@ Ragomics currently supports the following five data formats for upload:
    - `matrix.mtx`  
 - Once all data is uploaded, click the **Assemble** button to complete the upload process.
 
-3. Assemble AnnData
+1. Assemble AnnData
 - Enter species information and data description, then click the **Next Step** button.  
 - Upload the required files by dragging and dropping or clicking the upload area:  
    - Mandatory Files:  
@@ -151,12 +153,12 @@ Ragomics currently supports the following five data formats for upload:
 - Once all files are uploaded, click the **Assemble** button to finalize the AnnData assembly.  
 - Click the **Complete** button to finish the upload process.
 
-4. FastQ Upload
+1. FastQ Upload
 - Select the corresponding species information and provide a description of the data.  
 - Click the **Next Step** button.  
 - Add FastQ `.zip` files by dragging and dropping or clicking the central upload area.
 
-5. Spaceranger Count Upload
+1. Spaceranger Count Upload
 - Enter the data name, select the corresponding species information, and provide a description of the data.  
 - Click the **Next Step** button.  
 - Add Spaceranger Count data by dragging and dropping or clicking the upload area.  
