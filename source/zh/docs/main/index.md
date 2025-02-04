@@ -48,6 +48,8 @@ After logging into the homepage, the [<span style="color:#00bfff">Workflow</span
 - In the <span style="color:#00bfff">Data Source</span> section, users can import datasets from [<span style="color:#00bfff">Public Databases</span>](#public-databases) into their accounts or [<span style="color:#00bfff">Upload Data</span>](#data-upload) from local sources.
 
 ## <span style="color:#00bfff">**Creating an Analysis**</span>
+
+![vid-1](../../img/gif/vid-1.gif)
 Once on the platform's homepage, users can go to the <span style="color:#00bfff">Analysis Task</span> page under the [<span style="color:#00bfff">Workflow</span>](#workflow) tab and click the **Create New Analysis Task** button to create a new analysis task. 
 
 1. In the pop-up form, users must enter a name for the analysis task. While the task description is optional, it helps the [<span style="color:#00bfff">Agent</span>](#agent) module provide more accurate assistance, the user also needs to set an **access password** for the analysis task they create. When reopening the analysis task next time, this password will be required for access.
