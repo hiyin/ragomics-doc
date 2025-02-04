@@ -6,10 +6,15 @@ After opening the platform, users is on the homepage. Follow the quickstart anim
 
 1. [<span style="color:#00bfff;">Creating an Analysis</span>](#creating-an-analysis), after analysis created, drag any public dataset from the left side **Data Source** section into the analysis area.  
 2. Click the [<span style="color:#00bfff">"Pipeline Helper"</span>](#pipeline-helper) button in the top-left corner to choose a suitable pipeline from the Ragomics [<span style="color:#00bfff">Pipeline Template</span>](#pipeline-template) and import it into the analysis panel for assembly.  
-3. (IMPORTANT) Before running the pipeline, user is always recommended to enable **"Bug Fixer"** option with max try of at least 5 times by clicking the **Settings** (![settings-button](../../img/analysis-panel/settings-button.png)) button on the bottom toolbar of the[<span style="color:#00bfff">Analysis Panel</span>](#analysis-panel) and toggling the **Bug Fixer** switch to on state.
-![enable-bug-fixer](../../img/enable-bug-fixer.png)
-4. Once the pipeline is assembled, users can connect the data node to the pipeline by dragging a line between them, then click the **"Run Tree"** (![run-btn](../../img/run-btn.png)) button on a data node to run the analysis.  
-5. After the analysis is complete, users can enter the [<span style="color:#00bfff">Visualization Panel</span>](#visualization-panel) from any analysis node to view the results.  
+  
+
+1. Once the pipeline is assembled, users can connect the data node to the pipeline by dragging a line between them, then click the **"Run Tree"** button from the "..." menu or click the "Run Single Node" icon (![run-btn](../../img/run-btn.png))  on a data node to run the analysis.  
+2. After the analysis is complete, users can enter the [<span style="color:#00bfff">Visualization Panel</span>](#visualization-panel) from any analysis node to view the results.
+3. Users can click on green nodes (completed runs) to open the right sidebar and generate context-aware interpretations using LLM. For bug troubleshooting a single red node, Ragomics provides LLM generated explanations and solutions on the right bar, with the original error messages and standard outputs.
+<!-- 4. (Optional) For custom needs beyond built-in our function block library, users can use **"Auto-Genie"**, an LLM-based agent, to generate code acoording to Ragomics function block framework for specific tasks. -->
+<!-- 5. (Optional) Before running the pipeline, users may enable **"Bug Fixer"** option with max try of at least 5 times by clicking the **Settings**. However, this feature is experimental and we are still optimizing it. -->
+<!-- 6. ![enable-bug-fixer](../../img/enable-bug-fixer.png) -->
+<!-- 9. (![settings-button](../../img/analysis-panel/settings-button.png)) button on the bottom toolbar of the [<span style="color:#00bfff">Analysis Panel</span>](#analysis-panel) and toggling the **Bug Fixer** switch to on state. -->
 
 
 
@@ -117,13 +122,15 @@ Supported Data Formats for Upload in Ragomics
 
 Ragomics currently supports the following five data formats for upload:
 
-1. AnnData Upload
+1. AnnData Upload  
+**Important node**:  
+Please ensure that anndata key names do not contain "/". E.g. adata.obs["date/month"] is invalid. It causes issues when the server decomposes the anndata because "/" is treated as a "subfolder" on cloud storage service. It is a known sanity-check related issue. We have resolved it in the latest version but not in the alpha server after NAR technical review.  
 - Users can add `.h5ad` files by dragging and dropping or clicking the **Add** (![add-button](../../img/data-upload-and-management/anndata-add-button.png)) button.  
 - Select the corresponding species information and provide a description of the data.  
 - Once the file is selected and all information is filled out, click the **Upload** (![upload-button](../../img/data-upload-and-management/anndata-upload-button.png)) button to start uploading.  
 - When the upload status indicates success ![complete-status](../../img/data-upload-and-management/complete-status.png), the data upload is complete.
 
-2. 10x Data Upload
+1. 10x Data Upload
 - Enter the data name, species information, and data description.  
 - Click the **Next Step** button, then click **Add a Sample** to create a new sample row.  
 - For multiple samples, add the corresponding number of sample rows.  
@@ -133,7 +140,7 @@ Ragomics currently supports the following five data formats for upload:
    - `matrix.mtx`  
 - Once all data is uploaded, click the **Assemble** button to complete the upload process.
 
-3. Assemble AnnData
+1. Assemble AnnData
 - Enter species information and data description, then click the **Next Step** button.  
 - Upload the required files by dragging and dropping or clicking the upload area:  
    - Mandatory Files:  
@@ -148,12 +155,12 @@ Ragomics currently supports the following five data formats for upload:
 - Once all files are uploaded, click the **Assemble** button to finalize the AnnData assembly.  
 - Click the **Complete** button to finish the upload process.
 
-4. FastQ Upload
+1. FastQ Upload
 - Select the corresponding species information and provide a description of the data.  
 - Click the **Next Step** button.  
 - Add FastQ `.zip` files by dragging and dropping or clicking the central upload area.
 
-5. Spaceranger Count Upload
+1. Spaceranger Count Upload
 - Enter the data name, select the corresponding species information, and provide a description of the data.  
 - Click the **Next Step** button.  
 - Add Spaceranger Count data by dragging and dropping or clicking the upload area.  
