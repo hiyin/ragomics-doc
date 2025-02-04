@@ -1,12 +1,23 @@
 # <span style="color:#00bfff">**Quickstart**</span>
 
-After opening the platform, users can access the [<span style="color:#00bfff">Analysis Panel</span>](#analysis-panel).  
+After opening the platform, users is on the homepage. Follow the quickstart animation and/or steps below when necessary.
 
-1. Drag any public dataset from the left side into the analysis area.  
-2. Click the [<span style="color:#00bfff">"Pipeline Helper"</span>](#pipeline-helper) button in the top-left corner to choose a suitable pipeline from the Ragomics [<span style="color:#00bfff">Pipeline Template Library</span>](#pipeline-template-library) library and import it into the analysis panel for assembly.  
-3. Once the pipeline is assembled, users can click the **"Run"** (![run-btn](../../img/run-btn.png)) button on a data node to run the analysis.  
-4. After the analysis is complete, users can enter the [<span style="color:#00bfff">Visualization Panel</span>](#visualization-panel) from any analysis node to view the results.  
-![quickstart](../../img/quickstart-high-res.gif)
+![quickstart](../../img/quickstart-server-high-res.gif)
+
+1. [<span style="color:#00bfff;">Creating an Analysis</span>](#creating-an-analysis), after analysis created, drag any public dataset from the left side **Data Source** section into the analysis area.  
+2. Click the [<span style="color:#00bfff">"Pipeline Helper"</span>](#pipeline-helper) button in the top-left corner to choose a suitable pipeline from the Ragomics [<span style="color:#00bfff">Pipeline Template</span>](#pipeline-template) and import it into the analysis panel for assembly.  
+  
+
+1. Once the pipeline is assembled, users can connect the data node to the pipeline by dragging a line between them, then click the **"Run Tree"** button from the "..." menu or click the "Run Single Node" icon (![run-btn](../../img/run-btn.png))  on a data node to run the analysis.  
+2. After the analysis is complete, users can enter the [<span style="color:#00bfff">Visualization Panel</span>](#visualization-panel) from any analysis node to view the results.
+3. Users can click on green nodes (completed runs) to open the right sidebar and generate context-aware interpretations using LLM. For bug troubleshooting a single red node, Ragomics provides LLM generated explanations and solutions on the right bar, with the original error messages and standard outputs.
+<!-- 4. (Optional) For custom needs beyond built-in our function block library, users can use **"Auto-Genie"**, an LLM-based agent, to generate code acoording to Ragomics function block framework for specific tasks. -->
+<!-- 5. (Optional) Before running the pipeline, users may enable **"Bug Fixer"** option with max try of at least 5 times by clicking the **Settings**. However, this feature is experimental and we are still optimizing it. -->
+<!-- 6. ![enable-bug-fixer](../../img/enable-bug-fixer.png) -->
+<!-- 9. (![settings-button](../../img/analysis-panel/settings-button.png)) button on the bottom toolbar of the [<span style="color:#00bfff">Analysis Panel</span>](#analysis-panel) and toggling the **Bug Fixer** switch to on state. -->
+
+
+
 
 <!---
 # <span style="color:#00bfff">**Platform Login and Registration**</span>
@@ -42,7 +53,9 @@ After logging into the homepage, the [<span style="color:#00bfff">Workflow</span
 - In the <span style="color:#00bfff">Data Source</span> section, users can import datasets from [<span style="color:#00bfff">Public Databases</span>](#public-databases) into their accounts or [<span style="color:#00bfff">Upload Data</span>](#data-upload) from local sources.
 
 ## <span style="color:#00bfff">**Creating an Analysis**</span>
-Once logged in, users can go to the <span style="color:#00bfff">Analysis Task</span> page under the [<span style="color:#00bfff">Workflow</span>](#workflow) tab and click the **Create New Analysis Task** button to create a new analysis task. 
+
+![vid-1](../../img/gif/vid-1.gif)
+Once on the platform's homepage, users can go to the <span style="color:#00bfff">Analysis Task</span> page under the [<span style="color:#00bfff">Workflow</span>](#workflow) tab and click the **Create New Analysis Task** button to create a new analysis task. 
 
 1. In the pop-up form, users must enter a name for the analysis task. While the task description is optional, it helps the [<span style="color:#00bfff">Agent</span>](#agent) module provide more accurate assistance, the user also needs to set an **access password** for the analysis task they create. When reopening the analysis task next time, this password will be required for access.
 
@@ -82,9 +95,13 @@ When an analysis task requires collaboration with other users, the **Collaborato
 # <span style="color:#00bfff">**Public Analyses and Databases**</span>
 
 ## <span style="color:#00bfff">**Public Analyses**</span>
+
+![vid-3](../../img/gif/3.gif)
 Ragomics provides users with a series of completed analysis examples. Users can directly access these [<span style="color:#00bfff">Public Analyses</span>](#public-analyses) to review the analysis process and results. However, users cannot perform any editing actions on these public analyses.
 
 ## <span style="color:#00bfff">**Public Databases**</span>
+
+![vid-4](../../img/gif/4.gif)
 On the [<span style="color:#00bfff">Workflow</span>](#workflow) - <span style="color:#00bfff">Data Source</span> page, users can explore datasets from public databases:
 
 1. Click the **Show More** button to view additional datasets in the public database.
@@ -98,10 +115,14 @@ On the [<span style="color:#00bfff">Workflow</span>](#workflow) - <span style="c
 Ragomics offers two methods for uploading data:
 
 Method 1
+
+![vid-5](../../img/gif/5.gif)
 - Navigate to [<span style="color:#00bfff">Workflow</span>](#workflow) - <span style="color:#00bfff">Data Source</span> - **My Data** section.
 - Click the **Upload** (![upload-button](../../img/data-upload-and-management/upload-from-device-button.png)) button to start the data upload process.
 
 Method 2
+
+![vid-6](../../img/gif/6.gif)
 - In the [<span style="color:#00bfff">Analysis Panel</span>](#analysis-panel), click the **Add** (![add-button](../../img/data-upload-and-management/add-button.png)) button under the Data Source tab on the left sidebar, choose **Upload from Device** button to begin uploading data directly from your device.
 ![upload-from-device](../../img/data-upload-and-management/upload-from-device.png)
 
@@ -109,13 +130,15 @@ Supported Data Formats for Upload in Ragomics
 
 Ragomics currently supports the following five data formats for upload:
 
-1. AnnData Upload
+1. AnnData Upload  
+**Important node**:  
+Please ensure that anndata key names do not contain "/". E.g. adata.obs["date/month"] is invalid. It causes issues when the server decomposes the anndata because "/" is treated as a "subfolder" on cloud storage service. It is a known sanity-check related issue. We have resolved it in the latest version but not in the alpha server after NAR technical review.  
 - Users can add `.h5ad` files by dragging and dropping or clicking the **Add** (![add-button](../../img/data-upload-and-management/anndata-add-button.png)) button.  
 - Select the corresponding species information and provide a description of the data.  
 - Once the file is selected and all information is filled out, click the **Upload** (![upload-button](../../img/data-upload-and-management/anndata-upload-button.png)) button to start uploading.  
 - When the upload status indicates success ![complete-status](../../img/data-upload-and-management/complete-status.png), the data upload is complete.
 
-2. 10x Data Upload
+1. 10x Data Upload
 - Enter the data name, species information, and data description.  
 - Click the **Next Step** button, then click **Add a Sample** to create a new sample row.  
 - For multiple samples, add the corresponding number of sample rows.  
@@ -125,7 +148,7 @@ Ragomics currently supports the following five data formats for upload:
    - `matrix.mtx`  
 - Once all data is uploaded, click the **Assemble** button to complete the upload process.
 
-3. Assemble AnnData
+1. Assemble AnnData
 - Enter species information and data description, then click the **Next Step** button.  
 - Upload the required files by dragging and dropping or clicking the upload area:  
    - Mandatory Files:  
@@ -140,12 +163,13 @@ Ragomics currently supports the following five data formats for upload:
 - Once all files are uploaded, click the **Assemble** button to finalize the AnnData assembly.  
 - Click the **Complete** button to finish the upload process.
 
-4. FastQ Upload
+<!---
+1. FastQ Upload
 - Select the corresponding species information and provide a description of the data.  
 - Click the **Next Step** button.  
 - Add FastQ `.zip` files by dragging and dropping or clicking the central upload area.
-
-5. Spaceranger Count Upload
+-->
+1. Spaceranger Count Upload
 - Enter the data name, select the corresponding species information, and provide a description of the data.  
 - Click the **Next Step** button.  
 - Add Spaceranger Count data by dragging and dropping or clicking the upload area.  
@@ -172,14 +196,20 @@ In the [<span style="color:#00bfff">Analysis Panel</span>](#analysis-panel), use
 In the [<span style="color:#00bfff">Analysis Panel</span>](#analysis-panel), users can freely perform various analysis operations, such as [<span style="color:#00bfff">Data Upload</span>](#data-upload), [<span style="color:#00bfff">Importing Data</span>](#importing-data), **Function Blocks** option, and [<span style="color:#00bfff">Analysis Pipeline Assembly</span>](#assembling-an-analysis-pipeline). After completing the analysis, users can view the results directly or navigate to the corresponding [<span style="color:#00bfff">Visualization Panel</span>](#visualization-panel) to explore the visualized outcomes. 
 Users can choose between manual or [<span style="color:#00bfff">Automatic Layout</span>](#automatic-layout) option of the analysis pipeline on the current analysis panel. To switch to another analysis task, users can click the top-left **Ragomics** (![ragomics-button](../../img/analysis-panel/ragomics-button.png)) button to return to the homepage.
 
-## **<span style="color:#00bfff;" id="automatic-layout">Automatic Layout</span>**  
+## **<span style="color:#00bfff;" id="automatic-layout">Automatic Layout</span>**
+
+![vid-8](../../img/gif/8.gif)
 Users can manually arrange the nodes of the analysis pipeline or enable an automatic layout feature. By clicking the **Settings** (![settings-button](../../img/analysis-panel/settings-button.png)) button on the bottom toolbar of the analysis panel, users can activate automatic layout in the pop-up options. When enabled, any subsequently connected analysis nodes will be automatically arranged. To instantly rearrange the entire analysis pipeline, users can click the bottom toolbar button, and all nodes in the current analysis panel will be automatically laid out immediately.
 
 ## **<span style="color:#00bfff;">Analysis Pipeline Thumbnail</span>**
+
+![vid-8-2](../../img/gif/8-2.gif)
 For large analysis pipelines that are difficult to overview, users can enable the thumbnail feature by clicking the **Zoom** (![enlarge-button](../../img/analysis-panel/enlarge-button.png)) button on the bottom toolbar of the analysis panel. The thumbnail allows users to quickly locate which part of the pipeline they are currently operating on within the broader analysis pipeline.
 ![thumbnail](../../img/analysis-panel/analysis-pipeline-thumbnail.png)
 
 ## **<span style="color:#00bfff;">Analysis Node Status Panel</span>**
+
+![vid-9](../../img/gif/9.gif)
 If users need an overview of the status of all analysis nodes in the current pipeline, they can refer to the bottom toolbar. The toolbar displays the total number of nodes in the current panel, along with counts for nodes that are running, failed, successful, waiting, or under bug-fix debugging.  
 
 Users can click the number next to "Nodes" to open the **Analysis Node Status Panel**. When the highlight setting is enabled, clicking any node card in the analysis panel will highlight the corresponding row in the status panel. Similarly, clicking a node name in the status panel will cause the analysis panel to focus on the corresponding node in the pipeline.  
@@ -188,6 +218,8 @@ Additionally, clicking the **View Code** (![detail-code](../../img/analysis-pane
 ![analysis-dashboard](../../img/analysis-panel/analysis-dashboard.png)
 
 ## <span style="color:#00bfff;">**Sharing Analysis Task**</span>
+
+![vid-10](../../img/gif/10.gif)
 To share a specific analysis task with others, users can click the **"Share"** button at the top of the analysis panel. In the pop-up window, enable the **"Public"** setting and click the **"Copy Link"** button to generate a link for the current analysis task. Other users can use this link to access and view the shared task; however, **guest users** will not be able to make edits. If the user wants other users to also be able to edit, they can share the **access link** and **access password** for this analysis task with them. If the user wishes to change the password, they can click the **"Edit"** button next to the **access password** to make the change.
 <!---
 If editing permissions are required, users can perform [<span style="color:#00bfff;">Collaborator Management</span>](#collaborator-management) in the settings below.
@@ -215,14 +247,20 @@ When an analysis node runs successfully or fails, or when a user receives a coll
 ### <span style="color:#00bfff;">**Pipeline Helper**</span>
 If users require assistance when assembling analysis pipelines, they can enable **Guidance** during the [<span style="color:#00bfff;">Creating an Analysis</span>](#creating-an-analysis) step or click the **Pipeline Helper** button in the top-left corner of the main area in the [<span style="color:#00bfff;">Analysis Panel</span>](#analysis-panel).
 
-### <span style="color:#00bfff;">**Pipeline Template Library**</span>
-In the [<span style="color:#00bfff;">Pipeline Helper<span>](#pipeline-helper) page, users can select a suitable analysis pipeline from Ragomics' [<span style="color:#00bfff;">Pipeline Template Library<span>](#pipeline-template-library) and import it into the **Analysis Panel** for use.
+### <span style="color:#00bfff;">**Pipeline Template**</span>
+In the [<span style="color:#00bfff;">Pipeline Helper<span>](#pipeline-helper) page, users can select a suitable analysis pipeline from Ragomics' [<span style="color:#00bfff;">Pipeline Template<span>](#pipeline-template) and import it into the **Analysis Panel** for use.
 
-Users can select analysis pipelines from Ragomics' [<span style="color:#00bfff;">Pipeline Template Library<span>](#pipeline-template-library) and import them into the analysis panel on the Analysis Pipeline Assistant page.  
+Users can select analysis pipelines from Ragomics' [<span style="color:#00bfff;">Pipeline Template<span>](#pipeline-template) and import them into the analysis panel on the Analysis Pipeline Assistant page.  
 <!---
 If the template library does not have a suitable template, users can use the [<span style="color:#00bfff;">AI Pipeline</span>](#ai-pipeline) feature to generate a new analysis pipeline.
 ![pipeline-template](../../img/analysis-pipeline/pipeline-template.png)
 -->
+
+### <span style="color:#00bfff;">**Upload of Function Blocks**</span>
+If the user has developed or obtained certain bioinformatics algorithm/module not available on the platform and wishes to run them on the platform, they can click the **"Upload"** button at the top of the **Function Blocks** list to open the upload interface. In the upload interface, users need to either drag and drop or click the upload area to select the algorithm/module files to be uploaded. Users also need to fill in information such as the algorithm/module name, group, and version name. Finally, clicking the "Finish and Upload" button will initiate the upload of the algorithm/module.
+![fb-upload](../../img/analysis-pipeline/fb-upload.png) 
+
+After the algorithm/module upload is complete, users will be able to find their uploaded algorithm/module under the **"Private"** category in the **Function Blocks** list and use them as needed.
 
 
 
@@ -325,7 +363,7 @@ In the <span style="color: #00bfff;">AI Pipeline Helper</span> page, users can u
 
 After filling in the analysis requirements, the user clicks **"Next"**, Ragomics will display the user’s original requirements alongside the AI-optimized version. Users can compare the two and click the **"Edit"** (![edit-button](../../img/agent/edit-button.png)) button to edit. If the user is dissatisfied with the current AI-generated optimized result, they can click the **"Refresh"** (![refresh-button](../../img/agent/refresh-button.png)) button to refresh it. 
 
-The user needs to select the final requirements text to use and click the **"Confirm"** button. In the next step, the user must choose between querying analysis pipelines from the [<span style="color: #00bfff;">Pipeline Template Library</span>](#pipeline-template-library) or generating an analysis pipeline directly through AI. After generation, they can click the **"Import"** button to bring the current generated analysis pipeline into the analysis panel.
+The user needs to select the final requirements text to use and click the **"Confirm"** button. In the next step, the user must choose between querying analysis pipelines from the [<span style="color: #00bfff;">Pipeline Template</span>](#pipeline-template) or generating an analysis pipeline directly through AI. After generation, they can click the **"Import"** button to bring the current generated analysis pipeline into the analysis panel.
 -->
 ## <span style="color: #00bfff;"><strong>AI Parameter</strong></span>
 If users encounter difficulties when filling in the parameters for an analysis node, they can click the AI Parameter button at the bottom-left of the parameter panel. In the popup menu, users can select either **"Fill All Parameters"** or **"Complete Unfilled Parameters"**.

@@ -95,9 +95,13 @@ When an analysis task requires collaboration with other users, the **Collaborato
 # <span style="color:#00bfff">**Public Analyses and Databases**</span>
 
 ## <span style="color:#00bfff">**Public Analyses**</span>
+
+![vid-3](../../img/gif/3.gif)
 Ragomics provides users with a series of completed analysis examples. Users can directly access these [<span style="color:#00bfff">Public Analyses</span>](#public-analyses) to review the analysis process and results. However, users cannot perform any editing actions on these public analyses.
 
 ## <span style="color:#00bfff">**Public Databases**</span>
+
+![vid-4](../../img/gif/4.gif)
 On the [<span style="color:#00bfff">Workflow</span>](#workflow) - <span style="color:#00bfff">Data Source</span> page, users can explore datasets from public databases:
 
 1. Click the **Show More** button to view additional datasets in the public database.
@@ -111,10 +115,14 @@ On the [<span style="color:#00bfff">Workflow</span>](#workflow) - <span style="c
 Ragomics offers two methods for uploading data:
 
 Method 1
+
+![vid-5](../../img/gif/5.gif)
 - Navigate to [<span style="color:#00bfff">Workflow</span>](#workflow) - <span style="color:#00bfff">Data Source</span> - **My Data** section.
 - Click the **Upload** (![upload-button](../../img/data-upload-and-management/upload-from-device-button.png)) button to start the data upload process.
 
 Method 2
+
+![vid-6](../../img/gif/6.gif)
 - In the [<span style="color:#00bfff">Analysis Panel</span>](#analysis-panel), click the **Add** (![add-button](../../img/data-upload-and-management/add-button.png)) button under the Data Source tab on the left sidebar, choose **Upload from Device** button to begin uploading data directly from your device.
 ![upload-from-device](../../img/data-upload-and-management/upload-from-device.png)
 
@@ -155,11 +163,12 @@ Please ensure that anndata key names do not contain "/". E.g. adata.obs["date/mo
 - Once all files are uploaded, click the **Assemble** button to finalize the AnnData assembly.  
 - Click the **Complete** button to finish the upload process.
 
+<!---
 1. FastQ Upload
 - Select the corresponding species information and provide a description of the data.  
 - Click the **Next Step** button.  
 - Add FastQ `.zip` files by dragging and dropping or clicking the central upload area.
-
+-->
 1. Spaceranger Count Upload
 - Enter the data name, select the corresponding species information, and provide a description of the data.  
 - Click the **Next Step** button.  
@@ -187,14 +196,20 @@ In the [<span style="color:#00bfff">Analysis Panel</span>](#analysis-panel), use
 In the [<span style="color:#00bfff">Analysis Panel</span>](#analysis-panel), users can freely perform various analysis operations, such as [<span style="color:#00bfff">Data Upload</span>](#data-upload), [<span style="color:#00bfff">Importing Data</span>](#importing-data), **Function Blocks** option, and [<span style="color:#00bfff">Analysis Pipeline Assembly</span>](#assembling-an-analysis-pipeline). After completing the analysis, users can view the results directly or navigate to the corresponding [<span style="color:#00bfff">Visualization Panel</span>](#visualization-panel) to explore the visualized outcomes. 
 Users can choose between manual or [<span style="color:#00bfff">Automatic Layout</span>](#automatic-layout) option of the analysis pipeline on the current analysis panel. To switch to another analysis task, users can click the top-left **Ragomics** (![ragomics-button](../../img/analysis-panel/ragomics-button.png)) button to return to the homepage.
 
-## **<span style="color:#00bfff;" id="automatic-layout">Automatic Layout</span>**  
+## **<span style="color:#00bfff;" id="automatic-layout">Automatic Layout</span>**
+
+![vid-8](../../img/gif/8.gif)
 Users can manually arrange the nodes of the analysis pipeline or enable an automatic layout feature. By clicking the **Settings** (![settings-button](../../img/analysis-panel/settings-button.png)) button on the bottom toolbar of the analysis panel, users can activate automatic layout in the pop-up options. When enabled, any subsequently connected analysis nodes will be automatically arranged. To instantly rearrange the entire analysis pipeline, users can click the bottom toolbar button, and all nodes in the current analysis panel will be automatically laid out immediately.
 
 ## **<span style="color:#00bfff;">Analysis Pipeline Thumbnail</span>**
+
+![vid-8-2](../../img/gif/8-2.gif)
 For large analysis pipelines that are difficult to overview, users can enable the thumbnail feature by clicking the **Zoom** (![enlarge-button](../../img/analysis-panel/enlarge-button.png)) button on the bottom toolbar of the analysis panel. The thumbnail allows users to quickly locate which part of the pipeline they are currently operating on within the broader analysis pipeline.
 ![thumbnail](../../img/analysis-panel/analysis-pipeline-thumbnail.png)
 
 ## **<span style="color:#00bfff;">Analysis Node Status Panel</span>**
+
+![vid-9](../../img/gif/9.gif)
 If users need an overview of the status of all analysis nodes in the current pipeline, they can refer to the bottom toolbar. The toolbar displays the total number of nodes in the current panel, along with counts for nodes that are running, failed, successful, waiting, or under bug-fix debugging.  
 
 Users can click the number next to "Nodes" to open the **Analysis Node Status Panel**. When the highlight setting is enabled, clicking any node card in the analysis panel will highlight the corresponding row in the status panel. Similarly, clicking a node name in the status panel will cause the analysis panel to focus on the corresponding node in the pipeline.  
@@ -203,6 +218,8 @@ Additionally, clicking the **View Code** (![detail-code](../../img/analysis-pane
 ![analysis-dashboard](../../img/analysis-panel/analysis-dashboard.png)
 
 ## <span style="color:#00bfff;">**Sharing Analysis Task**</span>
+
+![vid-10](../../img/gif/10.gif)
 To share a specific analysis task with others, users can click the **"Share"** button at the top of the analysis panel. In the pop-up window, enable the **"Public"** setting and click the **"Copy Link"** button to generate a link for the current analysis task. Other users can use this link to access and view the shared task; however, **guest users** will not be able to make edits. If the user wants other users to also be able to edit, they can share the **access link** and **access password** for this analysis task with them. If the user wishes to change the password, they can click the **"Edit"** button next to the **access password** to make the change.
 <!---
 If editing permissions are required, users can perform [<span style="color:#00bfff;">Collaborator Management</span>](#collaborator-management) in the settings below.
@@ -218,6 +235,8 @@ When an analysis node runs successfully or fails, or when a user receives a coll
 # <span style="color:#00bfff;">**Analysis Pipeline**</span>
 
 ## <span style="color:#00bfff;">**Assembling an Analysis Pipeline**</span>
+
+![vid-12](../../img/gif/12.gif)
 1. In the [<span style="color:#00bfff;">Analysis Panel</span>](#analysis-panel), select any dataset from either the **Public** or the **Imported** list on the left sidebar.  
 2. Drag the selected data into the main analysis area of the panel.  
 3. Based on your analysis requirements, choose the appropriate algorithm modules and drag them into the main analysis area.  
@@ -240,6 +259,8 @@ If the template library does not have a suitable template, users can use the [<s
 -->
 
 ### <span style="color:#00bfff;">**Upload of Function Blocks**</span>
+
+![vid-14](../../img/gif/14.gif)
 If the user has developed or obtained certain bioinformatics algorithm/module not available on the platform and wishes to run them on the platform, they can click the **"Upload"** button at the top of the **Function Blocks** list to open the upload interface. In the upload interface, users need to either drag and drop or click the upload area to select the algorithm/module files to be uploaded. Users also need to fill in information such as the algorithm/module name, group, and version name. Finally, clicking the "Finish and Upload" button will initiate the upload of the algorithm/module.
 ![fb-upload](../../img/analysis-pipeline/fb-upload.png) 
 
@@ -322,6 +343,8 @@ When users analyze data or algorithm modules that require significant computatio
 After a node completes its calculation, users can click the **"Download"** (![download-button](../../img/analysis-node/download-button.png)) button on the top-right of the analysis node card to download the current node's h5ad file.
 
 # <strong style="color: #00bfff;">Chart Display</strong>
+
+![vid-15](../../img/gif/15.gif)
 After an analysis node with charting functionality completes its execution, users can click the **Settings** (![settings-button](../../img/analysis-panel/settings-button.png)) button in the toolbar at the bottom of the analysis panel to enable **"Show Chart"**. The chart output will be displayed at the bottom of the node, and clicking the chart will redirect to the corresponding [<span style="color: #00bfff;">Visualization Panel</span>](#visualization-panel) page.
 
 ![chart-display](../../img/analysis-node/chart-display.png)
@@ -349,6 +372,8 @@ After filling in the analysis requirements, the user clicks **"Next"**, Ragomics
 The user needs to select the final requirements text to use and click the **"Confirm"** button. In the next step, the user must choose between querying analysis pipelines from the [<span style="color: #00bfff;">Pipeline Template</span>](#pipeline-template) or generating an analysis pipeline directly through AI. After generation, they can click the **"Import"** button to bring the current generated analysis pipeline into the analysis panel.
 -->
 ## <span style="color: #00bfff;"><strong>AI Parameter</strong></span>
+
+![vid-16](../../img/gif/16.gif)
 If users encounter difficulties when filling in the parameters for an analysis node, they can click the AI Parameter button at the bottom-left of the parameter panel. In the popup menu, users can select either **"Fill All Parameters"** or **"Complete Unfilled Parameters"**.
 
 - **"Fill All Parameters"**: In this case, the agent will automatically fill in the appropriate parameters based on the user’s current analysis data, pipeline, and analysis node.
@@ -359,6 +384,8 @@ When users click the **"Show Parameter Update History"** button, a popup will di
 ![ai-parameter](../../img/agent/ai-parameter.png)
 
 ## <span style="color: #00bfff;"><strong>Bug Fixing</strong></span>
+
+![vid-17](../../img/gif/17.gif)
 During the analysis process, users may encounter errors in certain analysis nodes. In such cases, users can click on the erroring node, and the error message for that node will appear on the right side of the analysis panel. The error message includes a description of the error, suggested fixes, and logs. Users can use this information to manually fix the error.
 
 ![bug-fixing](../../img/agent/bug-fixing.png)
@@ -368,6 +395,8 @@ If users are still unable to fix the error, they can try using the **Bug Fixer**
 ![bug-fixer](../../img/agent/bug-fixer.png)
 
 ## <span style="color: #00bfff;"><strong>AI Interpretation</strong></span>
+
+![vid-18](../../img/gif/18.gif)
 Once an analysis node has completed execution, users can click to select the node. In the [<span style="color: #00bfff;">AI Interpretation</span>](#ai-interpretation) section of the control panel on the right, users can click **"Generate"**, and the agent module will provide biological interpretations of the data from that node, along with suggestions for subsequent analysis.
 
 

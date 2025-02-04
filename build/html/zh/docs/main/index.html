@@ -260,14 +260,19 @@
         <article role="main" id="furo-main-content">
           <section class="tex2jax_ignore mathjax_ignore" id="quickstart">
 <h1><span style="color:#00bfff"><strong>Quickstart</strong></span><a class="headerlink" href="#quickstart" title="Link to this heading">¶</a></h1>
-<p>After opening the platform, users can access the <a class="reference internal" href="#analysis-panel"><span class="xref myst"><span style="color:#00bfff">Analysis Panel</span></span></a>.</p>
+<p>After opening the platform, users is on the homepage. Follow the quickstart animation and/or steps below when necessary.</p>
+<p><img alt="quickstart" src="../../../_images/quickstart-server-high-res.gif" /></p>
 <ol class="arabic simple">
-<li><p>Drag any public dataset from the left side into the analysis area.</p></li>
-<li><p>Click the <a class="reference internal" href="#pipeline-helper"><span class="xref myst"><span style="color:#00bfff">”Pipeline Helper”</span></span></a> button in the top-left corner to choose a suitable pipeline from the Ragomics <a class="reference internal" href="#pipeline-template-library"><span class="xref myst"><span style="color:#00bfff">Pipeline Template Library</span></span></a> library and import it into the analysis panel for assembly.</p></li>
-<li><p>Once the pipeline is assembled, users can click the <strong>“Run”</strong> (<img alt="run-btn" src="../../../_images/run-btn.png" />) button on a data node to run the analysis.</p></li>
-<li><p>After the analysis is complete, users can enter the <a class="reference internal" href="#visualization-panel"><span class="xref myst"><span style="color:#00bfff">Visualization Panel</span></span></a> from any analysis node to view the results.<br />
-<img alt="quickstart" src="../../../_images/quickstart-high-res.gif" /></p></li>
+<li><p><a class="reference internal" href="#creating-an-analysis"><span class="xref myst"><span style="color:#00bfff;">Creating an Analysis</span></span></a>, after analysis created, drag any public dataset from the left side <strong>Data Source</strong> section into the analysis area.</p></li>
+<li><p>Click the <a class="reference internal" href="#pipeline-helper"><span class="xref myst"><span style="color:#00bfff">”Pipeline Helper”</span></span></a> button in the top-left corner to choose a suitable pipeline from the Ragomics <a class="reference internal" href="#pipeline-template"><span class="xref myst"><span style="color:#00bfff">Pipeline Template</span></span></a> and import it into the analysis panel for assembly.</p></li>
+<li><p>Once the pipeline is assembled, users can connect the data node to the pipeline by dragging a line between them, then click the <strong>“Run Tree”</strong> button from the “…” menu or click the “Run Single Node” icon (<img alt="run-btn" src="../../../_images/run-btn.png" />)  on a data node to run the analysis.</p></li>
+<li><p>After the analysis is complete, users can enter the <a class="reference internal" href="#visualization-panel"><span class="xref myst"><span style="color:#00bfff">Visualization Panel</span></span></a> from any analysis node to view the results.</p></li>
+<li><p>Users can click on green nodes (completed runs) to open the right sidebar and generate context-aware interpretations using LLM. For bug troubleshooting a single red node, Ragomics provides LLM generated explanations and solutions on the right bar, with the original error messages and standard outputs.</p></li>
 </ol>
+<!-- 4. (Optional) For custom needs beyond built-in our function block library, users can use **"Auto-Genie"**, an LLM-based agent, to generate code acoording to Ragomics function block framework for specific tasks. -->
+<!-- 5. (Optional) Before running the pipeline, users may enable **"Bug Fixer"** option with max try of at least 5 times by clicking the **Settings**. However, this feature is experimental and we are still optimizing it. -->
+<!-- 6. ![enable-bug-fixer](../../img/enable-bug-fixer.png) -->
+<!-- 9. (![settings-button](../../img/analysis-panel/settings-button.png)) button on the bottom toolbar of the [<span style="color:#00bfff">Analysis Panel</span>](#analysis-panel) and toggling the **Bug Fixer** switch to on state. -->
 <!---
 # <span style="color:#00bfff">**Platform Login and Registration**</span>
 
@@ -306,7 +311,8 @@ On the password reset page, users must enter their mobile number (login account)
 </section>
 <section id="creating-an-analysis">
 <h2><span style="color:#00bfff"><strong>Creating an Analysis</strong></span><a class="headerlink" href="#creating-an-analysis" title="Link to this heading">¶</a></h2>
-<p>Once logged in, users can go to the <span style="color:#00bfff">Analysis Task</span> page under the <a class="reference internal" href="#workflow"><span class="xref myst"><span style="color:#00bfff">Workflow</span></span></a> tab and click the <strong>Create New Analysis Task</strong> button to create a new analysis task.</p>
+<p><img alt="vid-1" src="../../../_images/vid-1.gif" />
+Once on the platform’s homepage, users can go to the <span style="color:#00bfff">Analysis Task</span> page under the <a class="reference internal" href="#workflow"><span class="xref myst"><span style="color:#00bfff">Workflow</span></span></a> tab and click the <strong>Create New Analysis Task</strong> button to create a new analysis task.</p>
 <ol class="arabic simple">
 <li><p>In the pop-up form, users must enter a name for the analysis task. While the task description is optional, it helps the <a class="reference internal" href="#agent"><span class="xref myst"><span style="color:#00bfff">Agent</span></span></a> module provide more accurate assistance, the user also needs to set an <strong>access password</strong> for the analysis task they create. When reopening the analysis task next time, this password will be required for access.</p></li>
 <li><p>Users can choose to enable the <strong>With Guidance</strong> feature. If enabled, the <a class="reference internal" href="#pipeline-helper"><span class="xref myst"><span style="color:#00bfff">Pipeline Helper</span></span></a> will automatically launch the first time the user accesses the <a class="reference internal" href="#analysis-panel"><span class="xref myst"><span style="color:#00bfff">Analysis Panel</span></span></a> of the task, helping them quickly select an analysis pipeline tailored to their needs.</p></li>
@@ -344,11 +350,13 @@ When an analysis task requires collaboration with other users, the **Collaborato
 <h1><span style="color:#00bfff"><strong>Public Analyses and Databases</strong></span><a class="headerlink" href="#public-analyses-and-databases" title="Link to this heading">¶</a></h1>
 <section id="public-analyses">
 <h2><span style="color:#00bfff"><strong>Public Analyses</strong></span><a class="headerlink" href="#public-analyses" title="Link to this heading">¶</a></h2>
-<p>Ragomics provides users with a series of completed analysis examples. Users can directly access these <a class="reference internal" href="#public-analyses"><span class="xref myst"><span style="color:#00bfff">Public Analyses</span></span></a> to review the analysis process and results. However, users cannot perform any editing actions on these public analyses.</p>
+<p><img alt="vid-3" src="../../../_images/3.gif" />
+Ragomics provides users with a series of completed analysis examples. Users can directly access these <a class="reference internal" href="#public-analyses"><span class="xref myst"><span style="color:#00bfff">Public Analyses</span></span></a> to review the analysis process and results. However, users cannot perform any editing actions on these public analyses.</p>
 </section>
 <section id="public-databases">
 <h2><span style="color:#00bfff"><strong>Public Databases</strong></span><a class="headerlink" href="#public-databases" title="Link to this heading">¶</a></h2>
-<p>On the <a class="reference internal" href="#workflow"><span class="xref myst"><span style="color:#00bfff">Workflow</span></span></a> - <span style="color:#00bfff">Data Source</span> page, users can explore datasets from public databases:</p>
+<p><img alt="vid-4" src="../../../_images/4.gif" />
+On the <a class="reference internal" href="#workflow"><span class="xref myst"><span style="color:#00bfff">Workflow</span></span></a> - <span style="color:#00bfff">Data Source</span> page, users can explore datasets from public databases:</p>
 <ol class="arabic simple">
 <li><p>Click the <strong>Show More</strong> button to view additional datasets in the public database.</p></li>
 <li><p>Select an interesting dataset and click the <strong>Import</strong> button to add it to the user’s account database.</p></li>
@@ -362,11 +370,13 @@ When an analysis task requires collaboration with other users, the **Collaborato
 <h2><span style="color:#00bfff"><strong>Data Upload</strong></span><a class="headerlink" href="#data-upload" title="Link to this heading">¶</a></h2>
 <p>Ragomics offers two methods for uploading data:</p>
 <p>Method 1</p>
+<p><img alt="vid-5" src="../../../_images/5.gif" /></p>
 <ul class="simple">
 <li><p>Navigate to <a class="reference internal" href="#workflow"><span class="xref myst"><span style="color:#00bfff">Workflow</span></span></a> - <span style="color:#00bfff">Data Source</span> - <strong>My Data</strong> section.</p></li>
 <li><p>Click the <strong>Upload</strong> (<img alt="upload-button" src="../../../_images/upload-from-device-button.png" />) button to start the data upload process.</p></li>
 </ul>
 <p>Method 2</p>
+<p><img alt="vid-6" src="../../../_images/6.gif" /></p>
 <ul class="simple">
 <li><p>In the <a class="reference internal" href="#analysis-panel"><span class="xref myst"><span style="color:#00bfff">Analysis Panel</span></span></a>, click the <strong>Add</strong> (<img alt="add-button" src="../../../_images/add-button.png" />) button under the Data Source tab on the left sidebar, choose <strong>Upload from Device</strong> button to begin uploading data directly from your device.
 <img alt="upload-from-device" src="../../../_images/upload-from-device.png" /></p></li>
@@ -374,7 +384,9 @@ When an analysis task requires collaboration with other users, the **Collaborato
 <p>Supported Data Formats for Upload in Ragomics</p>
 <p>Ragomics currently supports the following five data formats for upload:</p>
 <ol class="arabic simple">
-<li><p>AnnData Upload</p></li>
+<li><p>AnnData Upload<br />
+<strong>Important node</strong>:<br />
+Please ensure that anndata key names do not contain “/”. E.g. adata.obs[“date/month”] is invalid. It causes issues when the server decomposes the anndata because “/” is treated as a “subfolder” on cloud storage service. It is a known sanity-check related issue. We have resolved it in the latest version but not in the alpha server after NAR technical review.</p></li>
 </ol>
 <ul class="simple">
 <li><p>Users can add <code class="docutils literal notranslate"><span class="pre">.h5ad</span></code> files by dragging and dropping or clicking the <strong>Add</strong> (<img alt="add-button" src="../../../_images/anndata-add-button.png" />) button.</p></li>
@@ -382,7 +394,7 @@ When an analysis task requires collaboration with other users, the **Collaborato
 <li><p>Once the file is selected and all information is filled out, click the <strong>Upload</strong> (<img alt="upload-button" src="../../../_images/anndata-upload-button.png" />) button to start uploading.</p></li>
 <li><p>When the upload status indicates success <img alt="complete-status" src="../../../_images/complete-status.png" />, the data upload is complete.</p></li>
 </ul>
-<ol class="arabic simple" start="2">
+<ol class="arabic simple">
 <li><p>10x Data Upload</p></li>
 </ol>
 <ul class="simple">
@@ -398,7 +410,7 @@ When an analysis task requires collaboration with other users, the **Collaborato
 </li>
 <li><p>Once all data is uploaded, click the <strong>Assemble</strong> button to complete the upload process.</p></li>
 </ul>
-<ol class="arabic simple" start="3">
+<ol class="arabic simple">
 <li><p>Assemble AnnData</p></li>
 </ol>
 <ul class="simple">
@@ -425,15 +437,13 @@ When an analysis task requires collaboration with other users, the **Collaborato
 <li><p>Once all files are uploaded, click the <strong>Assemble</strong> button to finalize the AnnData assembly.</p></li>
 <li><p>Click the <strong>Complete</strong> button to finish the upload process.</p></li>
 </ul>
-<ol class="arabic simple" start="4">
-<li><p>FastQ Upload</p></li>
-</ol>
-<ul class="simple">
-<li><p>Select the corresponding species information and provide a description of the data.</p></li>
-<li><p>Click the <strong>Next Step</strong> button.</p></li>
-<li><p>Add FastQ <code class="docutils literal notranslate"><span class="pre">.zip</span></code> files by dragging and dropping or clicking the central upload area.</p></li>
-</ul>
-<ol class="arabic simple" start="5">
+<!---
+1. FastQ Upload
+- Select the corresponding species information and provide a description of the data.  
+- Click the **Next Step** button.  
+- Add FastQ `.zip` files by dragging and dropping or clicking the central upload area.
+-->
+<ol class="arabic simple">
 <li><p>Spaceranger Count Upload</p></li>
 </ol>
 <ul class="simple">
@@ -465,23 +475,27 @@ When an analysis task requires collaboration with other users, the **Collaborato
 Users can choose between manual or <a class="reference internal" href="#automatic-layout"><span class="xref myst"><span style="color:#00bfff">Automatic Layout</span></span></a> option of the analysis pipeline on the current analysis panel. To switch to another analysis task, users can click the top-left <strong>Ragomics</strong> (<img alt="ragomics-button" src="../../../_images/ragomics-button.png" />) button to return to the homepage.</p>
 <section id="automatic-layout">
 <h2><strong><span style="color:#00bfff;" id="automatic-layout">Automatic Layout</span></strong><a class="headerlink" href="#automatic-layout" title="Link to this heading">¶</a></h2>
-<p>Users can manually arrange the nodes of the analysis pipeline or enable an automatic layout feature. By clicking the <strong>Settings</strong> (<img alt="settings-button" src="../../../_images/settings-button.png" />) button on the bottom toolbar of the analysis panel, users can activate automatic layout in the pop-up options. When enabled, any subsequently connected analysis nodes will be automatically arranged. To instantly rearrange the entire analysis pipeline, users can click the bottom toolbar button, and all nodes in the current analysis panel will be automatically laid out immediately.</p>
+<p><img alt="vid-8" src="../../../_images/8.gif" />
+Users can manually arrange the nodes of the analysis pipeline or enable an automatic layout feature. By clicking the <strong>Settings</strong> (<img alt="settings-button" src="../../../_images/settings-button.png" />) button on the bottom toolbar of the analysis panel, users can activate automatic layout in the pop-up options. When enabled, any subsequently connected analysis nodes will be automatically arranged. To instantly rearrange the entire analysis pipeline, users can click the bottom toolbar button, and all nodes in the current analysis panel will be automatically laid out immediately.</p>
 </section>
 <section id="analysis-pipeline-thumbnail">
 <h2><strong><span style="color:#00bfff;">Analysis Pipeline Thumbnail</span></strong><a class="headerlink" href="#analysis-pipeline-thumbnail" title="Link to this heading">¶</a></h2>
-<p>For large analysis pipelines that are difficult to overview, users can enable the thumbnail feature by clicking the <strong>Zoom</strong> (<img alt="enlarge-button" src="../../../_images/enlarge-button.png" />) button on the bottom toolbar of the analysis panel. The thumbnail allows users to quickly locate which part of the pipeline they are currently operating on within the broader analysis pipeline.
+<p><img alt="vid-8-2" src="../../../_images/8-2.gif" />
+For large analysis pipelines that are difficult to overview, users can enable the thumbnail feature by clicking the <strong>Zoom</strong> (<img alt="enlarge-button" src="../../../_images/enlarge-button.png" />) button on the bottom toolbar of the analysis panel. The thumbnail allows users to quickly locate which part of the pipeline they are currently operating on within the broader analysis pipeline.
 <img alt="thumbnail" src="../../../_images/analysis-pipeline-thumbnail.png" /></p>
 </section>
 <section id="analysis-node-status-panel">
 <h2><strong><span style="color:#00bfff;">Analysis Node Status Panel</span></strong><a class="headerlink" href="#analysis-node-status-panel" title="Link to this heading">¶</a></h2>
-<p>If users need an overview of the status of all analysis nodes in the current pipeline, they can refer to the bottom toolbar. The toolbar displays the total number of nodes in the current panel, along with counts for nodes that are running, failed, successful, waiting, or under bug-fix debugging.</p>
+<p><img alt="vid-9" src="../../../_images/9.gif" />
+If users need an overview of the status of all analysis nodes in the current pipeline, they can refer to the bottom toolbar. The toolbar displays the total number of nodes in the current panel, along with counts for nodes that are running, failed, successful, waiting, or under bug-fix debugging.</p>
 <p>Users can click the number next to “Nodes” to open the <strong>Analysis Node Status Panel</strong>. When the highlight setting is enabled, clicking any node card in the analysis panel will highlight the corresponding row in the status panel. Similarly, clicking a node name in the status panel will cause the analysis panel to focus on the corresponding node in the pipeline.</p>
 <p>Additionally, clicking the <strong>View Code</strong> (<img alt="detail-code" src="../../../_images/detail.png" />) icon next to each node in the status panel allows users to view the code for that specific node.
 <img alt="analysis-dashboard" src="../../../_images/analysis-dashboard.png" /></p>
 </section>
 <section id="sharing-analysis-task">
 <h2><span style="color:#00bfff;"><strong>Sharing Analysis Task</strong></span><a class="headerlink" href="#sharing-analysis-task" title="Link to this heading">¶</a></h2>
-<p>To share a specific analysis task with others, users can click the <strong>“Share”</strong> button at the top of the analysis panel. In the pop-up window, enable the <strong>“Public”</strong> setting and click the <strong>“Copy Link”</strong> button to generate a link for the current analysis task. Other users can use this link to access and view the shared task; however, <strong>guest users</strong> will not be able to make edits. If the user wants other users to also be able to edit, they can share the <strong>access link</strong> and <strong>access password</strong> for this analysis task with them. If the user wishes to change the password, they can click the <strong>“Edit”</strong> button next to the <strong>access password</strong> to make the change.</p>
+<p><img alt="vid-10" src="../../../_images/10.gif" />
+To share a specific analysis task with others, users can click the <strong>“Share”</strong> button at the top of the analysis panel. In the pop-up window, enable the <strong>“Public”</strong> setting and click the <strong>“Copy Link”</strong> button to generate a link for the current analysis task. Other users can use this link to access and view the shared task; however, <strong>guest users</strong> will not be able to make edits. If the user wants other users to also be able to edit, they can share the <strong>access link</strong> and <strong>access password</strong> for this analysis task with them. If the user wishes to change the password, they can click the <strong>“Edit”</strong> button next to the <strong>access password</strong> to make the change.</p>
 <!---
 If editing permissions are required, users can perform [<span style="color:#00bfff;">Collaborator Management</span>](#collaborator-management) in the settings below.
 
@@ -510,14 +524,20 @@ When an analysis node runs successfully or fails, or when a user receives a coll
 <h3><span style="color:#00bfff;"><strong>Pipeline Helper</strong></span><a class="headerlink" href="#pipeline-helper" title="Link to this heading">¶</a></h3>
 <p>If users require assistance when assembling analysis pipelines, they can enable <strong>Guidance</strong> during the <a class="reference internal" href="#creating-an-analysis"><span class="xref myst"><span style="color:#00bfff;">Creating an Analysis</span></span></a> step or click the <strong>Pipeline Helper</strong> button in the top-left corner of the main area in the <a class="reference internal" href="#analysis-panel"><span class="xref myst"><span style="color:#00bfff;">Analysis Panel</span></span></a>.</p>
 </section>
-<section id="pipeline-template-library">
-<h3><span style="color:#00bfff;"><strong>Pipeline Template Library</strong></span><a class="headerlink" href="#pipeline-template-library" title="Link to this heading">¶</a></h3>
-<p>In the <a class="reference internal" href="#pipeline-helper"><span class="xref myst"><span style="color:#00bfff;">Pipeline Helper<span></span></a> page, users can select a suitable analysis pipeline from Ragomics’ <a class="reference internal" href="#pipeline-template-library"><span class="xref myst"><span style="color:#00bfff;">Pipeline Template Library<span></span></a> and import it into the <strong>Analysis Panel</strong> for use.</p>
-<p>Users can select analysis pipelines from Ragomics’ <a class="reference internal" href="#pipeline-template-library"><span class="xref myst"><span style="color:#00bfff;">Pipeline Template Library<span></span></a> and import them into the analysis panel on the Analysis Pipeline Assistant page.</p>
+<section id="pipeline-template">
+<h3><span style="color:#00bfff;"><strong>Pipeline Template</strong></span><a class="headerlink" href="#pipeline-template" title="Link to this heading">¶</a></h3>
+<p>In the <a class="reference internal" href="#pipeline-helper"><span class="xref myst"><span style="color:#00bfff;">Pipeline Helper<span></span></a> page, users can select a suitable analysis pipeline from Ragomics’ <a class="reference internal" href="#pipeline-template"><span class="xref myst"><span style="color:#00bfff;">Pipeline Template<span></span></a> and import it into the <strong>Analysis Panel</strong> for use.</p>
+<p>Users can select analysis pipelines from Ragomics’ <a class="reference internal" href="#pipeline-template"><span class="xref myst"><span style="color:#00bfff;">Pipeline Template<span></span></a> and import them into the analysis panel on the Analysis Pipeline Assistant page.</p>
 <!---
 If the template library does not have a suitable template, users can use the [<span style="color:#00bfff;">AI Pipeline</span>](#ai-pipeline) feature to generate a new analysis pipeline.
 ![pipeline-template](../../img/analysis-pipeline/pipeline-template.png)
 -->
+</section>
+<section id="upload-of-function-blocks">
+<h3><span style="color:#00bfff;"><strong>Upload of Function Blocks</strong></span><a class="headerlink" href="#upload-of-function-blocks" title="Link to this heading">¶</a></h3>
+<p>If the user has developed or obtained certain bioinformatics algorithm/module not available on the platform and wishes to run them on the platform, they can click the <strong>“Upload”</strong> button at the top of the <strong>Function Blocks</strong> list to open the upload interface. In the upload interface, users need to either drag and drop or click the upload area to select the algorithm/module files to be uploaded. Users also need to fill in information such as the algorithm/module name, group, and version name. Finally, clicking the “Finish and Upload” button will initiate the upload of the algorithm/module.
+<img alt="fb-upload" src="../../../_images/fb-upload.png" /></p>
+<p>After the algorithm/module upload is complete, users will be able to find their uploaded algorithm/module under the <strong>“Private”</strong> category in the <strong>Function Blocks</strong> list and use them as needed.</p>
 </section>
 </section>
 </section>
@@ -624,7 +644,7 @@ In the <span style="color: #00bfff;">AI Pipeline Helper</span> page, users can u
 
 After filling in the analysis requirements, the user clicks **"Next"**, Ragomics will display the user’s original requirements alongside the AI-optimized version. Users can compare the two and click the **"Edit"** (![edit-button](../../img/agent/edit-button.png)) button to edit. If the user is dissatisfied with the current AI-generated optimized result, they can click the **"Refresh"** (![refresh-button](../../img/agent/refresh-button.png)) button to refresh it. 
 
-The user needs to select the final requirements text to use and click the **"Confirm"** button. In the next step, the user must choose between querying analysis pipelines from the [<span style="color: #00bfff;">Pipeline Template Library</span>](#pipeline-template-library) or generating an analysis pipeline directly through AI. After generation, they can click the **"Import"** button to bring the current generated analysis pipeline into the analysis panel.
+The user needs to select the final requirements text to use and click the **"Confirm"** button. In the next step, the user must choose between querying analysis pipelines from the [<span style="color: #00bfff;">Pipeline Template</span>](#pipeline-template) or generating an analysis pipeline directly through AI. After generation, they can click the **"Import"** button to bring the current generated analysis pipeline into the analysis panel.
 -->
 <section id="ai-parameter">
 <h2><span style="color: #00bfff;"><strong>AI Parameter</strong></span><a class="headerlink" href="#ai-parameter" title="Link to this heading">¶</a></h2>
