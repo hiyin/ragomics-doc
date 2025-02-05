@@ -13,7 +13,7 @@ After launching the platform, users arrive on the homepage. They can follow the 
 
 3. Import Pipeline
 - Click the [<span style="color:#00bfff">"Pipeline Helper"</span>](#pipeline-helper) button in the top-left corner to choose a suitable pipeline from [<span style="color:#00bfff">Pipeline Template</span>](#pipeline-template) and import it into the analysis panel for assembly.  
-
+ 
 4. Run the Pipeline
 - Once the pipeline is imported, link the data node to the [<span style="color:#00bfff">Analysis Node</span>](#analysis-nodes) (part of the pipeline) by dragging a connection line between nodes. Click the **"Run Tree"** button (![run-btn](../../img/run-btn.png)) in the data node to run the entire pipeline, or alternatively click the **"Run Node"** (![start-button](../../img/analysis-node/start-button.png)) on [<span style="color:#00bfff">Analysis Node</span>](#analysis-nodes) to run each analysis step.
 
@@ -451,7 +451,8 @@ The [<span style="color:#00bfff">Observations Tab</span>](#observations-obs-tab)
 #### <span style="color:#00bfff">**Cell Categories Data Area**</span>  
 In the [<span style="color:#00bfff">Cell Categories Data Area</span>](#cell-categories-data-area), metadata about cells is displayed, such as cell types and sample information. This helps users better understand the data characteristics and background information of each cell.  
 
-  - <span style="color:#00bfff">**Cell Categories Coloring**</span>  
+  - <span style="color:#00bfff">**Cell Categories Coloring**</span>
+    ![vid-19](../../img/gif/19.gif)  
     When the [<span style="color:#00bfff">Main Image Display and Plotting Area</span>](#main-image-and-plotting-function-area) is in [<span style="color:#00bfff">Embedding</span>](#embedding) mode, users can click the **"Color"** (![color-button](../../img/visualization-panel/color-button.png)) button next to any dimension of the cell category to color the plot based on that category.
     
     ![coloring-cell-category](../../img/visualization-panel/coloring-cell-category.png)
@@ -472,7 +473,8 @@ In the [<span style="color:#00bfff">Cell Categories Data Area</span>](#cell-cate
 
     Users can click the **"More"** (![more-button](../../img/visualization-panel/more-button.png)) button to directly edit the cell category, the pop-up contains renaming, deleting and other operations.
 
-  - <span style="color:#00bfff">**Subcategory Clustering Analysis**</span>  
+  - <span style="color:#00bfff">**Cell Subcategory Clustering Analysis**</span>
+    ![vid-20](../../img/gif/20.gif)    
     If users want to perform clustering on subcategories of a specific cell category, they can click the **"Cluster"** (![cluster-button](../../img/visualization-panel/cluster-button.png)) button next to that subcategory and choose the clustering algorithm to apply. After the algorithm completes, they can view the results in the corresponding analysis node.
 
   - <span style="color:#00bfff">**Cell Category Display Control**</span>  
