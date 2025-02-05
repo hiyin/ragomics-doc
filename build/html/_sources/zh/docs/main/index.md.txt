@@ -6,7 +6,7 @@ After launching the platform, users arrive on the homepage. They can follow the 
 
 1. Start New Analysis
 - Click **"Create New Analysis Task"** button in the Private section to begin a new analysis task. A popup window will appear, prompting users to enter details like 'Name', **'Passcode'**, 'Description', and whether to enable the **Guidance** option. 
-(*Please fill in the 'Passcode' otherwise you may leave the field empty by making your analysis task public.*)
+(<span style="color:#FF0000">*Please fill in the 'Passcode' otherwise you may leave the field empty by making your analysis task public.*</span>)
 
 2. Add a Dataset
 - Drag any public dataset under <span style="color:#00bfff">Data Source</span> tab into the analysis area -- this now becomes a data node. 
@@ -15,11 +15,12 @@ After launching the platform, users arrive on the homepage. They can follow the 
 - Click the [<span style="color:#00bfff">"Pipeline Helper"</span>](#pipeline-helper) button in the top-left corner to choose a suitable pipeline from [<span style="color:#00bfff">Pipeline Template</span>](#pipeline-template) and import it into the analysis panel for assembly.  
 
 4. Run the Pipeline
-- Once the pipeline is imported, link the data node to the analysis node (part of the pipeline) by dragging a connection line between nodes. Click the **"Run Tree"** button (![run-btn](../../img/run-btn.png)) in the data node to run the entire pipeline, or alternatively click the **"Run Node"** (![start-button](../../img/analysis-node/start-button.png)) on analysis node to run each analysis step.
+- Once the pipeline is imported, link the data node to the [<span style="color:#00bfff">Analysis Node</span>](#analysis-nodes) (part of the pipeline) by dragging a connection line between nodes. Click the **"Run Tree"** button (![run-btn](../../img/run-btn.png)) in the data node to run the entire pipeline, or alternatively click the **"Run Node"** (![start-button](../../img/analysis-node/start-button.png)) on [<span style="color:#00bfff">Analysis Node</span>](#analysis-nodes) to run each analysis step.
+
 ![node-explained](../../img/quickstart/node-explanation.png)  
 
 5. Result Interpretation and Debugging 
-- Upon analysis completion, users can click on the green nodes (indicating successful analyses) to open the right sidebar, where where AI-generated interpretations are provided based on the context. If an analysis fails (shown by a red node), clicking the node will display explanations and solutions in the right sidebar, along with the original error messages and outputs. Users can also access the [<span style="color:#00bfff">Visualization Panel</span>](#visualization-panel) from any analysis node to view the results.
+- Upon analysis completion, users can click on the green nodes (indicating successful analyses) to open the right sidebar, where where AI-generated interpretations are provided based on the context. If an analysis fails (shown by a red node), clicking the node will display explanations and solutions in the right sidebar, along with the original error messages and outputs. Users can also access the [<span style="color:#00bfff">Visualization Panel</span>](#visualization-panel) from any [<span style="color:#00bfff">Analysis Node</span>](#analysis-nodes) to view the results.
 ![vid-1-1](../../img/gif/1-1.gif)
 
 <!-- 4. (Optional) For custom needs beyond built-in our function block library, users can use **"Auto-Genie"**, an LLM-based agent, to generate code acoording to Ragomics function block framework for specific tasks. -->
@@ -221,7 +222,7 @@ Users can choose between manual or [<span style="color:#00bfff">Automatic Layout
 ## **<span style="color:#00bfff;" id="automatic-layout">Automatic Layout</span>**
 
 ![vid-8](../../img/gif/8.gif)
-Users can manually arrange the nodes of the analysis pipeline or enable an automatic layout feature. By clicking the **Settings** (![settings-button](../../img/analysis-panel/settings-button.png)) button on the bottom toolbar of the analysis panel, users can activate automatic layout in the pop-up options. When enabled, any subsequently connected analysis nodes will be automatically arranged. 
+Users can manually arrange the nodes of the analysis pipeline or enable an automatic layout feature. By clicking the **Settings** (![settings-button](../../img/analysis-panel/settings-button.png)) button on the bottom toolbar of the analysis panel, users can activate automatic layout in the pop-up options. When enabled, any subsequently connected [<span style="color:#00bfff">Analysis Node</span>](#analysis-nodes) will be automatically arranged. 
 
 ![auto-layout](../../img/analysis-panel/auto-layout.png)
 
@@ -236,7 +237,7 @@ For large analysis pipelines that are difficult to overview, users can enable th
 ## **<span style="color:#00bfff;">Analysis Node Status Panel</span>**
 
 ![vid-9](../../img/gif/9.gif)
-If users need an overview of the status of all analysis nodes in the current pipeline, they can refer to the bottom toolbar. The toolbar displays the total number of nodes in the current panel, along with counts for nodes that are running, failed, successful, waiting, or under bug-fix debugging.  
+If users need an overview of the status of all [<span style="color:#00bfff">Analysis Nodes</span>](#analysis-nodes) in the current pipeline, they can refer to the bottom toolbar. The toolbar displays the total number of nodes in the current panel, along with counts for nodes that are running, failed, successful, waiting, or under bug-fix debugging.  
 
 ![check-node-status](../../img/analysis-panel/check-node-status-1.png)
 
@@ -273,7 +274,7 @@ When an analysis node runs successfully or fails, or when a user receives a coll
 4. Independent function blocks can be connected to uploaded dataset or other [<span style="color:#00bfff;">Analysis Nodes</span>](#analysis-nodes).
 
 ![analysis-pipeline-assembly](../../img/analysis-pipeline/analysis-pipeline-assembly.png)  
-5. To connect, select the connection point on one side of the data node and drag it to another function block or analysis node.
+5. To connect, select the connection point on one side of the data node and drag it to another function block or [<span style="color:#00bfff">Analysis Node</span>](#analysis-nodes).
 
 ![drag-and-connect](../../img/analysis-panel/drag-and-select.png)
 
@@ -320,20 +321,20 @@ Node Design
 - Node Name: Displays the default name of the algorithm module. Users can click the **Edit** (![edit-button](../../img/analysis-node/edit-button.png)) button to customize the node name.
 
 ## <span style="color:#00bfff;">**Parameter Fine-tuning**</span>
-Users can click the **Parameter** (![parameter-button](../../img/analysis-node/parameter-button.png)) button within an analysis node to open the parameter adjustment panel.
-In the parameters panel, parameters marked with a red asterisk are required. If users are unclear about the meaning and function of a parameter, they can click the **Information** (![information-icon](../../img/analysis-node/information-icon.png)) icon next to each parameter to view a description. Once the parameters are filled in, users can click the **"Update"** button to save the parameters, or click the **"Update and Run"** button to execute the current analysis node. 
+Users can click the **Parameter** (![parameter-button](../../img/analysis-node/parameter-button.png)) button within an [<span style="color:#00bfff">Analysis Node</span>](#analysis-nodes) to open the parameter adjustment panel.
+In the parameters panel, parameters marked with a red asterisk are required. If users are unclear about the meaning and function of a parameter, they can click the **Information** (![information-icon](../../img/analysis-node/information-icon.png)) icon next to each parameter to view a description. Once the parameters are filled in, users can click the **"Update"** button to save the parameters, or click the **"Update and Run"** button to execute the current [<span style="color:#00bfff">Analysis Node</span>](#analysis-nodes). 
 Clicking the **"Reset"** button will revert the parameters to their last updated state. 
-Clicking the **"Set as Default"** button will reset all parameters in the analysis node to their default values. If users need assistance from the [<span style="color:#00bfff;">Agent</span>](#agent) while filling in parameters, they can use the [<span style="color:#00bfff;">AI Parameter</span>](#ai-parameter) module.
+Clicking the **"Set as Default"** button will reset all parameters in the [<span style="color:#00bfff">Analysis Node</span>](#analysis-nodes) to their default values. If users need assistance from the [<span style="color:#00bfff;">Agent</span>](#agent) while filling in parameters, they can use the [<span style="color:#00bfff;">AI Parameter</span>](#ai-parameter) module.
 
 ## <span style="color:#00bfff;">**Running Analysis**</span>
 When users need to run a specific [<span style="color:#00bfff;">Analysis Node</span>](#analysis-nodes), they have three options:
 
-1. Users can click the **"Update and Run"** button in the parameter panel of the analysis node to run the current node.
+1. Users can click the **"Update and Run"** button in the parameter panel of the [<span style="color:#00bfff">Analysis Node</span>](#analysis-nodes) to run the current node.
 2. Users can click the **"Run Node"** (![start-button](../../img/analysis-node/start-button.png)) button on the node card of the [<span style="color:#00bfff;">Analysis Node</span>](#analysis-nodes) to start the analysis.
 3. Users can click the **"More"** (![more-button](../../img/analysis-node/more-button.png)) button on the node card of the [<span style="color:#00bfff;">Analysis Node</span>](#analysis-nodes), then select **"Run Sub Tree"** in the secondary popup. In this case, the node and all subsequent child nodes will be executed sequentially.
 
 ## <span style="color:#00bfff;">**Node States**</span>
-In the analysis panel, there are four possible states for an analysis node:
+In the analysis panel, there are four possible states for an [<span style="color:#00bfff">Analysis Node</span>](#analysis-nodes):
 
 1. Ready to run: The top of the node card is white, indicating that the node has not been run yet.
 
@@ -352,39 +353,39 @@ In the analysis panel, there are four possible states for an analysis node:
 ![status-4](../../img/analysis-node/status-running-and-error.png)
 
 ## <strong style="color: #00bfff; font-weight:bold;">Node Output Results</strong>
-When certain nodes generate downloadable CSV files after execution, users can click the **"More"** (![more-button](../../img/analysis-node/more-button.png)) button on the analysis node card, select **"Output"** in the secondary popup, and choose the file they need to download.
+When certain nodes generate downloadable CSV files after execution, users can click the **"More"** (![more-button](../../img/analysis-node/more-button.png)) button on the [<span style="color:#00bfff">Analysis Node</span>](#analysis-nodes) card, select **"Output"** in the secondary popup, and choose the file they need to download.
 
 ![node-output](../../img/analysis-node/node-output.png)
 
 ## <strong style="color: #00bfff; font-weight:bold;">Calculation Logs</strong>
-After a node has been calculated at least once, users can click the **"More"** (![more-button](../../img/analysis-node/more-button.png)) button on the analysis node card, select "Calculation Logs" in the secondary popup to view it. Users can click the export button to export the logs as a CSV file and download it to their local machine.
+After a node has been calculated at least once, users can click the **"More"** (![more-button](../../img/analysis-node/more-button.png)) button on the [<span style="color:#00bfff">Analysis Node</span>](#analysis-nodes) card, select "Calculation Logs" in the secondary popup to view it. Users can click the export button to export the logs as a CSV file and download it to their local machine.
 ![analysis-logs](../../img/analysis-node/analysis-calculation-log.png)
 
 ## <strong style="color: #00bfff;">Job Info</strong>
-After a node has been calculated at least once, users can click the button on the analysis node card, select "Job Info" in the secondary popup to view it.
+After a node has been calculated at least once, users can click the button on the [<span style="color:#00bfff">Analysis Node</span>](#analysis-nodes) card, select "Job Info" in the secondary popup to view it.
 ![analysis-details](../../img/analysis-node/analysis-job-details.png)
 
 ## <strong style="color: #00bfff;">Node Sharing</strong>
-When a user has opened a [<span style="color: #00bfff;">Sharing Analysis Task</span>](#sharing-analysis-task) but wishes to focus on a specific analysis node to share with others, they can click the **"More"** (![more-button](../../img/analysis-node/more-button.png)) button on the analysis node card, select **"Share"** in the secondary popup. This action will automatically copy the link to the current node, and other users can access and view the shared analysis task using the link. 
+When a user has opened a [<span style="color: #00bfff;">Sharing Analysis Task</span>](#sharing-analysis-task) but wishes to focus on a specific [<span style="color:#00bfff">Analysis Node</span>](#analysis-nodes) to share with others, they can click the **"More"** (![more-button](../../img/analysis-node/more-button.png)) button on the [<span style="color:#00bfff">Analysis Node</span>](#analysis-nodes) card, select **"Share"** in the secondary popup. This action will automatically copy the link to the current node, and other users can access and view the shared analysis task using the link. 
 Please note that guest users will not have permission to edit the shared analysis.
 
 # <strong style="color: #00bfff;">Computational Resources Configuration</strong>
-When users analyze data or use algorithm modules that require significant computational resources, they can click the **"More"** (![more-button](../../img/analysis-node/more-button.png)) button on the analysis node card, select **"Configure Computational Resources"** in the secondary popup, and choose parameters like CPU, memory, timeout limits, etc., according to their needs. After configuration, the node will follow this setup when running.
+When users analyze data or use algorithm modules that require significant computational resources, they can click the **"More"** (![more-button](../../img/analysis-node/more-button.png)) button on the [<span style="color:#00bfff">Analysis Node</span>](#analysis-nodes) card, select **"Configure Computational Resources"** in the secondary popup, and choose parameters like CPU, memory, timeout limits, etc., according to their needs. After configuration, the node will follow this setup when running.
 
 # <strong style="color: #00bfff;">Node Data Download</strong>
-After a node completes its calculation, users can click the **"Download"** (![download-button](../../img/analysis-node/download-button.png)) button on the top-right of the analysis node card to download the current node's h5ad file.
+After a node completes its calculation, users can click the **"Download"** (![download-button](../../img/analysis-node/download-button.png)) button on the top-right of the [<span style="color:#00bfff">Analysis Node</span>](#analysis-nodes) card to download the current node's h5ad file.
 
 # <strong style="color: #00bfff;">Chart Display</strong>
 
 ![vid-15](../../img/gif/15.gif)
-After an analysis node with charting functionality completes its execution, users can click the **Settings** (![settings-button](../../img/analysis-panel/settings-button.png)) button in the toolbar at the bottom of the analysis panel to enable **"Show Chart"**. The chart output will be displayed at the bottom of the node, and clicking the chart will redirect to the corresponding [<span style="color: #00bfff;">Visualization Panel</span>](#visualization-panel) page.
+After an [<span style="color:#00bfff">Analysis Node</span>](#analysis-nodes) with charting functionality completes its execution, users can click the **Settings** (![settings-button](../../img/analysis-panel/settings-button.png)) button in the toolbar at the bottom of the analysis panel to enable **"Show Chart"**. The chart output will be displayed at the bottom of the node, and clicking the chart will redirect to the corresponding [<span style="color: #00bfff;">Visualization Panel</span>](#visualization-panel) page.
 
 ![chart-display](../../img/analysis-node/chart-display.png)
 
 # <strong style="color: #00bfff;">Cancelling Analysis</strong>
-If users need to stop the current running analysis process for any reason, they can click the **"More"** (![more-button](../../img/analysis-node/more-button.png)) button on the analysis node card, and in the secondary popup, select "Cancel Analysis."
+If users need to stop the current running analysis process for any reason, they can click the **"More"** (![more-button](../../img/analysis-node/more-button.png)) button on the [<span style="color:#00bfff">Analysis Node</span>](#analysis-nodes) card, and in the secondary popup, select "Cancel Analysis."
 
-If multiple analysis nodes are running simultaneously and the user wants to stop all analyses at once, they can click the **"Cancel All"** button in the toolbar at the bottom of the analysis panel.
+If multiple [<span style="color:#00bfff">Analysis Nodes</span>](#analysis-nodes) are running simultaneously and the user wants to stop all analyses at once, they can click the **"Cancel All"** button in the toolbar at the bottom of the analysis panel.
 
 
 
@@ -418,7 +419,7 @@ When users click the **"Show Parameter Update History"** button, a popup will di
 ## <span style="color: #00bfff;"><strong>Bug Fixing</strong></span>
 
 ![vid-17](../../img/gif/17.gif)
-During the analysis process, users may encounter errors in certain analysis nodes. In such cases, users can click on the erroring node, and the error message for that node will appear on the right side of the analysis panel. The error message includes a description of the error, suggested fixes, and logs. Users can use this information to manually fix the error.
+During the analysis process, users may encounter errors in certain [<span style="color:#00bfff">Analysis Nodes</span>](#analysis-nodes). In such cases, users can click on the erroring node, and the error message for that node will appear on the right side of the analysis panel. The error message includes a description of the error, suggested fixes, and logs. Users can use this information to manually fix the error.
 
 ![bug-fixing](../../img/agent/bug-fixing.png)
 
@@ -489,7 +490,7 @@ Users can also set the **X-axis** or **Y-axis** of the Embedding plot directly u
   - All: Includes all cell categories and continuous values from the current analysis node.
   - New: Only shows the newly generated data from the current analysis node.
   - Changed: Shows data that has been modified in the current node.
-  - Unchanged: Displays data that has not been modified in the current node, usually inherited from previous analysis nodes.
+  - Unchanged: Displays data that has not been modified in the current node, usually inherited from previous [<span style="color:#00bfff">Analysis Nodes</span>](#analysis-nodes).
   - Deleted: Displays only the deleted data, which cannot be modified.
   - Annotation Generated: Displays only data of cells with [<span style="color:#00bfff">Cell Type Annotations</span>](#cell-type-annotation) generated.
 
@@ -519,7 +520,7 @@ The [<span style="color:#00bfff">Main Image and Plotting Function Area</span>](#
 ### <span style="color:#00bfff">**Embedding**</span>  
 
 #### <span style="color:#00bfff">Dimension Selection</span>  
-  In the [<span style="color:#00bfff">Embedding</span>](#embedding) image tab, users can click the **"2D/3D Toggle"** button to switch between 2D and 3D views. Clicking the **"Dimensions"** button will display a list of dimensions generated by the current and previous analysis nodes. Users can quickly switch between them. If custom dimensions are needed, users can choose the **"Select Dimensions"** option to set **X-axis**, **Y-axis**, and **Z-axis** in a popup.
+  In the [<span style="color:#00bfff">Embedding</span>](#embedding) image tab, users can click the **"2D/3D Toggle"** button to switch between 2D and 3D views. Clicking the **"Dimensions"** button will display a list of dimensions generated by the current and previous [<span style="color:#00bfff">Analysis Node</span>](#analysis-nodes). Users can quickly switch between them. If custom dimensions are needed, users can choose the **"Select Dimensions"** option to set **X-axis**, **Y-axis**, and **Z-axis** in a popup.
 
 #### <span style="color:#00bfff">Cell Selection</span>
   Users can click the **"Drag"** (![drag-button](../../img/visualization-panel/drag-button.png)) button at the top of the [<span style="color:#00bfff">Embedding</span>](#embedding) image tab, then **"Select"** button (![select-button](../../img/visualization-panel/select-button.png)) to enter selection mode. They can then click on the starting point and drag to form a selection box around the desired cells. Once the selection is closed, only the selected cells will be displayed. Users can click the **"Save"** (![save-button](../../img/visualization-panel/save-button.png)) button to save the selected cells as a [<span style="color:#00bfff">Cell Sets</span>](#cell-sets) for further analysis.
