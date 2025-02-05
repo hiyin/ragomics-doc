@@ -384,12 +384,10 @@ On the <a class="reference internal" href="#workflow"><span class="xref myst"><s
 <p>Supported Data Formats for Upload</p>
 <p>Ragomics currently supports the following five data formats for upload:</p>
 <ol class="arabic simple">
-<li><p>AnnData Upload</p></li>
+<li><p>AnnData Upload<br />
+<strong>Important note</strong>:<br />
+Please ensure that anndata key names do not contain “/”. E.g. adata.obs[“date/month”] is invalid. “/” causes issues when the server decomposes the anndata matrices, as “/” is treated as a subfolder by the cloud storage service we use. It is a known sanity-check related issue, and we have resolved it in the next release but not on the current alpha server.</p></li>
 </ol>
-<blockquote>
-<div><p><strong>Important Note</strong><br />
-Please ensure that anndata key names do not contain “/”. E.g. adata.obs[“date/month”] is invalid. It causes issues when the server decomposes the anndata because “/” is treated as a “subfolder” on cloud storage service. It is a known sanity-check related issue.</p>
-</div></blockquote>
 <ul class="simple">
 <li><p>Users can add <code class="docutils literal notranslate"><span class="pre">.h5ad</span></code> files by dragging and dropping or clicking the <strong>Add</strong> (<img alt="add-button" src="../../../_images/anndata-add-button.png" />) button.</p></li>
 <li><p>Select the corresponding species information and provide a description of the data.</p></li>
