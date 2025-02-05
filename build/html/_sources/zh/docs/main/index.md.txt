@@ -1,15 +1,27 @@
 # <span style="color:#00bfff">**Quickstart**</span>
 
-After opening the platform, users is on the homepage. Follow the quickstart animation and/or steps below when necessary.
+After launching the platform, users arrive on the homepage. They can follow the quickstart animation or the steps below as needed to get started.
 
 ![quickstart](../../img/quickstart-server-high-res.gif)
 
-1. Click **"Create New Analysis Task"** button in the Private section to begin a new analysis task.
-2. Add a dataset to analyze by dragging any public dataset under **Data Source** section into the analysis area -- this now becomes a data node.  
-3. Click the [<span style="color:#00bfff">"Pipeline Helper"</span>](#pipeline-helper) button in the top-left corner to choose a suitable pipeline from [<span style="color:#00bfff">Pipeline Template</span>](#pipeline-template) and import it into the analysis panel for assembly.  
-4. Connect the data node to the pipeline or analysis node by dragging a line between them. Click the **"Run Tree"** button in data node, or click the "Run Node" icon (![run-btn](../../img/run-btn.png)) on analysis node to run the analysis.  
-5. After the analysis is completed, users can enter the [<span style="color:#00bfff">Visualization Panel</span>](#visualization-panel) from any analysis node to view the results.
-6. Users can click on green analysis nodes (completed runs) to open the right sidebar and generate context-aware interpretations using LLM. For bug troubleshooting a single red node (failed run), Ragomics provides LLM generated explanations and solutions on the right sidebar, with the original error messages and standard outputs.
+1. Start New Analysis
+- Click **"Create New Analysis Task"** button in the Private section to begin a new analysis task. A popup window will appear, prompting users to enter details like 'Name', 'Passcode', 'Description', and whether to enable the Guidance option. 
+(*Please fill in the 'Passcode' otherwise you may leave the field empty by making your analysis task public.*)
+
+2. Add a Dataset
+- Drag any public dataset under <span style="color:#00bfff">Data Source</span> section into the analysis area -- this now becomes a data node. 
+
+3. Import Pipeline
+- Click the [<span style="color:#00bfff">"Pipeline Helper"</span>](#pipeline-helper) button in the top-left corner to choose a suitable pipeline from [<span style="color:#00bfff">Pipeline Template</span>](#pipeline-template) and import it into the analysis panel for assembly.  
+
+4. Run the Pipeline
+- Once the pipeline is imported, link the data node to the analysis node (part of the pipeline) by dragging a connection line between nodes. Click the **"Run Tree"** button (![run-btn](../../img/run-btn.png)) in the data node to run the entire pipeline, or alternatively click the **"Run Node"** (![start-button](../../img/analysis-node/start-button.png)) on analysis node to run each analysis step.
+![node-explained](../../img/quickstart/node-explanation.png)  
+
+5. Result Interpretation and Debugging 
+- Upon analysis completion, users can click on the green nodes (indicating successful analyses) to open the right sidebar, where where AI-generated interpretations are provided based on the context. If an analysis fails (shown by a red node), clicking the node will display explanations and solutions in the right sidebar, along with the original error messages and outputs. Users can also access the [<span style="color:#00bfff">Visualization Panel</span>](#visualization-panel) from any analysis node to view the results.
+![vid-1-1](../../img/gif/1-1.gif)
+
 <!-- 4. (Optional) For custom needs beyond built-in our function block library, users can use **"Auto-Genie"**, an LLM-based agent, to generate code acoording to Ragomics function block framework for specific tasks. -->
 <!-- 5. (Optional) Before running the pipeline, users may enable **"Bug Fixer"** option with max try of at least 5 times by clicking the **Settings**. However, this feature is experimental and we are still optimizing it. -->
 <!-- 6. ![enable-bug-fixer](../../img/enable-bug-fixer.png) -->
@@ -56,10 +68,11 @@ Once on the homepage, the [<span style="color:#00bfff">Workflow</span>](#workflo
 ![vid-1](../../img/gif/vid-1.gif)
 Once on the platform's homepage, users can go to the <span style="color:#00bfff">Analysis Task</span> page under the [<span style="color:#00bfff">Workflow</span>](#workflow) tab and click the **Create New Analysis Task** button to create a new analysis task. 
 
-1. In the pop-up form, users must enter a name for the analysis task. While the task description is optional, it helps the [<span style="color:#00bfff">Agent</span>](#agent) module provide more accurate assistance, the user also needs to set an **access password** for the analysis task they create. When reopening the analysis task next time, this password will be required for access.
+1. In the pop-up form, users must enter a name for the analysis task. While the task description is optional, it helps the [<span style="color:#00bfff">Agent</span>](#agent) module provide more accurate assistance, the user also needs to set an **passcode** for the analysis task they create. When reopening the analysis task next time, this password will be required for access.
 
-2. Users can choose to enable the **With Guidance** feature. If enabled, the [<span style="color:#00bfff">Pipeline Helper</span>](#pipeline-helper) will automatically launch the first time the user accesses the [<span style="color:#00bfff">Analysis Panel</span>](#analysis-panel) of the task, helping them quickly select an analysis pipeline tailored to their needs.  
-3. Once the task is created, users will be directed to its [<span style="color:#00bfff">Analysis Panel</span>](#analysis-panel). After clicking **"Create"** button, the **access password** and **access link** for the analysis will be displayed. Users are advised to save them.
+2. Users can choose to enable the **Guidance** feature. If enabled, the [<span style="color:#00bfff">Pipeline Helper</span>](#pipeline-helper) will automatically launch the first time the user accesses the [<span style="color:#00bfff">Analysis Panel</span>](#analysis-panel) of the task, helping them quickly select an analysis pipeline tailored to their needs.  
+
+3. Once the task is created, users will be directed to its [<span style="color:#00bfff">Analysis Panel</span>](#analysis-panel). After clicking **"Create"** button, the **passcode** and **access link** for the analysis will be displayed. Users are advised to save them.
 ![create-analysis](../../img/analysis-creation-and-management/create-new-analysis-task.png)
 
 ## <span style="color:#00bfff">**Managing Analysis Tasks**</span>
@@ -296,7 +309,7 @@ Clicking the **"Set as Default"** button will reset all parameters in the analys
 When users need to run a specific [<span style="color:#00bfff;">Analysis Node</span>](#analysis-nodes), they have three options:
 
 1. Users can click the **"Update and Run"** button in the parameter panel of the analysis node to run the current node.
-2. Users can click the **"Start"** (![start-button](../../img/analysis-node/start-button.png)) button on the node card of the [<span style="color:#00bfff;">Analysis Node</span>](#analysis-nodes) to start the analysis.
+2. Users can click the **"Run Node"** (![start-button](../../img/analysis-node/start-button.png)) button on the node card of the [<span style="color:#00bfff;">Analysis Node</span>](#analysis-nodes) to start the analysis.
 3. Users can click the **"More"** (![more-button](../../img/analysis-node/more-button.png)) button on the node card of the [<span style="color:#00bfff;">Analysis Node</span>](#analysis-nodes), then select **"Run Sub Tree"** in the secondary popup. In this case, the node and all subsequent child nodes will be executed sequentially.
 
 ## <span style="color:#00bfff;">**Node States**</span>

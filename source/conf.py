@@ -9,7 +9,7 @@
 project = 'Ragomics'
 copyright = '2024, ragomics'
 author = 'Ragomics'
-release = '2024-11-18'
+release = ''
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -39,7 +39,7 @@ html_css_files = ['custom.css']
 html_logo = '_static/logo.png'
 
 html_theme_options = {
-    'navigation_depth': 4,
+    'navigation_depth': 3,
     'collapse_navigation': False,
 }
 

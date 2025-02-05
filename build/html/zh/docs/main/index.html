@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="prev" title="&lt;no title&gt;" href="../../index.zh.html" />
 
     <!-- Generated with Sphinx 7.4.7 and Furo 2024.08.06 -->
-        <title>Quickstart - Ragomics 2024-11-18 documentation</title>
+        <title>Quickstart - Ragomics documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?v=302659d7" />
@@ -167,7 +167,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">Ragomics 2024-11-18 documentation</div></a>
+      <a href="../../../index.html"><div class="brand">Ragomics  documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -194,7 +194,7 @@
     <img class="sidebar-logo" src="../../../_static/logo.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">Ragomics 2024-11-18 documentation</span>
+  <span class="sidebar-brand-text">Ragomics  documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -260,16 +260,41 @@
         <article role="main" id="furo-main-content">
           <section class="tex2jax_ignore mathjax_ignore" id="quickstart">
 <h1><span style="color:#00bfff"><strong>Quickstart</strong></span><a class="headerlink" href="#quickstart" title="Link to this heading">¶</a></h1>
-<p>After opening the platform, users is on the homepage. Follow the quickstart animation and/or steps below when necessary.</p>
+<p>After launching the platform, users arrive on the homepage. They can follow the quickstart animation or the steps below as needed to get started.</p>
 <p><img alt="quickstart" src="../../../_images/quickstart-server-high-res.gif" /></p>
 <ol class="arabic simple">
-<li><p>Click <strong>“Create New Analysis Task”</strong> button in the Private section to begin a new analysis task.</p></li>
-<li><p>Add a dataset to analyze by dragging any public dataset under <strong>Data Source</strong> section into the analysis area – this now becomes a data node.</p></li>
-<li><p>Click the <a class="reference internal" href="#pipeline-helper"><span class="xref myst"><span style="color:#00bfff">”Pipeline Helper”</span></span></a> button in the top-left corner to choose a suitable pipeline from <a class="reference internal" href="#pipeline-template"><span class="xref myst"><span style="color:#00bfff">Pipeline Template</span></span></a> and import it into the analysis panel for assembly.</p></li>
-<li><p>Connect the data node to the pipeline or analysis node by dragging a line between them. Click the <strong>“Run Tree”</strong> button in data node, or click the “Run Node” icon (<img alt="run-btn" src="../../../_images/run-btn.png" />) on analysis node to run the analysis.</p></li>
-<li><p>After the analysis is completed, users can enter the <a class="reference internal" href="#visualization-panel"><span class="xref myst"><span style="color:#00bfff">Visualization Panel</span></span></a> from any analysis node to view the results.</p></li>
-<li><p>Users can click on green analysis nodes (completed runs) to open the right sidebar and generate context-aware interpretations using LLM. For bug troubleshooting a single red node (failed run), Ragomics provides LLM generated explanations and solutions on the right sidebar, with the original error messages and standard outputs.</p></li>
+<li><p>Start New Analysis</p></li>
 </ol>
+<ul class="simple">
+<li><p>Click <strong>“Create New Analysis Task”</strong> button in the Private section to begin a new analysis task. A popup window will appear, prompting users to enter details like ‘Name’, ‘Passcode’, ‘Description’, and whether to enable the Guidance option.
+(<em>Please fill in the ‘Passcode’ otherwise you may leave the field empty by making your analysis task public.</em>)</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Add a Dataset</p></li>
+</ol>
+<ul class="simple">
+<li><p>Drag any public dataset under <span style="color:#00bfff">Data Source</span> section into the analysis area – this now becomes a data node.</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p>Import Pipeline</p></li>
+</ol>
+<ul class="simple">
+<li><p>Click the <a class="reference internal" href="#pipeline-helper"><span class="xref myst"><span style="color:#00bfff">”Pipeline Helper”</span></span></a> button in the top-left corner to choose a suitable pipeline from <a class="reference internal" href="#pipeline-template"><span class="xref myst"><span style="color:#00bfff">Pipeline Template</span></span></a> and import it into the analysis panel for assembly.</p></li>
+</ul>
+<ol class="arabic simple" start="4">
+<li><p>Run the Pipeline</p></li>
+</ol>
+<ul class="simple">
+<li><p>Once the pipeline is imported, link the data node to the analysis node (part of the pipeline) by dragging a connection line between nodes. Click the <strong>“Run Tree”</strong> button (<img alt="run-btn" src="../../../_images/run-btn.png" />) in the data node to run the entire pipeline, or alternatively click the <strong>“Run Node”</strong> (<img alt="start-button" src="../../../_images/start-button.png" />) on analysis node to run each analysis step.
+<img alt="node-explained" src="../../../_images/node-explanation.png" /></p></li>
+</ul>
+<ol class="arabic simple" start="5">
+<li><p>Result Interpretation and Debugging</p></li>
+</ol>
+<ul class="simple">
+<li><p>Upon analysis completion, users can click on the green nodes (indicating successful analyses) to open the right sidebar, where where AI-generated interpretations are provided based on the context. If an analysis fails (shown by a red node), clicking the node will display explanations and solutions in the right sidebar, along with the original error messages and outputs. Users can also access the <a class="reference internal" href="#visualization-panel"><span class="xref myst"><span style="color:#00bfff">Visualization Panel</span></span></a> from any analysis node to view the results.
+<img alt="vid-1-1" src="../../../_images/1-1.gif" /></p></li>
+</ul>
 <!-- 4. (Optional) For custom needs beyond built-in our function block library, users can use **"Auto-Genie"**, an LLM-based agent, to generate code acoording to Ragomics function block framework for specific tasks. -->
 <!-- 5. (Optional) Before running the pipeline, users may enable **"Bug Fixer"** option with max try of at least 5 times by clicking the **Settings**. However, this feature is experimental and we are still optimizing it. -->
 <!-- 6. ![enable-bug-fixer](../../img/enable-bug-fixer.png) -->
@@ -315,9 +340,9 @@ On the password reset page, users must enter their mobile number (login account)
 <p><img alt="vid-1" src="../../../_images/vid-1.gif" />
 Once on the platform’s homepage, users can go to the <span style="color:#00bfff">Analysis Task</span> page under the <a class="reference internal" href="#workflow"><span class="xref myst"><span style="color:#00bfff">Workflow</span></span></a> tab and click the <strong>Create New Analysis Task</strong> button to create a new analysis task.</p>
 <ol class="arabic simple">
-<li><p>In the pop-up form, users must enter a name for the analysis task. While the task description is optional, it helps the <a class="reference internal" href="#agent"><span class="xref myst"><span style="color:#00bfff">Agent</span></span></a> module provide more accurate assistance, the user also needs to set an <strong>access password</strong> for the analysis task they create. When reopening the analysis task next time, this password will be required for access.</p></li>
-<li><p>Users can choose to enable the <strong>With Guidance</strong> feature. If enabled, the <a class="reference internal" href="#pipeline-helper"><span class="xref myst"><span style="color:#00bfff">Pipeline Helper</span></span></a> will automatically launch the first time the user accesses the <a class="reference internal" href="#analysis-panel"><span class="xref myst"><span style="color:#00bfff">Analysis Panel</span></span></a> of the task, helping them quickly select an analysis pipeline tailored to their needs.</p></li>
-<li><p>Once the task is created, users will be directed to its <a class="reference internal" href="#analysis-panel"><span class="xref myst"><span style="color:#00bfff">Analysis Panel</span></span></a>. After clicking <strong>“Create”</strong> button, the <strong>access password</strong> and <strong>access link</strong> for the analysis will be displayed. Users are advised to save them.
+<li><p>In the pop-up form, users must enter a name for the analysis task. While the task description is optional, it helps the <a class="reference internal" href="#agent"><span class="xref myst"><span style="color:#00bfff">Agent</span></span></a> module provide more accurate assistance, the user also needs to set an <strong>passcode</strong> for the analysis task they create. When reopening the analysis task next time, this password will be required for access.</p></li>
+<li><p>Users can choose to enable the <strong>Guidance</strong> feature. If enabled, the <a class="reference internal" href="#pipeline-helper"><span class="xref myst"><span style="color:#00bfff">Pipeline Helper</span></span></a> will automatically launch the first time the user accesses the <a class="reference internal" href="#analysis-panel"><span class="xref myst"><span style="color:#00bfff">Analysis Panel</span></span></a> of the task, helping them quickly select an analysis pipeline tailored to their needs.</p></li>
+<li><p>Once the task is created, users will be directed to its <a class="reference internal" href="#analysis-panel"><span class="xref myst"><span style="color:#00bfff">Analysis Panel</span></span></a>. After clicking <strong>“Create”</strong> button, the <strong>passcode</strong> and <strong>access link</strong> for the analysis will be displayed. Users are advised to save them.
 <img alt="create-analysis" src="../../../_images/create-new-analysis-task.png" /></p></li>
 </ol>
 </section>
@@ -574,7 +599,7 @@ Clicking the <strong>“Set as Default”</strong> button will reset all paramet
 <p>When users need to run a specific <a class="reference internal" href="#analysis-nodes"><span class="xref myst"><span style="color:#00bfff;">Analysis Node</span></span></a>, they have three options:</p>
 <ol class="arabic simple">
 <li><p>Users can click the <strong>“Update and Run”</strong> button in the parameter panel of the analysis node to run the current node.</p></li>
-<li><p>Users can click the <strong>“Start”</strong> (<img alt="start-button" src="../../../_images/start-button.png" />) button on the node card of the <a class="reference internal" href="#analysis-nodes"><span class="xref myst"><span style="color:#00bfff;">Analysis Node</span></span></a> to start the analysis.</p></li>
+<li><p>Users can click the <strong>“Run Node”</strong> (<img alt="start-button" src="../../../_images/start-button.png" />) button on the node card of the <a class="reference internal" href="#analysis-nodes"><span class="xref myst"><span style="color:#00bfff;">Analysis Node</span></span></a> to start the analysis.</p></li>
 <li><p>Users can click the <strong>“More”</strong> (<img alt="more-button" src="../../../_images/more-button.png" />) button on the node card of the <a class="reference internal" href="#analysis-nodes"><span class="xref myst"><span style="color:#00bfff;">Analysis Node</span></span></a>, then select <strong>“Run Sub Tree”</strong> in the secondary popup. In this case, the node and all subsequent child nodes will be executed sequentially.</p></li>
 </ol>
 </section>
@@ -899,7 +924,7 @@ In <span style="color:#00bfff">Violin Plot</span> mode, users can choose an <str
       
     </aside>
   </div>
-</div><script src="../../../_static/documentation_options.js?v=cc491f29"></script>
+</div><script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
     <script src="../../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/scripts/furo.js?v=5fa4622c"></script>
