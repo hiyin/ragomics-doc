@@ -47,7 +47,7 @@ If a user needs to access analysis tasks created by others, they can do so as a 
 # <span style="color:#00bfff">**Creation and Management of Analysis Tasks**</span>
 
 ## <span style="color:#00bfff">**Workflow**</span>
-After logging into the homepage, the [<span style="color:#00bfff">Workflow</span>](#workflow) tab includes two sections: <span style="color:#00bfff">Analysis Task</span> and <span style="color:#00bfff">Data Source</span>. 
+Once on the homepage, the [<span style="color:#00bfff">Workflow</span>](#workflow) tab includes two sections: <span style="color:#00bfff">Analysis Task</span> and <span style="color:#00bfff">Data Source</span>. 
 
 - In the <span style="color:#00bfff">Analysis Task</span> section, users can create and manage analysis tasks and view [<span style="color:#00bfff">Public Analyses</span>](#public-analyses) at the top of the page to explore examples of analyses provided by Ragomics.  
 - In the <span style="color:#00bfff">Data Source</span> section, users can import datasets from [<span style="color:#00bfff">Public Databases</span>](#public-databases) into their accounts or [<span style="color:#00bfff">Upload Data</span>](#data-upload) from local sources.
@@ -126,19 +126,19 @@ Method 2
 - In the [<span style="color:#00bfff">Analysis Panel</span>](#analysis-panel), click the **Add** (![add-button](../../img/data-upload-and-management/add-button.png)) button under the Data Source tab on the left sidebar, choose **Upload from Device** button to begin uploading data directly from your device.
 ![upload-from-device](../../img/data-upload-and-management/upload-from-device.png)
 
-Supported Data Formats for Upload in Ragomics
+Supported Data Formats for Upload
 
 Ragomics currently supports the following five data formats for upload:
 
 1. AnnData Upload  
-**Important node**:  
-Please ensure that anndata key names do not contain "/". E.g. adata.obs["date/month"] is invalid. It causes issues when the server decomposes the anndata because "/" is treated as a "subfolder" on cloud storage service. It is a known sanity-check related issue. We have resolved it in the latest version but not in the alpha server after NAR technical review.  
+> **Important Note**   
+> Please ensure that anndata key names do not contain "/". E.g. adata.obs["date/month"] is invalid. It causes issues when the server decomposes the anndata because "/" is treated as a "subfolder" on cloud storage service. It is a known sanity-check related issue.   
 - Users can add `.h5ad` files by dragging and dropping or clicking the **Add** (![add-button](../../img/data-upload-and-management/anndata-add-button.png)) button.  
 - Select the corresponding species information and provide a description of the data.  
 - Once the file is selected and all information is filled out, click the **Upload** (![upload-button](../../img/data-upload-and-management/anndata-upload-button.png)) button to start uploading.  
 - When the upload status indicates success ![complete-status](../../img/data-upload-and-management/complete-status.png), the data upload is complete.
 
-1. 10x Data Upload
+2. 10x Data Upload
 - Enter the data name, species information, and data description.  
 - Click the **Next Step** button, then click **Add a Sample** to create a new sample row.  
 - For multiple samples, add the corresponding number of sample rows.  
@@ -148,7 +148,7 @@ Please ensure that anndata key names do not contain "/". E.g. adata.obs["date/mo
    - `matrix.mtx`  
 - Once all data is uploaded, click the **Assemble** button to complete the upload process.
 
-1. Assemble AnnData
+3. Assemble AnnData
 - Enter species information and data description, then click the **Next Step** button.  
 - Upload the required files by dragging and dropping or clicking the upload area:  
    - Mandatory Files:  
@@ -169,7 +169,7 @@ Please ensure that anndata key names do not contain "/". E.g. adata.obs["date/mo
 - Click the **Next Step** button.  
 - Add FastQ `.zip` files by dragging and dropping or clicking the central upload area.
 -->
-1. Spaceranger Count Upload
+4. Spaceranger Count Upload
 - Enter the data name, select the corresponding species information, and provide a description of the data.  
 - Click the **Next Step** button.  
 - Add Spaceranger Count data by dragging and dropping or clicking the upload area.  
@@ -212,7 +212,7 @@ For large analysis pipelines that are difficult to overview, users can enable th
 ![vid-9](../../img/gif/9.gif)
 If users need an overview of the status of all analysis nodes in the current pipeline, they can refer to the bottom toolbar. The toolbar displays the total number of nodes in the current panel, along with counts for nodes that are running, failed, successful, waiting, or under bug-fix debugging.  
 
-Users can click the number next to "Nodes" to open the **Analysis Node Status Panel**. When the highlight setting is enabled, clicking any node card in the analysis panel will highlight the corresponding row in the status panel. Similarly, clicking a node name in the status panel will cause the analysis panel to focus on the corresponding node in the pipeline.  
+Users can click the total number of nodes (shown in blue) to open the **Analysis Node Status Panel**. When the **Highlight** setting is enabled, clicking any node card in the analysis panel will highlight the corresponding row in the status panel. Similarly, clicking a node name in the status panel will cause the analysis panel to focus on the corresponding node in the pipeline.  
 
 Additionally, clicking the **View Code** (![detail-code](../../img/analysis-panel/detail.png)) icon next to each node in the status panel allows users to view the code for that specific node.
 ![analysis-dashboard](../../img/analysis-panel/analysis-dashboard.png)
