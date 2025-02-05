@@ -266,14 +266,14 @@
 <li><p>Start New Analysis</p></li>
 </ol>
 <ul class="simple">
-<li><p>Click <strong>“Create New Analysis Task”</strong> button in the Private section to begin a new analysis task. A popup window will appear, prompting users to enter details like ‘Name’, ‘Passcode’, ‘Description’, and whether to enable the Guidance option.
+<li><p>Click <strong>“Create New Analysis Task”</strong> button in the Private section to begin a new analysis task. A popup window will appear, prompting users to enter details like ‘Name’, <strong>‘Passcode’</strong>, ‘Description’, and whether to enable the <strong>Guidance</strong> option.
 (<em>Please fill in the ‘Passcode’ otherwise you may leave the field empty by making your analysis task public.</em>)</p></li>
 </ul>
 <ol class="arabic simple" start="2">
 <li><p>Add a Dataset</p></li>
 </ol>
 <ul class="simple">
-<li><p>Drag any public dataset under <span style="color:#00bfff">Data Source</span> section into the analysis area – this now becomes a data node.</p></li>
+<li><p>Drag any public dataset under <span style="color:#00bfff">Data Source</span> tab into the analysis area – this now becomes a data node.</p></li>
 </ul>
 <ol class="arabic simple" start="3">
 <li><p>Import Pipeline</p></li>
@@ -348,8 +348,9 @@ Once on the platform’s homepage, users can go to the <span style="color:#00bff
 </section>
 <section id="managing-analysis-tasks">
 <h2><span style="color:#00bfff"><strong>Managing Analysis Tasks</strong></span><a class="headerlink" href="#managing-analysis-tasks" title="Link to this heading">¶</a></h2>
-<p>After logging in, users can view and manage previously created analysis tasks in the <a class="reference internal" href="#workflow"><span class="xref myst"><span style="color:#00bfff">Workflow</span></span></a> - <span style="color:#00bfff">Analysis Task</span> tab. If the user has the <strong>access password</strong> for the corresponding analysis task,
-each analysis task card contains several buttons for task management, they can click the <strong>“Open”</strong> button on the analysis task card and enter the password to access the <a class="reference internal" href="#analysis-panel"><span class="xref myst"><span style="color:#00bfff">Analysis Panel</span></span></a> for the selected task.</p>
+<p>Users can view and manage previously created analysis tasks in the <a class="reference internal" href="#workflow"><span class="xref myst"><span style="color:#00bfff">Workflow</span></span></a> - <span style="color:#00bfff">Analysis Task</span> tab.</p>
+<p>If the user has the <strong>passcode</strong> for the corresponding analysis task, they can click the <strong>“Open”</strong> button on the analysis task card and enter the <strong>passcode</strong> to access its <a class="reference internal" href="#analysis-panel"><span class="xref myst"><span style="color:#00bfff">Analysis Panel</span></span></a>.</p>
+<p>Each analysis task card contains several buttons for task management.</p>
 <!---
 - **Collaborator Management Button** (![collaborate-button](../../img/analysis-creation-and-management/collaborate-button.png)): Click to open the [<span style="color:#00bfff">Collaborator Management</span>](#collaborator-management) page and invite collaborators to participate in the project analysis.
 -->
@@ -404,7 +405,7 @@ On the <a class="reference internal" href="#workflow"><span class="xref myst"><s
 <p>Method 2</p>
 <p><img alt="vid-6" src="../../../_images/6.gif" /></p>
 <ul class="simple">
-<li><p>In the <a class="reference internal" href="#analysis-panel"><span class="xref myst"><span style="color:#00bfff">Analysis Panel</span></span></a>, click the <strong>Add</strong> (<img alt="add-button" src="../../../_images/add-button.png" />) button under the Data Source tab on the left sidebar, choose <strong>Upload from Device</strong> button to begin uploading data directly from your device.
+<li><p>In the <a class="reference internal" href="#analysis-panel"><span class="xref myst"><span style="color:#00bfff">Analysis Panel</span></span></a>, click the <strong>Add</strong> (<img alt="add-button" src="../../../_images/add-button.png" />) button under the <span style="color:#00bfff">Data Source</span> tab on the left sidebar, choose <strong>Upload from Device</strong> button to begin uploading data directly from your device.
 <img alt="upload-from-device" src="../../../_images/upload-from-device.png" /></p></li>
 </ul>
 <p>Supported Data Formats for Upload</p>
@@ -496,7 +497,7 @@ Please ensure that anndata key names do not contain “/”. E.g. adata.obs[“d
 <section id="upload-from-device">
 <h3>2. Upload from Device<a class="headerlink" href="#upload-from-device" title="Link to this heading">¶</a></h3>
 <ul class="simple">
-<li><p>Please refer to <a class="reference internal" href="#data-upload"><span class="xref myst"><span style="color:#00bfff">Data Upload</span></span></a>.</p></li>
+<li><p>Please refer to <a class="reference internal" href="#data-upload"><span class="xref myst"><span style="color:#00bfff">Data Upload</span></span></a> - Method 2.</p></li>
 </ul>
 </section>
 <section id="importing-from-third-party">
@@ -516,7 +517,9 @@ Users can choose between manual or <a class="reference internal" href="#automati
 <section id="automatic-layout">
 <h2><strong><span style="color:#00bfff;" id="automatic-layout">Automatic Layout</span></strong><a class="headerlink" href="#automatic-layout" title="Link to this heading">¶</a></h2>
 <p><img alt="vid-8" src="../../../_images/8.gif" />
-Users can manually arrange the nodes of the analysis pipeline or enable an automatic layout feature. By clicking the <strong>Settings</strong> (<img alt="settings-button" src="../../../_images/settings-button.png" />) button on the bottom toolbar of the analysis panel, users can activate automatic layout in the pop-up options. When enabled, any subsequently connected analysis nodes will be automatically arranged. To instantly rearrange the entire analysis pipeline, users can click the bottom toolbar button, and all nodes in the current analysis panel will be automatically laid out immediately.</p>
+Users can manually arrange the nodes of the analysis pipeline or enable an automatic layout feature. By clicking the <strong>Settings</strong> (<img alt="settings-button" src="../../../_images/settings-button.png" />) button on the bottom toolbar of the analysis panel, users can activate automatic layout in the pop-up options. When enabled, any subsequently connected analysis nodes will be automatically arranged.</p>
+<p><img alt="auto-layout" src="../../../_images/auto-layout.png" /></p>
+<p>To instantly rearrange the entire analysis pipeline, users can click the bottom <strong>Grid</strong> button (<img alt="grid-btn" src="../../../_images/grid-btn.png" />), and all nodes in the current analysis panel will be automatically laid out immediately.</p>
 </section>
 <section id="analysis-pipeline-thumbnail">
 <h2><strong><span style="color:#00bfff;">Analysis Pipeline Thumbnail</span></strong><a class="headerlink" href="#analysis-pipeline-thumbnail" title="Link to this heading">¶</a></h2>
@@ -528,6 +531,7 @@ For large analysis pipelines that are difficult to overview, users can enable th
 <h2><strong><span style="color:#00bfff;">Analysis Node Status Panel</span></strong><a class="headerlink" href="#analysis-node-status-panel" title="Link to this heading">¶</a></h2>
 <p><img alt="vid-9" src="../../../_images/9.gif" />
 If users need an overview of the status of all analysis nodes in the current pipeline, they can refer to the bottom toolbar. The toolbar displays the total number of nodes in the current panel, along with counts for nodes that are running, failed, successful, waiting, or under bug-fix debugging.</p>
+<p><img alt="check-node-status" src="../../../_images/check-node-status-1.png" /></p>
 <p>Users can click the total number of nodes (shown in blue) to open the <strong>Analysis Node Status Panel</strong>. When the <strong>Highlight</strong> setting is enabled, clicking any node card in the analysis panel will highlight the corresponding row in the status panel. Similarly, clicking a node name in the status panel will cause the analysis panel to focus on the corresponding node in the pipeline.</p>
 <p>Additionally, clicking the <strong>View Code</strong> (<img alt="detail-code" src="../../../_images/detail.png" />) icon next to each node in the status panel allows users to view the code for that specific node.
 <img alt="analysis-dashboard" src="../../../_images/analysis-dashboard.png" /></p>
@@ -535,7 +539,8 @@ If users need an overview of the status of all analysis nodes in the current pip
 <section id="sharing-analysis-task">
 <h2><span style="color:#00bfff;"><strong>Sharing Analysis Task</strong></span><a class="headerlink" href="#sharing-analysis-task" title="Link to this heading">¶</a></h2>
 <p><img alt="vid-10" src="../../../_images/10.gif" />
-To share a specific analysis task with others, users can click the <strong>“Share”</strong> button at the top of the analysis panel. In the pop-up window, enable the <strong>“Public”</strong> setting and click the <strong>“Copy Link”</strong> button to generate a link for the current analysis task. Other users can use this link to access and view the shared task; however, <strong>guest users</strong> will not be able to make edits. If the user wants other users to also be able to edit, they can share the <strong>access link</strong> and <strong>access password</strong> for this analysis task with them. If the user wishes to change the password, they can click the <strong>“Edit”</strong> button next to the <strong>access password</strong> to make the change.</p>
+To share a specific analysis task with others, users can click the <strong>“Share”</strong> button at the top of the analysis panel. In the pop-up window, enable the <strong>“Public”</strong> setting and click the <strong>“Copy Link”</strong> button to generate a link for the current analysis task. Other users can use this link to access and view the shared task; however, <strong>guest users</strong> will not be able to make edits.</p>
+<p>If the user wants other users to also be able to edit, they can share the <strong>access link</strong> and <strong>passcode</strong> for this analysis task with them. If the user wishes to change the passcode, they can click the <strong>“Edit”</strong> button next to the <strong>passcode</strong> to make the change.</p>
 <!---
 If editing permissions are required, users can perform [<span style="color:#00bfff;">Collaborator Management</span>](#collaborator-management) in the settings below.
 
@@ -551,13 +556,14 @@ When an analysis node runs successfully or fails, or when a user receives a coll
 <h2><span style="color:#00bfff;"><strong>Assembling an Analysis Pipeline</strong></span><a class="headerlink" href="#assembling-an-analysis-pipeline" title="Link to this heading">¶</a></h2>
 <p><img alt="vid-12" src="../../../_images/12.gif" /></p>
 <ol class="arabic simple">
-<li><p>In the <a class="reference internal" href="#analysis-panel"><span class="xref myst"><span style="color:#00bfff;">Analysis Panel</span></span></a>, select any dataset from either the <strong>Public</strong> or the <strong>Imported</strong> list on the left sidebar.</p></li>
+<li><p>In the <a class="reference internal" href="#analysis-panel"><span class="xref myst"><span style="color:#00bfff;">Analysis Panel</span></span></a>, select any dataset from either the <strong>Public Data List</strong> or the <strong>Imported Data List</strong> on the left sidebar.</p></li>
 <li><p>Drag the selected data into the main analysis area of the panel.</p></li>
-<li><p>Based on your analysis requirements, choose the appropriate algorithm modules and drag them into the main analysis area.</p></li>
-<li><p>Independent algorithm modules can be connected to uploaded single-cell sequencing data or other <a class="reference internal" href="#analysis-nodes"><span class="xref myst"><span style="color:#00bfff;">Analysis Nodes</span></span></a>.</p></li>
-<li><p>To connect, select the connection point on one side and drag it to another function block or data node.
-<img alt="analysis-pipeline-assembly" src="../../../_images/analysis-pipeline-assembly.png" /></p></li>
+<li><p>Based on your analysis requirements, choose the appropriate algorithm modules or we call <span style="color:#00bfff;">Function Block</span> and drag them into the main analysis area.</p></li>
+<li><p>Independent function blocks can be connected to uploaded dataset or other <a class="reference internal" href="#analysis-nodes"><span class="xref myst"><span style="color:#00bfff;">Analysis Nodes</span></span></a>.</p></li>
 </ol>
+<p><img alt="analysis-pipeline-assembly" src="../../../_images/analysis-pipeline-assembly.png" /><br />
+5. To connect, select the connection point on one side of the data node and drag it to another function block or analysis node.</p>
+<p><img alt="drag-and-connect" src="../../../_images/drag-and-select.png" /></p>
 </section>
 <section id="pipeline-helper-and-analysis-nodes">
 <h2><span style="color:#00bfff;"><strong>Pipeline Helper and Analysis Nodes</strong></span><a class="headerlink" href="#pipeline-helper-and-analysis-nodes" title="Link to this heading">¶</a></h2>
@@ -567,8 +573,7 @@ When an analysis node runs successfully or fails, or when a user receives a coll
 </section>
 <section id="pipeline-template">
 <h3><span style="color:#00bfff;"><strong>Pipeline Template</strong></span><a class="headerlink" href="#pipeline-template" title="Link to this heading">¶</a></h3>
-<p>In the <a class="reference internal" href="#pipeline-helper"><span class="xref myst"><span style="color:#00bfff;">Pipeline Helper<span></span></a> page, users can select a suitable analysis pipeline from Ragomics’ <a class="reference internal" href="#pipeline-template"><span class="xref myst"><span style="color:#00bfff;">Pipeline Template<span></span></a> and import it into the <strong>Analysis Panel</strong> for use.</p>
-<p>Users can select analysis pipelines from Ragomics’ <a class="reference internal" href="#pipeline-template"><span class="xref myst"><span style="color:#00bfff;">Pipeline Template<span></span></a> and import them into the analysis panel on the Analysis Pipeline Assistant page.</p>
+<p>Under the <a class="reference internal" href="#pipeline-helper"><span class="xref myst"><span style="color:#00bfff;">Pipeline Helper<span></span></a> tab, users can select a suitable analysis pipeline from Ragomics’ <a class="reference internal" href="#pipeline-template"><span class="xref myst"><span style="color:#00bfff;">Pipeline Template<span></span></a> and import it into the <strong>Analysis Panel</strong> for use.</p>
 <!---
 If the template library does not have a suitable template, users can use the [<span style="color:#00bfff;">AI Pipeline</span>](#ai-pipeline) feature to generate a new analysis pipeline.
 ![pipeline-template](../../img/analysis-pipeline/pipeline-template.png)
@@ -660,7 +665,7 @@ Please note that guest users will not have permission to edit the shared analysi
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="computational-resources-configuration">
 <h1><strong style="color: #00bfff;">Computational Resources Configuration</strong><a class="headerlink" href="#computational-resources-configuration" title="Link to this heading">¶</a></h1>
-<p>When users analyze data or algorithm modules that require significant computational resources, they can click the button on the analysis node card, select “Configure Computational Resources” in the secondary popup, and choose parameters like CPU, memory, timeout limits, etc., according to their needs. After configuration, the node will follow this setup when running.</p>
+<p>When users analyze data or use algorithm modules that require significant computational resources, they can click the <strong>“More”</strong> (<img alt="more-button" src="../../../_images/more-button.png" />) button on the analysis node card, select <strong>“Configure Computational Resources”</strong> in the secondary popup, and choose parameters like CPU, memory, timeout limits, etc., according to their needs. After configuration, the node will follow this setup when running.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="node-data-download">
 <h1><strong style="color: #00bfff;">Node Data Download</strong><a class="headerlink" href="#node-data-download" title="Link to this heading">¶</a></h1>
