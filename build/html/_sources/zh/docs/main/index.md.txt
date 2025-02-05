@@ -190,13 +190,20 @@ Please ensure that anndata key names do not contain "/". E.g. adata.obs["date/mo
 ![spaceranger-count-upload](../../img/data-upload-and-management/spaceranger-count-upload.png)
 
 ## <span style="color:#00bfff">**Importing Data**</span>
-In the [<span style="color:#00bfff">Analysis Panel</span>](#analysis-panel), users can import data through **Add** (![add-button](../../img/data-upload-and-management/add-button.png)) button under the <span style="color:#00bfff">Data Source</span> tab on the left sidebar. There are three methods for importing data:
+In the [<span style="color:#00bfff">Analysis Panel</span>](#analysis-panel), users can import data through **Add** (![add-button](../../img/data-upload-and-management/add-button.png)) button under the <span style="color:#00bfff">Data Source</span> tab on the left sidebar. There are three ways for importing data:
 
 ### 1. Importing from Existing Data
 - If users have already uploaded the target data to their account via the data upload feature, they can choose to import it from existing data.  
 - In the import form, select the desired data by checking the boxes on the left.  
 - Click **Confirm** to import the data from the account into the current analysis task.
+![import-data-1](../../img/importing-data/import-data-1.png)
 
+### 2. Upload from Device
+Please refer to [<span style="color:#00bfff">Data Upload</span>](#data-upload).
+
+### 3. Importing from Third Party
+- Over 1000 public datasets were sourced from third party such as CellxGene platform and stored in our repository for users to select from. In the list of available datasets, select and import the desired dataset by clicking "Import".
+![import-data-3](../../img/importing-data/import-data-3.png)
 
 
 ---
