@@ -3,6 +3,10 @@
 After opening the platform, users is on the homepage. Follow the quickstart animation and/or steps below when necessary.
 
 ![quickstart](../../img/quickstart-server-high-res.gif)
+<video width="320" height="240" controls>
+  <source src="../../img/gif/1.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 1. [<span style="color:#00bfff;">Creating an Analysis</span>](#creating-an-analysis), after analysis created, drag any public dataset from the left side **Data Source** section into the analysis area.  
 2. Click the [<span style="color:#00bfff">"Pipeline Helper"</span>](#pipeline-helper) button in the top-left corner to choose a suitable pipeline from the Ragomics [<span style="color:#00bfff">Pipeline Template</span>](#pipeline-template) and import it into the analysis panel for assembly.  
@@ -131,8 +135,13 @@ Supported Data Formats for Upload
 Ragomics currently supports the following five data formats for upload:
 
 1. AnnData Upload  
+<<<<<<< HEAD
 > **Important Note**   
 > Please ensure that anndata key names do not contain "/". E.g. adata.obs["date/month"] is invalid. It causes issues when the server decomposes the anndata because "/" is treated as a "subfolder" on cloud storage service. It is a known sanity-check related issue.   
+=======
+**Important note**:  
+Please ensure that anndata key names do not contain "/". E.g. adata.obs["date/month"] is invalid. "/" causes issues when the server decomposes the anndata matrices, as "/" is treated as a subfolder by the cloud storage service we use. It is a known sanity-check related issue, and we have resolved it in the next release but not on the current alpha server. 
+>>>>>>> 8d6b6914b25c755c868b7bd4ce74fa7621ed4cda
 - Users can add `.h5ad` files by dragging and dropping or clicking the **Add** (![add-button](../../img/data-upload-and-management/anndata-add-button.png)) button.  
 - Select the corresponding species information and provide a description of the data.  
 - Once the file is selected and all information is filled out, click the **Upload** (![upload-button](../../img/data-upload-and-management/anndata-upload-button.png)) button to start uploading.  
