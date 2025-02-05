@@ -7,7 +7,7 @@ After opening the platform, users is on the homepage. Follow the quickstart anim
 1. Click **"Create New Analysis Task"** button in the Private section to begin a new analysis task.
 2. Add a dataset to analyze by dragging any public dataset under **Data Source** section into the analysis area -- this now becomes a data node.  
 3. Click the [<span style="color:#00bfff">"Pipeline Helper"</span>](#pipeline-helper) button in the top-left corner to choose a suitable pipeline from [<span style="color:#00bfff">Pipeline Template</span>](#pipeline-template) and import it into the analysis panel for assembly.  
-4. Connect the data node to the pipeline or analysis node by dragging a line between them. Click the **"Run Tree"** button in data node, or click the "Run Node" icon (![run-btn](../../img/run-btn.png)) on analysis node to run the analysis.  
+4. Connect the data node to the pipeline or analysis node by dragging a line between them. Click the **"Run Tree"** button (![run-btn](../../img/run-btn.png)) in data node, or click the **"Run Node"** (![start-button](../../img/analysis-node/start-button.png)) on analysis node to run the analysis.  
 5. After the analysis is completed, users can enter the [<span style="color:#00bfff">Visualization Panel</span>](#visualization-panel) from any analysis node to view the results.
 6. Users can click on green analysis nodes (completed runs) to open the right sidebar and generate context-aware interpretations using LLM. For bug troubleshooting a single red node (failed run), Ragomics provides LLM generated explanations and solutions on the right sidebar, with the original error messages and standard outputs.
 <!-- 4. (Optional) For custom needs beyond built-in our function block library, users can use **"Auto-Genie"**, an LLM-based agent, to generate code acoording to Ragomics function block framework for specific tasks. -->
@@ -296,7 +296,7 @@ Clicking the **"Set as Default"** button will reset all parameters in the analys
 When users need to run a specific [<span style="color:#00bfff;">Analysis Node</span>](#analysis-nodes), they have three options:
 
 1. Users can click the **"Update and Run"** button in the parameter panel of the analysis node to run the current node.
-2. Users can click the **"Start"** (![start-button](../../img/analysis-node/start-button.png)) button on the node card of the [<span style="color:#00bfff;">Analysis Node</span>](#analysis-nodes) to start the analysis.
+2. Users can click the **"Run Node"** (![start-button](../../img/analysis-node/start-button.png)) button on the node card of the [<span style="color:#00bfff;">Analysis Node</span>](#analysis-nodes) to start the analysis.
 3. Users can click the **"More"** (![more-button](../../img/analysis-node/more-button.png)) button on the node card of the [<span style="color:#00bfff;">Analysis Node</span>](#analysis-nodes), then select **"Run Sub Tree"** in the secondary popup. In this case, the node and all subsequent child nodes will be executed sequentially.
 
 ## <span style="color:#00bfff;">**Node States**</span>
