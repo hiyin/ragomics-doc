@@ -199,7 +199,7 @@ In the [<span style="color:#00bfff">Analysis Panel</span>](#analysis-panel), use
 ![import-data-1](../../img/importing-data/import-data-1.png)
 
 ### 2. Upload from Device
-Please refer to [<span style="color:#00bfff">Data Upload</span>](#data-upload).
+- Please refer to [<span style="color:#00bfff">Data Upload</span>](#data-upload).
 
 ### 3. Importing from Third Party
 - Over 1000 public datasets were sourced from third party such as CellxGene platform and stored in our repository for users to select from. In the list of available datasets, select and import the desired dataset by clicking "Import".
