@@ -1,6 +1,6 @@
-# <span style="color:#00bfff">**Quickstart**</span>
+# <span style="color:#00bfff">**Quickstart Tutorial**</span>
 
-After launching the platform, users arrive on the homepage. They can follow the quickstart animation or the steps below as needed to get started.
+After launching the platform, users arrive on the platform's homepage. They can follow the quickstart tutorial's animation and the steps below as needed to get started.
 
 ![quickstart](../../img/quickstart-server-high-res.gif)
 
@@ -22,6 +22,17 @@ After launching the platform, users arrive on the homepage. They can follow the 
 5. Result Interpretation and Debugging 
 - Upon analysis completion, users can click on the green nodes (indicating successful analyses) to open the right sidebar, where where AI-generated interpretations are provided based on the context. If an analysis fails (shown by a red node), clicking the node will display explanations and solutions in the right sidebar, along with the original error messages and outputs. Users can also access the [<span style="color:#00bfff">Visualization Panel</span>](#visualization-panel) from any [<span style="color:#00bfff">Analysis Node</span>](#analysis-nodes) to view the results.
 ![vid-1-1](../../img/gif/1-1.gif)
+
+Note: sample single-cell datasets are made accessible for users to try out in quickstart tutorial, users can download them in the links below:
+| Sample Data Type | Link |
+| ---------------- | ------- |
+| 10X     | [test_matrix.mtx](https://test-sc-data.s3.us-east-2.amazonaws.com/10X/matrix.mtx)     |
+| 10X     | [test_genes.tsv](https://test-sc-data.s3.us-east-2.amazonaws.com/10X/genes.tsv)       |
+| 10X     | [test_barcodes.tsv](https://test-sc-data.s3.us-east-2.amazonaws.com/10X/barcodes.tsv) |
+| anndata | [test_anndata1.h5ad](https://test-sc-data.s3.us-east-2.amazonaws.com/anndata/6104.h5ad) |
+| anndata | [test_anndata2.h5ad](https://test-sc-data.s3.us-east-2.amazonaws.com/anndata/841fb19f-26bd-4888-8a41-5bd28c868b8.h5ad) |
+| anndata | [test_anndata3.h5ad](https://test-sc-data.s3.us-east-2.amazonaws.com/anndata/9.h5ad) |
+
 
 <!-- 4. (Optional) For custom needs beyond built-in our function block library, users can use **"Auto-Genie"**, an LLM-based agent, to generate code acoording to Ragomics function block framework for specific tasks. -->
 <!-- 5. (Optional) Before running the pipeline, users may enable **"Bug Fixer"** option with max try of at least 5 times by clicking the **Settings**. However, this feature is experimental and we are still optimizing it. -->
