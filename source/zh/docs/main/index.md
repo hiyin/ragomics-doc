@@ -23,7 +23,7 @@ After launching the platform, users arrive on the platform's homepage. They can 
 - Upon analysis completion, users can click on the green nodes (indicating successful analyses) to open the right sidebar, where where AI-generated interpretations are provided based on the context. If an analysis fails (shown by a red node), clicking the node will display explanations and solutions in the right sidebar, along with the original error messages and outputs. Users can also access the [<span style="color:#00bfff">Visualization Panel</span>](#visualization-panel) from any [<span style="color:#00bfff">Analysis Node</span>](#analysis-nodes) to view the results.
 ![vid-1-1](../../img/gif/1-1.gif)
 
-Note: sample single-cell datasets are made accessible for users if they wish to try out in this tutorial, users can download the datasets to their local PC using the links below and perform [<span style="color:#00bfff">Data Upload</span>](#data-upload) to start analysis:
+Note: sample single-cell datasets are made accessible for users if they wish to try out in this tutorial, users can download the datasets to their local PC using the links below and follow instructions in [<span style="color:#00bfff">Data Upload</span>](#data-upload) to start data upload for analysis:
 | Sample Data Type | Link |
 | ---------------- | ------- |
 | 10X     | [test_matrix.mtx](https://test-sc-data.s3.us-east-2.amazonaws.com/10X/matrix.mtx)     |
